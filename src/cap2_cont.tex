@@ -1,0 +1,161 @@
+\chapter{Fundamentação Teórica}
+\label{ch:fundamentacao}
+\par Neste capítulo ser\~ao fundamentados os conhecimentos b\'asicos para o entendimento do trabalho.
+
+\section{Deficiência}
+
+De acordo com o censo do IBGE, realizado em 2010, cerca de 6.2\% da população brasileira possui algum tipo de deficiência. E a necessidade de inclusão destas pessoas na sociedade é extremamente importante. Do grupo citado anteriormente, cerca de 1.3\% tem algum tipo de deficiência auditiva, e 1.1\% tem deficiências auditivas
+
+Para aqueles com deficiência auditiva, a comunicação e inclusão pode ser feita através da Linguagem Brasileira de Sinais, segunda língua oficial do Brasil desde 2005. Mas, pode-se encontrar problemas com a comunicação através de LIBRAS principalmente pelo fato de, boa parte dos ouvintes não falar esta língua o que acarreta também na baixa utilização desta em diversos meios de comunicação. Um ponto importante apontado no documentário feito pela TVE RS, é que, pessoas com deficiência auditiva, normalmente são alfabetizadas somente com LIBRAS, por terem muita difículdade e falta de estrutura para o aprendizado da Língua Portuguesa. Ainda de acordo com o documentário, para as pessoas com deficiências motoras há os recursos de tecnologias assitivas, que aumentar a facilidade do acesso destas pessoas aos meios sociais, principalmente os digitais.
+
+% Precisa ficar realizando definições de cada uma das deficiências que serão tratadas no trabalho ?? 
+%% Caso precise, qual o nível de profundidade necessário ? ? ?
+
+\section{Tecnologias assistivas}
+
+% Verificar como citar esta fonte ! ! !
+Uma das formas de realizar a inclusão social de pessoas com deficiência é através da inclusão digital, utilizando técnologias assitivas, estes que visam ampliar as habilidades presentes no indivíduo, não o forçando a ter características específicas para a inclusão (NTAAI, 2016). As tecnologias assitivas, de acordo com o Núcleo de Tecnologia Assistiva, Acessibilidade e Inovação da Universidade de Brasilia, podem ser divididas em dois grupos, os recursos, que representam equipamentos que expandem as habilidades dos indivíduos com deficiência, e os serviços, que normalmente são aqueles relacionados a facilitação e capacitação para o uso correto dos recursos assistivos.
+
+% Adicionar dados aqui que fazem jus ao que estou dizendo ! ! !
+Para aqueles que possuem deficiência motora, a inclusão digital vem através de \textit{mouses} adaptados, formas diferentes de utilizar teclados, ou até mesmo a utilização do computador por comandos de voz. E para os surdos ferramentas que ajudam no processo de interação já levando em consideração problemas com a alfabetização.
+
+\section{Inteligência artificial}
+
+% Rever todas as referências - Provavelmente reescrever o texto nas férias ! ! !
+% Von Zuben: ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ea072_2s13/introducao_EA072_2s2013.pdf
+
+Sistemas inteligentes de forma geral são aqueles que apresentam a capacidade de planejar e resolver problemas através de dedução e indução utilizando conhecimentos de situações anteriores (ZUBEN, 2013), e a inteligência artificial, é um campo da ciência e engenharia de computação (ZUBEN, 2013), que possibilitam a sistemas computacionais, perceber, raciocionar e agir (WINSTON, 1992).
+
+% Augusto -> http://dcm.ffclrp.usp.br/~augusto/teaching/ami/AM-I-Conceitos-Definicoes.pdf
+Uma das técnicas computacionais mais utilizadas para o desenvolvimento e aplicação de inteligência artificial, são aquelas relacionadas ao aprendizado de máquina. Esta que é uma área que tem como objetivo principal, desenvolver técnicas que permitam aos sistemas adquirir conhecimento de forma automática e com estes conhecimentos tomar decisões (AUGUSTO, 2007).
+
+% NG -> Curso do andrew
+Para a realização do aprendizado de máquina, existem diversas técnicas, que vão de simples regressões estatísticas, até modelos complexos, como às redes neurais artificiais (NG, 2016).
+
+\section{Redes neurais artificiais}
+
+% Cintra - Minicurso INPE (2015)
+Como descrito na seção anterior, uma das áreas de aplicação do aprendizado de máquina mais avançadas atualmente são as RNA, que imitam principalmente aspectos do funcionamento do corpo humano, neste caso, o cérebro e suas redes neuronais (CINTRA, 2015). 
+
+\subsection{Neurônio biológico}
+
+% Falar sobre sinapses ! ! !
+% Falar sobre como aprendemos ! ! !
+
+% Nunes -> Livro
+Todo o processamento de informações no cérebro humano, é feito através de elementos biológicos de processamento, que operam em paralelo para a produção de ações apropriadas para cada estimulo recebido pelo corpo. A célula base do sistema nervoso cerebral é o neurônio (Figura 1), e sua principal função é conduzir impulsos (Representando os estimulos) levando em consideração as condições do corpo e assim produzindo ações. Os neurônios também são os resposáveis pelos atos do pensamento e armazenamento de informações (NUNES et al, 2016).
+
+O neurônio podem ser divididos em três partes elementares, os dendritos, que captam de forma continua os impulsos vindos de outros neurônios, o corpo celular, que processa todas as informações captadas e os axônio que enviam as informações processadas no corpo celular para outros neurônios.
+
+% https://www.researchgate.net/figure/Figura-24-Ilustrativo-de-um-neuronio-biologico_fig17_303369695
+\image{1.2}{neuronio-biologico.png}{Ilustração do neurônio biológico}{bioneuron}
+
+% SHEPERD -> Artigo
+% XAVIER -> Artigo (Divulgado no Alô Ciência) !
+Estima-se que a rede neural cerebral, possui cerca de 100 bilhões de neurônios, cada um destes mantendo conexão com uma média de 6.000 outros neurônios, gerando cerca de 600 trilhões de conexões (SHEPHERD, 1990). As conexões entre os neurônios são chamados de sinapses, estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} tem os caminhos fortalecidos toda vez que é utilizado, assim, pode-se entender que, neurônios tem propensões para certas atividades, quando os neurônios utilizados por esta tem suas sinapses bem fortalecidas (XAVIER, 2017).
+
+A Figura 2 demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo cortex auditivo.
+
+% https://pt.wikipedia.org/wiki/Ficheiro:Cajal_actx_inter.jpg
+\image{0.35}{nn_cortex.jpg}{Rede neural do cotex auditivo}{nncotex}
+
+% McCulloch -> Artigo
+A representação inicial deste conjunto de neurônios em sistemas de computação foram implementadas através de circuitos elétricos (MCCULLOCH; PITTS, 1943), estes que foram utilizados como base para a criação dos modelos de neurônios artificiais (HODGKIN; HUXLEY, 1952).
+
+\subsection{Neurônio artificial}
+
+Os neurônios artificias, que são modelos de representações dos neurônios biológicos compoem a RNA. O principal modelo de neurônio artificial utilizado, mesmo em arquiteturas mais atuais, é o proposto por McCulloch e Pitts em 1943 (Figura 3). Neste há componentes que fazem referência direta ao neurônio biológico visto anteriormente.
+
+\image{0.1}{nn_mculloch.jpg}{Modelo de Neurônio artificial}{nn_mcculloch}
+
+Os sinais de entrada, apresentados na Figura 3, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
+
+Através destes modelos as redes neurais são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
+
+\image{0.8}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
+
+Na camada de entrada, os dados são recebidos e enviados para a camada oculta, na camada oculta, os dados são processados pelos neurônios, e seus resultados são unidos na camada de saída (PONTI, 2017).
+
+Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptron}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
+
+% Falar sobre as diferenças no processo de aprendizado
+% Aqui falo de forma geral ? Preciso ir a fundo na questão ??
+\subsection{Processo de aprendizado}
+
+Um dos pontos mais relevantes das RNA é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo de treinamento, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
+
+Estes processos de treinamento podem adotar diferentes estratégias para ensinar as RNA, e cada estratégia gera um algoritimo de aprendizado diferente, sendo os principais, os algoritimos de aprendizado supervisionado e não-supervisionado.
+
+\subsubsection{Aprendizado supervisionado}
+
+% OSÓRIO -> fia99 (http://osorio.wait4.org/oldsite/IForumIA/fia99.pdf)
+No aprendizado supervisionado, o usuário indica o comportamento que a RNA deve apresentar dado um conjunto de dados qualquer, desta forma, a RNA pode ir ajustando os pesos sinápticos de seus neurônios com o objetivo de produzir o mesmo resultado apresentado pelo usuário (OSÓRIO, 1999). Levando em consideração um problema de classificação, onde um conjunto de dados é apresentado para a RNA, e ela deve informar ao usuário o que cada um dos dados daquele conjunto representa.
+
+\subsubsection{Aprendizado não-supervisionado}
+
+% NG -> Neste caso é o curso do Andrew NG
+O aprendizado não supervisionado é completamente o oposto do supervisionado, neste é apresentado para a RNA apenas o conjunto de dados, e a RNA se encarrega de aprender sobre aquele conjunto de dados. Este tipo de aprendizado pode ser utilizado para deixar a RNA identificar os padrões presentes nos dados, e tirar informações destes padrões (NG, 2013). 
+
+\section{Deep Learning}
+
+O \textit{Deep Learning} apresenta uma abordagem diferente para os problemas resolvidos com técnicas de RNA, porém, no caso de DL, muitas camadas são empregadas (GOODFELLOW, 2016) nas arquiteturas das redes neurais (Figura 5).
+
+\image{0.6}{snn_vs_dl.png}{Diferenças entre redes neurais simples e Deep Learning}{ml_vs_dl}
+
+A utilização de múltiplas camadas, cada um com dezenas de neurônios, permitiu as técnicas de DL chegarem ao estado-da-arte em muitos problemas que envolvem o AM (SHANKAR, 2017).  Além disto, de acordo com Andrew NG, o processo de aprendizado destas redes melhora muito com o aumento dos dados (Figura 6), diferente do que ocorria com arquiteturas e algoritimos de aprendizado de máquinas antigos.
+
+\image{0.4}{dl_vs_dados.png}{Deep Learning X Quantidade de dados}{dl_vs_dados}
+
+Ainda de acordo com Andrew, isto ocorre pois ao utilizar múltiplas camadas, diversos recursos são captados dos dados, fazendo com que o processo de aprendizado se torne eficaz, e tende a melhorar ainda mais com o aumento da quantidade de dados utilizados no processo de treinamento. 
+
+A utilização de múltiplas camadas, permitiram que diferentes técnicas pudessem ser utilizadas dentro de uma rede neural, e isto fez com que diversas arquiteturas, para os mais váriados fins fossem criados.
+
+\subsection{Redes neurais convolucionais}
+
+% SAVARESE, 2018 -> https://web.stanford.edu/class/cs231a/lectures/intro_cnn.pdf
+% ARAÚJO, 2017 -> Redes neurais convolucionais com tensorflow: Teoria e Prática 
+Redes neurais convolucionais, do inglês, \textit{Convolutional Neural Network} são um tipo de rede neural profunda, especializadas em análise de elementos visuais, tais como imagens e vídeos (SAVARESE, 2018).  Sua especialidade em dados visuais permitiu um grande avanço nas áreas de visão computacional, especialmente por estar serem mais fáceis de treinar, quando comparado a redes neurais comuns em trabalhos com imagens (ARAÚJO, 2017).
+
+Um dos primeiros modelos de CNN propostos foi a LeNet (LECUN et al, 1998), proposta por Yann LeCunn em 1998, e mesmo com a evolução dos conceitos deste tipo de rede, os conceitos apresentados por LeCun continuam sendo aplicados. Nesta arquitetura, uma sequência de camadas convolucionais, de \textit{pooling} e totalmente conectadas são utilizadas (ARAÚJO, 2017).
+
+As camadas convolucionais, que são a grande diferença das CNN para outros tipos de RNA, trabalham como filtros, recuperando apenas pontos importantes da imagem para a classificação, isto através de uma matriz de pesos que é utilizada nas convoluções (ARAÚJO, 2017). Após o filtro realizado por esta camada, as imagens resultantes do filtro são passadas para a camada de \textit{pooling}, estas camadas que básicamente reduzem a dimensionalidade das resultantes. Por fim, as camadas totalmente conectadas são as responsáveis em realizar a multiplicação ponto a ponto dos sinais recebidos (imagens) e aplicar uma função de ativação, que produzirá a probabilidade de cada uma das classes esperadas na classificação (ARAÚJO, 2017).
+
+A Figura 7 demonstra a arquitetura de LeCun sendo utilizada para a classificação de imagens de tumores, podendo ter como resultado às classes \textbf{normal} ou \textbf{anormal}.
+
+\image{0.6}{cnn_lenet.JPG}{Estrutura básica de CNN proposta por LeCun, 1998}{lecun_basic}
+
+Veja que, o diferencial citado acima, na utilização das convoluções está justamente na quantidade de elementos que são utilizados para a classificação, em RNA comuns, ao realizar a classificação de imagens, deve-se ter de neurônios na RNA a mesma quantidade de píxels presentes na imagem a ser classificada, o que nas CNN não ocorre, exatamente por conta dos filtros que são criados (PONTI, 2017). 
+
+% \subsubsection{Camada convolucional}
+% \subsubsection{Camada de pooling}
+% \subsection{Camada totalmente conectada}
+
+\subsection{Posenet}
+
+Posenet é um tipo de CNN, para a identificação em tempo real de pontos do corpo dos usuários, o modelo desenvolvido para esta rede é extremamente robusto e permite a identificação das poses mesmo quando há problemas com luz e iluminação do ambiente que está sendo levado em consideração na classificação (KENDALL, 2015). 
+
+\section{Tecnologias}
+
+Esta seção demonstra as tecnologias utilizadas durante a implementação do presente trabalho.
+
+\subsection{Tensorflow.js}
+
+% https://www.tensorflow.org/about/bib
+Tensorflow.js é uma biblioteca para a linguagem de programação Javascript, que permite a implementação de modelos de AM com grande facilidade de expressão. A biblioteca é flexível e pode ser usada para expressar uma ampla variedade de algoritmos, incluindo algoritmos de treinamento e inferência para modelos de DL, e tem sido usado para conduzir pesquisas e implantar sistemas de aprendizado de máquina nas mais diversas áreas, envolvendo trabalhos como reconhecimento de fala, visão computacional e robótica (ABADI et al, 2015). 
+
+\subsection{Google Colaboratory}
+
+% Eu que fiz esta definição ! ! !
+Colaboratory é uma ferramenta criada pelo Google, que permite a fácil execução de algoritimos de aprendizado de máquina. O ambiente é criado sobre o pacote Jupyter, um ambiente interativo e simples para a execução de código, com a diferença de que, no Colaboratory, toda a execução pode ser feita utilizando máquinas disponibilizadas pelo Google.
+
+% Melhorar (E muito) esta definição, já que deve ser aprofundado estes conceitos ! ! ! 
+\subsection{Processamento de voz}
+
+O processamento de voz é uma área que engloba diversas técnicas diferentes, como o reconhecimento de fala natural e síntese de voz (GUILHOTO, 2001). Para a aplicação de reconhecimentos de comandos por voz, utiliza-se o reconhecimento de palavras, este que é caracterízado pelo processamento de um pequeno trecho da fala, com o objetivo de identificar qual ação o sistema deve tomar (GUILHOTO, 2001).
+
+\subsubsection{Web speech API}
+
+% Verificar como citar a certificação digital ! ! !
+Normalmente a utilização de comandos voz em sistemas pode ser muito complexa, pois esta envolve diversos conceitos, das mais variadas áreas de estudo. Porém, a utilização de comandos de voz torna todo sistema que o utiliza, mais acessível a pessoas com deficiência, desta forma o \textit{Web Speech API} foi desenvolvido. Esta é uma ferramenta que facilita o processo de análise e sintetização de voz em texto (ADORF, 2013).
+
+Sua utilização permite uma rápida aplicação do processamento de voz em sistemas criados utilizando a linguagem de programação Javascript.
