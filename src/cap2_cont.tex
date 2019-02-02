@@ -114,10 +114,10 @@ Estima-se que a rede neural cerebral, possui cerca de 100 bilhões de neurônios
 % A regiã entre os neurônios são chamados de sinapses, estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} tem os caminhos fortalecidos toda vez que é utilizado
 % , assim, pode-se entender que, neurônios tem propensões para certas atividades, quando os neurônios utilizados por esta tem suas sinapses bem fortalecidas (XAVIER, 2017).
 
-A Figura 2 demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo cortex auditivo.
+A Figura 2 demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo córtex auditivo.
 
 % https://pt.wikipedia.org/wiki/Ficheiro:Cajal_actx_inter.jpg
-\image{0.35}{nn_cortex.jpg}{Rede neural do cotex auditivo}{nncotex}
+\image{0.35}{nn_cortex.jpg}{Rede neural do córtex auditivo}{nncotex}
 
 %%% Validar as informações abaixo
 % Citar assim Hodgkin e Huxley (1952)  ou (Hodgkin; Huxley, 1952) ? ? ?
@@ -156,7 +156,9 @@ onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, .
 
 A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
 
-\subsection{Camadas} % Este tópico vai ficar aqui, mas pode ser algo temporário, estou pensando sobre (02/02/2019)
+\subsection{Camadas} 
+% Este tópico vai ficar aqui, mas pode ser algo temporário, estou pensando sobre (02/02/2019)
+% O que pensei foi, no momento que falar das camadas já falar da arquitetura de redes neurais, acho bacana fazer isto aqui
 
 % ToDo: Tentar buscar referência para confirmar esta afirmação do primeiro linha
 As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são separados através de camadas, cada uma delas com uma função específica. Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
@@ -227,7 +229,7 @@ Veja que, o diferencial citado acima, na utilização das convoluções está ju
 
 \subsubsection{Camada de pooling}
 
-% \subsection{Camada totalmente conectada} -> Ainda não sei se esta seção vem para este local
+\subsubsection{Camada totalmente conectada} % Esta seção fica aqui pois faz parte das redes neurais convolucionais
 
 \subsection{Mobilenet}
 
@@ -239,6 +241,7 @@ Falar sobre a arquitetura Mobilenet, assim como sua forma de convolução
 
 \subsection{Transferência de aprendizado}
 
+% Em aprendizado profundo existe a necessidade de datasets com centenas de milhares de imagens...
 \par Explicar sobre transferência de aprendizado
 
 \section{Tecnologias}
