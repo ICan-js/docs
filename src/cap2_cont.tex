@@ -27,11 +27,14 @@ Uma das formas de realizar a inclusão social de pessoas com deficiência é atr
 
 % \par Um pequeno descritivo sobre regressões
 
-\section{Regressão linear}
+\section{Regressão} % Ou Regressão linear
 
-\par Uma função que divide linearmente um hiperplano
+% Claro que isto deverá ser reescrito, até porque coloquei com as minhas palavras
+\par Os métodos de regressão são aqueles que buscam através de variáveis continuas ou categóricas estimar uma outra variável, podendo esta também ser continua ou categórica. Para este trabalho utilizou-se do método de regressão linear, este que básicamente busca através de uma função f(x) mapear a relação de duas variáveis linearmente separáveis.
 
-\section{Correlação}
+\section{Correlação de imagens digitais}
+
+% http://www.dpi.inpe.br/~carlos/Academicos/Cursos/Pdi/pdi_estatisticas.html
 
 \par A correlação é A, porém para este trabalho ela foi empregada em Imagens digitais
 
@@ -115,19 +118,43 @@ A representação inicial deste conjunto de neurônios em sistemas de computaç�
 
 \subsection{Neurônio artificial}
 
-Os neurônios artificias, que são modelos de representações dos neurônios biológicos compoem a RNA. O principal modelo de neurônio artificial utilizado, mesmo em arquiteturas mais atuais, é o proposto por McCulloch e Pitts em 1943 (Figura 3). Neste há componentes que fazem referência direta ao neurônio biológico visto anteriormente.
+Como citado anteriormente, os neurônios artificiais, são modelos computacionais para a representação do neurônio biológico nas RNAs, e da mesma que em um neurônio biológico, a representação deste é feita com três elementos básicos (HAYKIN, 2001):  
 
+\begin{itemize}
+	% Posso colocar Conjunto de sinapses, representado por Xn... ? (02/02/2019)
+	\item Conjunto de sinapses, cada uma caracterizada por um peso, este que indica a relevância de cada valor de entrada;
+	\item Somador, ou combinador linear, que faz a ponderação dos valores de entrada com as respectivas sinapses do neurônio;
+	\item Função de ativação utilizada para restringir os valores de saída do neurônio.
+\end{itemize}
+
+Ainda de acordo com Haykin (2001), a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura 3) com as seguintes equações (HAYKIN, 2001):
+
+% ToDo: Verificar forma de colocar equações no Latex (Para virar sumário)
+\begin{equation}
+	u_{k} = \sum_{j=1}^{n} w_{kj} x_{j}
+\end{equation}
+e
+\begin{equation}
+	y_{k} = f(u_{k} + b_{k})	
+\end{equation}
+onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, ..., w_{kn} $ são os pesos sinápticos do neurônio k; $ u_{k} $ é a saída do combinador linear; $ b_{k} $ é o \textit{bias}; $ f(u_{k} + b_{k}) $ a função de ativação; e $ y_{k} $ representa a saída do neurônio
+
+% Os neurônios artificias, que são modelos de representações dos neurônios biológicos compoem a RNA. O principal modelo de neurônio artificial utilizado, mesmo em arquiteturas mais atuais, é o proposto por McCulloch e Pitts em 1943 (Figura 3). Neste há componentes que fazem referência direta ao neurônio biológico visto anteriormente.
+
+% Imagem adaptada de Haykin (2001)
 \image{0.1}{nn_mculloch.jpg}{Modelo de Neurônio artificial}{nn_mcculloch}
 
-Os sinais de entrada, apresentados na Figura 3, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
+A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
 
-Através destes modelos as redes neurais são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
+% ToDo: Depois que comecei a ler sobre teoria do aprendizado estatístico, tudo o que eu escrevi não tem um total sentido, para trocar esta parte
+% busque referências de aprendizado estatístico antes de continuar (02/02/2019)
+Através destes neurônios artificiais as RNAs são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
 
 \image{0.8}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
 
 Na camada de entrada, os dados são recebidos e enviados para a camada oculta, na camada oculta, os dados são processados pelos neurônios, e seus resultados são unidos na camada de saída (PONTI, 2017).
 
-Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptron}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
+Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptrons}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
 
 % Falar sobre as diferenças no processo de aprendizado
 % Aqui falo de forma geral ? Preciso ir a fundo na questão ??
@@ -189,7 +216,11 @@ Falar sobre a arquitetura Mobilenet, assim como sua forma de convolução
 
 \subsection{Posenet}
 
-Posenet é um tipo de CNN, para a identificação em tempo real de pontos do corpo dos usuários, o modelo desenvolvido para esta rede é extremamente robusto e permite a identificação das poses mesmo quando há problemas com luz e iluminação do ambiente que está sendo levado em consideração na classificação (KENDALL, 2015). 
+\par Posenet é um tipo de CNN, para a identificação em tempo real de pontos do corpo dos usuários, o modelo desenvolvido para esta rede é extremamente robusto e permite a identificação das poses mesmo quando há problemas com luz e iluminação do ambiente que está sendo levado em consideração na classificação (KENDALL, 2015). 
+
+\subsection{Transferência de aprendizado}
+
+\par Explicar sobre transferência de aprendizado
 
 \section{Tecnologias}
 
