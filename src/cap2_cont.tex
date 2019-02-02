@@ -129,7 +129,6 @@ Como citado anteriormente, os neurônios artificiais, são modelos computacionai
 
 Ainda de acordo com Haykin (2001), a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura 3) com as seguintes equações (HAYKIN, 2001):
 
-% ToDo: Verificar forma de colocar equações no Latex (Para virar sumário)
 \begin{equation}
 	u_{k} = \sum_{j=1}^{n} w_{kj} x_{j}
 \end{equation}
@@ -146,21 +145,29 @@ onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, .
 
 A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
 
-% ToDo: Depois que comecei a ler sobre teoria do aprendizado estatístico, tudo o que eu escrevi não tem um total sentido, para trocar esta parte
-% busque referências de aprendizado estatístico antes de continuar (02/02/2019)
-Através destes neurônios artificiais as RNAs são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
+\subsection{Camadas} % Este tópico vai ficar aqui, mas pode ser algo temporário, estou pensando sobre (02/02/2019)
+
+% ToDo: Tentar buscar referência para confirmar esta afirmação do primeiro linha
+As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são separados através de camadas, cada uma delas com uma função específica. Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
 
 \image{0.8}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
 
-Na camada de entrada, os dados são recebidos e enviados para a camada oculta, na camada oculta, os dados são processados pelos neurônios, e seus resultados são unidos na camada de saída (PONTI, 2017).
+% ToDo: Veja que isto deverá ser revisado
+Veja ainda que, a quantidade de camadas pode representar o poder de solução de problemas de uma rede, de acordo com PONTI (2017), RNAs de estruturas muito simples, como os \textit{Perceptrons}, que possuem apenas um neurônio, não são capazes de resolver problemas com complexidades não lineares.
 
-Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptrons}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
+% ToDo: Depois que comecei a ler sobre teoria do aprendizado estatístico, tudo o que eu escrevi não tem um total sentido, para trocar esta parte
+% busque referências de aprendizado estatístico antes de continuar (02/02/2019)
+% Através destes neurônios artificiais as RNAs são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
+
+% Na camada de entrada, os dados são recebidos e enviados para a camada oculta, na camada oculta, os dados são processados pelos neurônios, e seus resultados são unidos na camada de saída (PONTI, 2017).
+
+% Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptrons}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
 
 % Falar sobre as diferenças no processo de aprendizado
 % Aqui falo de forma geral ? Preciso ir a fundo na questão ??
 \subsection{Processo de aprendizado}
 
-Um dos pontos mais relevantes das RNA é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo de treinamento, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
+Um dos pontos mais relevantes das RNAs é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo de treinamento, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
 
 Estes processos de treinamento podem adotar diferentes estratégias para ensinar as RNA, e cada estratégia gera um algoritimo de aprendizado diferente, sendo os principais, os algoritimos de aprendizado supervisionado e não-supervisionado.
 
