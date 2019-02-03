@@ -164,7 +164,7 @@ A arquitetura de uma RNA define como seus vários neurônios estão dispostos em
 % Colocar abreviaturas nestes nomes ?
 \subsubsection{Redes alimentadas adiante com camada única}
 
-As redes alimentadas adiante com camada única (Figura 4) são a forma mais simples de uma rede, onde são apresentadas duas camadas, a camada de entrada, que básicamente recuperam os dados do meio externo e a camada de saída, esta constituida de neurônios que processam os dados e retornam os resultados. Desta forma pode-se entender que, a alimentação desta rede é estritamente adiante ou acíclica, uma vez que não há caminhos da saída para a entrada. 
+As redes alimentadas adiante com camada única (Figura 4) são a forma mais simples de uma rede, onde são apresentadas duas camadas, a camada de entrada, que básicamente recuperam os dados do meio externo e a camada de saída, esta constituida de neurônios que processam os dados e retornam os resultados, não havendo caminho inverso. 
 
 % \image{1.0}{r_a_ad_com_mult_camadas.png}{Redes alimentadas adiante com camada única}{nn_per}
 
@@ -172,7 +172,7 @@ As redes alimentadas adiante com camada única (Figura 4) são a forma mais simp
 
 \subsubsection{Redes alimentadas diretamente com múltiplas camadas}
 
-As redes alimentadas diretamente com múltiplas camadas (Figura 5) tem em sua estrutura a presença de uma ou mais camadas ocultas, onde estão presentes conjuntos de neurônios, que são básicamente são responsáveis por permitir que a rede extraia características mais complexadas do dados captados na camada de entrada, assim permitindo que a rede possa aprender características globais dos dados (CHURCHLAND; SEJNOWSKI, 1992), facilitando sua generalização.
+As redes alimentadas diretamente com múltiplas camadas (Figura 5) tem em sua estrutura a presença de uma ou mais camadas ocultas, onde estão presentes conjuntos de neurônios, que são básicamente são responsáveis por permitir que a rede extraia características mais complexas dos dados captados na camada de entrada, assim permitindo que a rede possa aprender características globais (CHURCHLAND; SEJNOWSKI, 1992), não ficando limitada apenas aos dados utilizado em seu treinamento.
 
 % \image{1.0}{r_a_de_com_mult_camadas.png}{Redes alimentadas diretamente com múltiplas camadas}{nn_mlp}
 
