@@ -42,12 +42,13 @@ A análise de regressão estuda a relação entre uma variável dependente e out
 % \par Os métodos de regressão são aqueles que buscam através de variáveis continuas ou categóricas estimar uma outra variável, podendo esta também ser continua ou categórica. Para este trabalho utilizou-se do método de regressão linear, este que básicamente busca através de uma função f(x) mapear a relação de duas variáveis linearmente separáveis.
 %%%%%%%%%%%%%
 
-\section{Correlação de imagens digitais}
+% \section{Correlação de imagens digitais}
 
 % http://www.dpi.inpe.br/~carlos/Academicos/Cursos/Pdi/pdi_estatisticas.html
-% Se tudo funcionar da forma que estou pensando, vou colocar este conceito aqui
+% Se tudo funcionar da forma que estou pensando, vou colocar este conceito aqui (02/02/2019)
+% Pois bem, não funcionou como eu esperada, assim vou manter este conceito de fora do documento (03/02/2019)
 
-\par A correlação é A, porém para este trabalho ela foi empregada em Imagens digitais
+% \par A correlação é A, porém para este trabalho ela foi empregada em Imagens digitais
 
 % \subsection{Regressão logistica}
 
@@ -156,17 +157,89 @@ onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, .
 
 A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
 
-\subsection{Camadas} 
+\subsection{Arquiteturas de rede} % Eu estou deixando o texto da maneira como está, porém vou fazer mudanças depois (03/02/2019)
+
+A arquitetura de uma RNA define como seus vários neurônios estão dispostos em relação um ao outro \cite{DaSilva2016}. Para Haykin (2001), existem três classes de arquiteturas de redes neurais fundamentalmente diferentes.
+
+% Colocar abreviaturas nestes nomes ?
+\subsubsection{Redes alimentadas adiante com camada única}
+
+As redes alimentadas adiante com camada única (Figura 4) são a forma mais simples de uma rede, onde são apresentadas duas camadas, a camada de entrada, que básicamente recuperam os dados do meio externo e a camada de saída, esta constituida de neurônios que processam os dados e retornam os resultados. Desta forma pode-se entender que, a alimentação desta rede é estritamente adiante ou acíclica, uma vez que não há caminhos da saída para a entrada. 
+
+% \image{1.0}{r_a_ad_com_mult_camadas.png}{Redes alimentadas adiante com camada única}{nn_per}
+
+% Comentar a imagem ? ?
+
+\subsubsection{Redes alimentadas diretamente com múltiplas camadas}
+
+As redes alimentadas diretamente com múltiplas camadas (Figura 5) tem em sua estrutura a presença de uma ou mais camadas ocultas, onde estão presentes conjuntos de neurônios, que são básicamente são responsáveis por permitir que a rede extraia características mais complexadas do dados captados na camada de entrada, assim permitindo que a rede possa aprender características globais dos dados (CHURCHLAND; SEJNOWSKI, 1992), facilitando sua generalização.
+
+% \image{1.0}{r_a_de_com_mult_camadas.png}{Redes alimentadas diretamente com múltiplas camadas}{nn_mlp}
+
+% Comentar a imagem ? ?
+
+\subsubsection{Redes recorrentes}
+
+Em Redes recorrentes (Figura 6) existem as camadas de entrada e saída, porém nestas os valores de saída de um neurônio pode ser utilizado como entrada para sí próprio ou mesmo algum outro neurônio da mesma camada.
+
+% \image{1.0}{r_rec.png}{Redes recorrentes}{nn_rr}
+
+% \begin{itemize}
+% 	\item Redes alimentadas adiante com camada única: Possuem a camada de entrada conectada unicamente a camada de saída;
+% 	\item Redes alimentadas diretamente com múltiplas camadas: Apresentam camadas ocultas, que são utilizadas para extração de características mais complexas do contexto onde está inserida;
+% 	\item Redes recorrentes: Operam com laços de realimentação, onde a saída de um neurônio é também sua entrada.
+% \end{itemize}
+
+% (SILVA; SPATTI; FLAUZINO, 2010) -> Livro
+% Um exemplo muito comum de redes alimentadas adiante com camada única são os \textit{Perceptrons} (Figura 4), estas que basicamente são compostas pela camada de entrada, que não realizam operações nos dados de entrada e a camada de saída, que neste caso são compostas por conjuntos de neurônios, que operam sobre as saídas da camada de entrada e realizam as saídas da rede (SILVA; SPATTI; FLAUZINO, 2010).
+
+% Para as redes alimentadas diretamente com múltiplas camadas, o exemplo comum são as \textit{Multi-Layers Perceptrons} (Figura 5)
+
+%As RNAs podem ser constituídas de alguns ou mesmo vários neurônios artificiais, que são organizados através de camadas, estas que por sua vez definem a arquitetura da rede neural artificial. Para Haykin (2001) a arquitetura da rede neural é especifica para cada aplicação, e pode ser composta por diferentes níveis de camadas ocultas, função de ativação e algoritmo de aprendizado, podendo variar também a quantidade de neurônios que está sendo empregado na solução do problema.
+
+%Mesmo havendo diversas variações de arquiteturas para diferentes problemas, normalmente encontra-se em uma RNA três tipos de camadas, sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017). 
+
+%Um exemplo de RNA que apresenta cada uma destas camadas citadas são as \textit{Multi-Layer Perceptron} (Figura 4), que além de possuirem uma camada de entrada e uma de saída, podem apresentar diversas camadas ocultas.
+
+%\image{1.0}{mlp.png}{Rede de múltiplas camadas}{nn_mlp}
+
+%Mas veja que, há arquiteturas que não seguem este formato, como é o caso das redes \textit{Perceptron} (Figura 5), que básicamente possuem apenas a camada de entrada e saída, e neste caso, todo o processamento ocorre na camada de saída.
+
+%\image{1.0}{perceptron.png}{Rede de alimentação direta e camada simples}{nn_perceptron}
+
+% Estudar mais sobre arquitetura de rede ! ! !
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \image{0.83}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
+
+% Mas há redes neurais artificiais como os \textit{Perceptrons} (Figura 5) que possuem apenas duas camadas, a camada de entrada, e a camada de saída, sendo que, o processamento dos dados neste tipo de rede é feito na camada de saída.
+
+% \image{1.0}{perceptron.png}{Rede de alimentação direta e camada simples}{nn_perceptron}
+
+% Buscar referências para a MLP
+% E também poder haver redes com diversas camadas, como é os caso das \textit{Multi-Layer Perceptron} (Figura 6) que possuem as camadas de entrada e saída, e um conjunto de camadas ocultas que podem variar de uma única camada ou até mesmo dezenas delas, dependendo do problema a ser resolvido.
+
+% \image{1.0}{mlp.png}{Rede de múltiplas camadas}{nn_mlp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
+
+% Criar uma imagem que identifica cada uma das camadas que citei
+% Acho que assim fica mais fácil entender o que está acontecendo
+
+
+% Porém veja que, em arquiteturas simples como as redes \textit{Perceptron} (Figura 5), há apenas a camada de entrada e a camada de saída, não havendo camadas ocultas
+
 % Este tópico vai ficar aqui, mas pode ser algo temporário, estou pensando sobre (02/02/2019)
 % O que pensei foi, no momento que falar das camadas já falar da arquitetura de redes neurais, acho bacana fazer isto aqui
+% As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são organizados através de camadas, estes que por sua vez definem a arquitetura da rede neural. Para Haykin (2001), a arquitetura da rede 
+
 
 % ToDo: Tentar buscar referência para confirmar esta afirmação do primeiro linha
-As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são separados através de camadas, cada uma delas com uma função específica. Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
+% As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são separados através de camadas, cada uma delas com uma função específica. Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
 
-\image{0.8}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
 
 % ToDo: Veja que isto deverá ser revisado
-Veja ainda que, a quantidade de camadas pode representar o poder de solução de problemas de uma rede, de acordo com PONTI (2017), RNAs de estruturas muito simples, como os \textit{Perceptrons}, que possuem apenas um neurônio, não são capazes de resolver problemas com complexidades não lineares.
+% Veja ainda que, a quantidade de camadas pode representar o poder de solução de problemas de uma rede, de acordo com PONTI (2017), RNAs de estruturas muito simples, como os \textit{Perceptrons}, que possuem apenas um neurônio, não são capazes de resolver problemas com complexidades não lineares.
 
 % ToDo: Depois que comecei a ler sobre teoria do aprendizado estatístico, tudo o que eu escrevi não tem um total sentido, para trocar esta parte
 % busque referências de aprendizado estatístico antes de continuar (02/02/2019)
@@ -181,7 +254,7 @@ Veja ainda que, a quantidade de camadas pode representar o poder de solução de
 % Talvez aqui eu possa introduzir erro, otimização, feed forward....estou pensando sobre isto (02/02/2019)
 \subsection{Processo de aprendizado}
 
-Um dos pontos mais relevantes das RNAs é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo de treinamento, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
+Um dos pontos mais relevantes das RNAs é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
 
 Estes processos de treinamento podem adotar diferentes estratégias para ensinar as RNA, e cada estratégia gera um algoritimo de aprendizado diferente, sendo os principais, os algoritimos de aprendizado supervisionado e não-supervisionado.
 
@@ -225,7 +298,7 @@ A Figura 7 demonstra a arquitetura de LeCun sendo utilizada para a classificaç�
 
 Veja que, o diferencial citado acima, na utilização das convoluções está justamente na quantidade de elementos que são utilizados para a classificação, em RNA comuns, ao realizar a classificação de imagens, deve-se ter de neurônios na RNA a mesma quantidade de píxels presentes na imagem a ser classificada, o que nas CNN não ocorre, exatamente por conta dos filtros que são criados (PONTI, 2017). 
 
-\subsubsection{Camada convolucional}
+\subsubsection{Camada de convolução}
 
 \subsubsection{Camada de pooling}
 
