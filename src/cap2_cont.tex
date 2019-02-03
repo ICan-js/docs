@@ -157,7 +157,9 @@ onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, .
 
 A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
 
-\subsection{Arquiteturas de rede} % Eu estou deixando o texto da maneira como está, porém vou fazer mudanças depois (03/02/2019)
+\subsection{Arquiteturas de rede} 
+% Eu estou deixando o texto da maneira como está, porém vou fazer mudanças depois (03/02/2019)
+% Eu mudei muita coisa aqui, estava bastante incomodado com os resultados desta seção (03/02/2019)
 
 A arquitetura de uma RNA define como seus vários neurônios estão dispostos em relação um ao outro \cite{DaSilva2016}. Para Haykin (2001), existem três classes de arquiteturas de redes neurais fundamentalmente diferentes.
 
@@ -171,6 +173,8 @@ As redes alimentadas adiante com camada única (Figura 4) são a forma mais simp
 % Comentar a imagem ? ?
 
 \subsubsection{Redes alimentadas diretamente com múltiplas camadas}
+
+% Falar aqui sobre a camada totalmente conectada é melhor! Acho mais interessante
 
 As redes alimentadas diretamente com múltiplas camadas (Figura 5) tem em sua estrutura a presença de uma ou mais camadas ocultas, onde estão presentes conjuntos de neurônios, que são básicamente são responsáveis por permitir que a rede extraia características mais complexas dos dados captados na camada de entrada, assim permitindo que a rede possa aprender características globais (CHURCHLAND; SEJNOWSKI, 1992), não ficando limitada apenas aos dados utilizado em seu treinamento.
 
@@ -302,7 +306,7 @@ Veja que, o diferencial citado acima, na utilização das convoluções está ju
 
 \subsubsection{Camada de pooling}
 
-\subsubsection{Camada totalmente conectada} % Esta seção fica aqui pois faz parte das redes neurais convolucionais
+% \subsubsection{Camada totalmente conectada} % Esta seção fica aqui pois faz parte das redes neurais convolucionais (02/02/2019), (03/02/2019) R: não! Isto faz parte de rede neural mesmo! 
 
 \subsection{Mobilenet}
 
