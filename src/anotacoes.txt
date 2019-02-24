@@ -1,0 +1,54 @@
+Anotação para o Menino:
+
+1 - Que linda a dedicatória :,)
+
+2 - Toma cuidado com as siglas, na minha banca cobrou isso. Você tem duas escolhas: 
+    1 - Traduz tudo (e.g. AP - Aprendizado profundo)
+    2 - Usa tudo em inglês (e.g. NN - Neural networks)
+
+###### Cap 1 
+
+3 - Na introdução - Você não demonstra nada e sim apresenta (Este cap apresenta ...), demonstrar é como se fosse um tutorial, essa dica é do Mineda 
+
+"De acordo com o censo do IBGE, realizado em 2010, no Brasil, há cerca de 45
+milhões de pessoas com algum tipo de deficiência. E todas estas pessoas necessitam de
+uma vida independente e de inclusão" - Esse "E todas" ta meio estranho seria melhor um "sendo" algo do tipo
+
+"individuo" tem acento 
+
+
+"No Brasil, há uma grande dificuldade de acesso aos recursos de tecnologia assitiva,
+causadas por diversos fatores, a citar, o alto custo e a necessidade de importação (ANDRI-
+OLI, 2017). O alto custo, na maioria dos casos pode ser justificado pela necessidade de
+desenvolvimento e construção de equipamentos específicos, o que acaba gerando um alto
+valor de compra, com equipamentos chegando em valores próximos a 15 mil reais." - Sua problematização está bem clara, excelente!
+
+"Desta forma, este trabalho foi motivado pela possibilidade da realização de um
+estudo de casos, onde técnicas de
+Deep Learning
+são aplicadas para possibilitar a criação
+de recursos de tecnologias assistivas de baixo custo." - Da para colocar "na qual" ou "cuja" no lugar do "onde" 
+
+###### Cap 2 
+
+4 - Cara, acho que você pode diminuir a quantidade de subcapitulos:
+
+    - Não acho necessário um cap para regressão, se é importante, pode virar um subcap
+    - Acho que está faltando uma ponte de cap, da uma olhada no diagrama de venn da IA
+    - Não acho necessário um subcap para neurônio biológico
+    - Neuronio artificial está OK
+    - Não acho necessário um subcap para cada tipo de arquitetura, só um explicação sucinta basta
+    - Não acho necessário um subcap para cada tipo de aprendizado, só uma explicação sucinta basta
+    - Deep Learning está OK (De novo, tome cuidado com os termos, ingles ou portugues)
+
+    - Redes Neurais Convolucionais está OK
+    - Mobilenet e Posenet está OK
+    - Acho que a transferencia de aprendizado possa ser um subcap do Processo de aprendizado
+    - Tecnologias está OK
+###### Cap 3
+    - Estrutura ta OK
+
+OBS geral:
+    - Seu trabalho ta bem legal
+    - Da uma procurada em sinonimos para substituir algumas palavras que se repetem x vezes
+    - Tenta dar uma enxugada nos seus subcap's do cap 2

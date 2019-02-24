@@ -2,7 +2,7 @@
 \label{ch:fundamentacao}
 \par Neste capítulo ser\~ao fundamentados os conhecimentos b\'asicos para o entendimento do trabalho.
 
-\section{Deficiência}
+\section{Deficiência} % Este título está completamente problemático....
 
 De acordo com o censo do IBGE, realizado em 2010, cerca de 6.2\% da população brasileira possui algum tipo de deficiência. E a necessidade de inclusão destas pessoas na sociedade é extremamente importante. Do grupo citado anteriormente, cerca de 1.3\% tem algum tipo de deficiência auditiva, e 1.1\% tem deficiências auditivas
 
@@ -27,11 +27,15 @@ Uma das formas de realizar a inclusão social de pessoas com deficiência é atr
 % \par Um pequeno descritivo sobre regressões
 %%%%%%%%%%%%%%%%%%%
 
-\section{Análise de Regressão} % Ou Regressão linear
+%%% 17/02/2019
+% Verificar o que pode ser feito com a análise de regressão
+% Vendo o que o Felipinho disse, realmente parece que a regressão está foram do lugar aqui
+%%%
+% \section{Análise de Regressão} % Ou Regressão linear
 
 % MACHADO -> https://www.ime.usp.br/~fmachado/MAE229/AULA10.pdf
 % PETERNELLI -> http://www.dpi.ufv.br/~peternelli/inf162.www.16032004/materiais/CAPITULO9.pdf
-A análise de regressão estuda a relação entre uma variável dependente e outras independentes (MACHADO, 2015). Esta relação é representada através de um modelo matemático (MACHADO, 2015), este que pode ter diferentes formas sendo linear, quadrático, exponencial entre outros (PETERNELLI, 2003). 
+%A análise de regressão estuda a relação entre uma variável dependente e outras independentes (MACHADO, 2015). Esta relação é representada através de um modelo matemático (MACHADO, 2015), este que pode ter diferentes formas sendo linear, quadrático, exponencial entre outros (PETERNELLI, 2003). 
 
 % ToDo: Colocar um exemplo ? Se for colocar, qual será ? (02/02/2019)
 
@@ -74,14 +78,15 @@ Para a realização do aprendizado de máquina, existem diversas técnicas, que 
 
 \section{Redes neurais artificiais}
 
+% Colocar mais referências em redes neurais artificiais, exemplos de uso.... acho que fica legal
 % Haikin (2001) -> Livro (Redes Neurais: Princípios e Prática)
 % Cintra -> Minicurso do INPE (2015)
 
 % É um começo, mas ainda não estou feliz com o resultado.... (01/02/2019)
-Redes neurais artificiais são sistemas computacionais que busca modelar o sistema cérebral natural humano, estas que são uma das formas de soluções de problemas apresentados dentro do âmbito de inteligência computacional (CINTRA, 2015).
+Redes neurais artificiais são sistemas computacionais que busca modelar o sistema cerebral natural humano, estas que são uma das formas de soluções de problemas apresentados dentro do âmbito de inteligência computacional \cite{Cintra2019}.
 
 %% Não creio que isto esteja escrito da melhor forma, mas está melhor que o texto inicial (01/02/2019)
-Por buscar modelar o cérebro humano, as RNAs utilizam como unidade básica de processamento, os neurônios artificiais (HAYKIN, 2001), da mesma forma que o cérebro utiliza os neurônios biológicos. % Preciso criar um complemento para ir para o próximo capítulo ? (01/02/2019)
+Por buscar modelar o cérebro humano, as RNAs utilizam como unidade básica de processamento, os neurônios artificiais \cite{Haykin2001}, da mesma forma que o cérebro utiliza os neurônios biológicos. % Preciso criar um complemento para ir para o próximo capítulo ? (01/02/2019)
 
 %Acho que esta segunda parte não está combinando com o resto do texto, mas por agora vou manter aqui
 % Por buscar modelar o cérebro humano, a unidade básica de processamento das RNAs são os neurônios (HAYKIN, 2001), estruturas estas que tem fortes ligações com o sistema biológico.
@@ -100,7 +105,7 @@ Por buscar modelar o cérebro humano, as RNAs utilizam como unidade básica de p
 % Falar sobre como aprendemos ! ! ! -> Será  mesmo necessário ? ? ?
 
 % Nunes -> Livro
-Todo o processamento de informações no cérebro humano, é feito através de elementos biológicos de processamento, que operam em paralelo para a produção de ações apropriadas para cada estímulo recebido pelo corpo. A célula base do sistema nervoso cerebral é o neurônio (Figura 1), e sua principal função é conduzir impulsos (Representando os estímulos) levando em consideração as condições do corpo e assim produzindo ações. Os neurônios também são os resposáveis pelos atos do pensamento e armazenamento de informações (NUNES et al, 2016).
+Todo o processamento de informações no cérebro humano, é feito através de elementos biológicos de processamento, que operam em paralelo para a produção de ações apropriadas para cada estímulo recebido pelo corpo. A célula base do sistema nervoso cerebral é o neurônio (Figura 1), e sua principal função é conduzir impulsos (Representando os estímulos) levando em consideração as condições do corpo e assim produzindo ações. Os neurônios também são os responsáveis pelos atos do pensamento e armazenamento de informações (NUNES et al, 2016).
 
 Os neurônios podem ser divididos em três partes elementares, os dendritos, que captam de forma continua os impulsos vindos de outros neurônios, o corpo celular, que processa todas as informações captadas e os axônios que enviam as informações processadas no corpo celular para outros neurônios.
 
@@ -121,7 +126,7 @@ A Figura 2 demonstra um exemplo de uma pequena parte das redes neuronais respons
 \image{0.35}{nn_cortex.jpg}{Rede neural do córtex auditivo}{nncotex}
 
 %%% Validar as informações abaixo
-% Citar assim Hodgkin e Huxley (1952)  ou (Hodgkin; Huxley, 1952) ? ? ?
+% Citar assim Hodgkin e Huxley (1952) ou (Hodgkin; Huxley, 1952) ? ? ?
 
 % McCulloch -> Artigo
 % (HODGKIn, HUXLEY, 1952) ? ? ? 
@@ -130,7 +135,7 @@ A representação inicial deste conjunto de neurônios em sistemas de computaç�
 
 \subsection{Neurônio artificial}
 
-Como citado anteriormente, os neurônios artificiais, são modelos computacionais para a representação do neurônio biológico nas RNAs, e da mesma que em um neurônio biológico, a representação deste é feita com três elementos básicos (HAYKIN, 2001):  
+Como citado anteriormente, os neurônios artificiais, são modelos computacionais para a representação do neurônio biológico nas RNAs, e da mesma forma que em um neurônio biológico, a representação deste é feita com três elementos básicos \cite{Haykin2001}:  
 
 \begin{itemize}
 	% Posso colocar Conjunto de sinapses, representado por Xn... ? (02/02/2019)
@@ -139,7 +144,7 @@ Como citado anteriormente, os neurônios artificiais, são modelos computacionai
 	\item Função de ativação utilizada para restringir os valores de saída do neurônio.
 \end{itemize}
 
-Ainda de acordo com Haykin (2001), a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura 3) com as seguintes equações (HAYKIN, 2001):
+Ainda de acordo com \citeonline{Haykin2001}, a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura 3) com as seguintes equações \cite{Haykin2001}:
 
 \begin{equation}
 	u_{k} = \sum_{j=1}^{n} w_{kj} x_{j}
@@ -148,131 +153,49 @@ e
 \begin{equation}
 	y_{k} = f(u_{k} + b_{k})	
 \end{equation}
-onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, ..., w_{kn} $ são os pesos sinápticos do neurônio k; $ u_{k} $ é a saída do combinador linear; $ b_{k} $ é o \textit{bias}; $ f(u_{k} + b_{k}) $ a função de ativação; e $ y_{k} $ representa a saída do neurônio
+onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, ..., w_{kn} $ são os pesos sinápticos do neurônio k; $ u_{k} $ é a saída do combinador linear; $ b_{k} $ é o \textit{bias}; $ f(u_{k} + b_{k}) $ a função de ativação; e $ y_{k} $ representa a saída do neurônio.
 
 % Os neurônios artificias, que são modelos de representações dos neurônios biológicos compoem a RNA. O principal modelo de neurônio artificial utilizado, mesmo em arquiteturas mais atuais, é o proposto por McCulloch e Pitts em 1943 (Figura 3). Neste há componentes que fazem referência direta ao neurônio biológico visto anteriormente.
 
 % Imagem adaptada de Haykin (2001)
 \image{0.1}{nn_mculloch.jpg}{Modelo de Neurônio artificial}{nn_mcculloch}
 
-A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
+A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados \cite{livroNunes2016} 
 
 \subsection{Arquiteturas de rede} 
-% Eu estou deixando o texto da maneira como está, porém vou fazer mudanças depois (03/02/2019)
-% Eu mudei muita coisa aqui, estava bastante incomodado com os resultados desta seção (03/02/2019)
 
-A arquitetura de uma RNA define como seus vários neurônios estão dispostos em relação um ao outro \cite{DaSilva2016}. Para Haykin (2001), existem três classes de arquiteturas de redes neurais fundamentalmente diferentes.
+Para \citeonline{livroNunes2016} uma RNA pode ser constituída de até três partes diferentes, estas denominadas de camadas, as quais são nomeadas a seguir:
 
-% Colocar abreviaturas nestes nomes ?
-\subsubsection{Redes alimentadas adiante com camada única}
+\begin{itemize}
+    \item Camada de entrada: É a camada responsável pelo recebimento de dados;
+    \item Camadas escondidas, intermediárias ou ocultas: São camadas compostas de neurônios responsáveis pela extração de características associadas ao processo ou sistema;
+    \item Camadas de saída: Também constituída de neurônios, esta camada é responsável pela produção e apresentação dos resultados finais da rede.
+\end{itemize}
 
-As redes alimentadas adiante com camada única (Figura 4) são a forma mais simples de uma rede, onde são apresentadas duas camadas, a camada de entrada, que básicamente recuperam os dados do meio externo e a camada de saída, esta constituida de neurônios que processam os dados e retornam os resultados, não havendo caminho inverso. 
+Das camadas descritas acima, devem estar presentes em uma RNA no mínimo a camada de entrada e a camada de saída \cite{Cintra2019}.
 
-% \image{1.0}{r_a_ad_com_mult_camadas.png}{Redes alimentadas adiante com camada única}{nn_per}
+Diferentes formas de organização de cada uma destas camadas, especialmente relacionadas a forma de relação entre os neurônios, definem as arquiteturas de RNA \cite{livroNunes2016}. \citeonline{Haykin2001} define a existência de duas classes de arquiteturas fundamentais, sendo elas: Redes de alimentação direta, com uma ou várias camadas e Redes recorrentes.
 
-% Comentar a imagem ? ?
+As redes de alimentação direta, são denominadas desta forma por conta de seu fluxo percorrer uma única direção \cite{Cintra2019}, iniciando o fluxo na camada de entrada seguindo pelas diferentes camadas até o neurônio de saída, por outro lado, as redes recorrentes recebem este nome por conta da realimentação entre os neurônios da mesma camada, ou seja, a saída de um neurônio em uma camada, pode servir como entrada para outro neurônio da mesma camada \cite{Nelson2017}.
 
-\subsubsection{Redes alimentadas diretamente com múltiplas camadas}
+Estas formas de organização presentes nas arquiteturas, estão intimamente relacionados ao processo ou algoritmo de aprendizado que é aplicado nas RNAs \cite{Haykin2001}.
 
-% Falar aqui sobre a camada totalmente conectada é melhor! Acho mais interessante
-
-As redes alimentadas diretamente com múltiplas camadas (Figura 5) tem em sua estrutura a presença de uma ou mais camadas ocultas, onde estão presentes conjuntos de neurônios, que são básicamente são responsáveis por permitir que a rede extraia características mais complexas dos dados captados na camada de entrada, assim permitindo que a rede possa aprender características globais (CHURCHLAND; SEJNOWSKI, 1992), não ficando limitada apenas aos dados utilizado em seu treinamento.
-
-% \image{1.0}{r_a_de_com_mult_camadas.png}{Redes alimentadas diretamente com múltiplas camadas}{nn_mlp}
-
-% Comentar a imagem ? ?
-
-\subsubsection{Redes recorrentes}
-
-Em Redes recorrentes (Figura 6) existem as camadas de entrada e saída, porém nestas os valores de saída de um neurônio pode ser utilizado como entrada para sí próprio ou mesmo algum outro neurônio da mesma camada.
-
-% \image{1.0}{r_rec.png}{Redes recorrentes}{nn_rr}
-
-% \begin{itemize}
-% 	\item Redes alimentadas adiante com camada única: Possuem a camada de entrada conectada unicamente a camada de saída;
-% 	\item Redes alimentadas diretamente com múltiplas camadas: Apresentam camadas ocultas, que são utilizadas para extração de características mais complexas do contexto onde está inserida;
-% 	\item Redes recorrentes: Operam com laços de realimentação, onde a saída de um neurônio é também sua entrada.
-% \end{itemize}
-
-% (SILVA; SPATTI; FLAUZINO, 2010) -> Livro
-% Um exemplo muito comum de redes alimentadas adiante com camada única são os \textit{Perceptrons} (Figura 4), estas que basicamente são compostas pela camada de entrada, que não realizam operações nos dados de entrada e a camada de saída, que neste caso são compostas por conjuntos de neurônios, que operam sobre as saídas da camada de entrada e realizam as saídas da rede (SILVA; SPATTI; FLAUZINO, 2010).
-
-% Para as redes alimentadas diretamente com múltiplas camadas, o exemplo comum são as \textit{Multi-Layers Perceptrons} (Figura 5)
-
-%As RNAs podem ser constituídas de alguns ou mesmo vários neurônios artificiais, que são organizados através de camadas, estas que por sua vez definem a arquitetura da rede neural artificial. Para Haykin (2001) a arquitetura da rede neural é especifica para cada aplicação, e pode ser composta por diferentes níveis de camadas ocultas, função de ativação e algoritmo de aprendizado, podendo variar também a quantidade de neurônios que está sendo empregado na solução do problema.
-
-%Mesmo havendo diversas variações de arquiteturas para diferentes problemas, normalmente encontra-se em uma RNA três tipos de camadas, sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017). 
-
-%Um exemplo de RNA que apresenta cada uma destas camadas citadas são as \textit{Multi-Layer Perceptron} (Figura 4), que além de possuirem uma camada de entrada e uma de saída, podem apresentar diversas camadas ocultas.
-
-%\image{1.0}{mlp.png}{Rede de múltiplas camadas}{nn_mlp}
-
-%Mas veja que, há arquiteturas que não seguem este formato, como é o caso das redes \textit{Perceptron} (Figura 5), que básicamente possuem apenas a camada de entrada e saída, e neste caso, todo o processamento ocorre na camada de saída.
-
-%\image{1.0}{perceptron.png}{Rede de alimentação direta e camada simples}{nn_perceptron}
-
-% Estudar mais sobre arquitetura de rede ! ! !
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \image{0.83}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
-
-% Mas há redes neurais artificiais como os \textit{Perceptrons} (Figura 5) que possuem apenas duas camadas, a camada de entrada, e a camada de saída, sendo que, o processamento dos dados neste tipo de rede é feito na camada de saída.
-
-% \image{1.0}{perceptron.png}{Rede de alimentação direta e camada simples}{nn_perceptron}
-
-% Buscar referências para a MLP
-% E também poder haver redes com diversas camadas, como é os caso das \textit{Multi-Layer Perceptron} (Figura 6) que possuem as camadas de entrada e saída, e um conjunto de camadas ocultas que podem variar de uma única camada ou até mesmo dezenas delas, dependendo do problema a ser resolvido.
-
-% \image{1.0}{mlp.png}{Rede de múltiplas camadas}{nn_mlp}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
-
-% Criar uma imagem que identifica cada uma das camadas que citei
-% Acho que assim fica mais fácil entender o que está acontecendo
-
-
-% Porém veja que, em arquiteturas simples como as redes \textit{Perceptron} (Figura 5), há apenas a camada de entrada e a camada de saída, não havendo camadas ocultas
-
-% Este tópico vai ficar aqui, mas pode ser algo temporário, estou pensando sobre (02/02/2019)
-% O que pensei foi, no momento que falar das camadas já falar da arquitetura de redes neurais, acho bacana fazer isto aqui
-% As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são organizados através de camadas, estes que por sua vez definem a arquitetura da rede neural. Para Haykin (2001), a arquitetura da rede 
-
-
-% ToDo: Tentar buscar referência para confirmar esta afirmação do primeiro linha
-% As RNAs podem ser contituídas de alguns ou mesmo vários neurônios artificiais, que são separados através de camadas, cada uma delas com uma função específica. Em uma RNA simples, tem-se normalmente três camadas apenas (Figura 4), sendo uma a camada de entrada, esta responsável em apenas receber os dados, uma camada oculta, que recebe os dados da camada de entrada e processa em um conjunto de neurônios e a camada de saída de resultados (PONTI, 2017).
-
-
-% ToDo: Veja que isto deverá ser revisado
-% Veja ainda que, a quantidade de camadas pode representar o poder de solução de problemas de uma rede, de acordo com PONTI (2017), RNAs de estruturas muito simples, como os \textit{Perceptrons}, que possuem apenas um neurônio, não são capazes de resolver problemas com complexidades não lineares.
-
-% ToDo: Depois que comecei a ler sobre teoria do aprendizado estatístico, tudo o que eu escrevi não tem um total sentido, para trocar esta parte
-% busque referências de aprendizado estatístico antes de continuar (02/02/2019)
-% Através destes neurônios artificiais as RNAs são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
-
-% Na camada de entrada, os dados são recebidos e enviados para a camada oculta, na camada oculta, os dados são processados pelos neurônios, e seus resultados são unidos na camada de saída (PONTI, 2017).
-
-% Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptrons}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
-
-% Falar sobre as diferenças no processo de aprendizado (01/02/2019)
-% Aqui falo de forma geral ? Preciso ir a fundo na questão ?? (01/02/2019)
-% Talvez aqui eu possa introduzir erro, otimização, feed forward....estou pensando sobre isto (02/02/2019)
 \subsection{Processo de aprendizado}
 
-Um dos pontos mais relevantes das RNAs é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
+Um dos pontos mais relevantes das RNAs é seu poder de generalização, assim, após aprender a realizar alguma tarefa, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar as mesmas tarefas com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, um algorítimo, este conhecido como processo de treinamento \cite{livroNunes2016}.
 
-Estes processos de treinamento podem adotar diferentes estratégias para ensinar as RNA, e cada estratégia gera um algoritimo de aprendizado diferente, sendo os principais, os algoritimos de aprendizado supervisionado e não-supervisionado.
-
-\subsubsection{Aprendizado supervisionado}
-
-% OSÓRIO -> fia99 (http://osorio.wait4.org/oldsite/IForumIA/fia99.pdf)
-No aprendizado supervisionado, o usuário indica o comportamento que a RNA deve apresentar dado um conjunto de dados qualquer, desta forma, a RNA pode ir ajustando os pesos sinápticos de seus neurônios com o objetivo de produzir o mesmo resultado apresentado pelo usuário (OSÓRIO, 1999). Levando em consideração um problema de classificação, onde um conjunto de dados é apresentado para a RNA, e ela deve informar ao usuário o que cada um dos dados daquele conjunto representa.
-
-\subsubsection{Aprendizado não-supervisionado}
+% Que disse isso ? ? (23/02/2019)
+Estes processos de treinamento podem adotar diferentes estratégias para ensinar as RNAs, e cada estratégia gera um algorítimo de aprendizado diferente, sendo os principais, os algorítimos de aprendizado supervisionado e não-supervisionado.
 
 % NG -> Neste caso é o curso do Andrew NG
-O aprendizado não supervisionado é completamente o oposto do supervisionado, neste é apresentado para a RNA apenas o conjunto de dados, e a RNA se encarrega de aprender sobre aquele conjunto de dados. Este tipo de aprendizado pode ser utilizado para deixar a RNA identificar os padrões presentes nos dados, e tirar informações destes padrões (NG, 2013). 
+No aprendizado supervisionado, o usuário indica o comportamento que a RNA deve apresentar dado um conjunto de dados qualquer, desta forma, a RNA pode ir ajustando os pesos sinápticos de seus neurônios com o objetivo de produzir o mesmo resultado apresentado pelo usuário \cite{Osorio1999}. Já o aprendizado não supervisionado é completamente o oposto do supervisionado, neste é apresentado para a RNA apenas o conjunto de dados, e a RNA se encarrega de aprender sobre aquele conjunto de dados. Este tipo de aprendizado pode ser utilizado para deixar a RNA identificar os padrões presentes nos dados, e tirar informações destes padrões (NG, 2013). 
 
-\section{Deep Learning}
+\subsubsection{Transferência de aprendizado}
+
+% Em aprendizado profundo existe a necessidade de datasets com centenas de milhares de imagens...
+\par Explicar sobre transferência de aprendizado
+
+\section{Aprendizado profundo}
 
 O \textit{Deep Learning} apresenta uma abordagem diferente para os problemas resolvidos com técnicas de RNA, porém, no caso de DL, muitas camadas são empregadas (GOODFELLOW, 2016) nas arquiteturas das redes neurais (Figura 5).
 
@@ -315,11 +238,6 @@ Falar sobre a arquitetura Mobilenet, assim como sua forma de convolução
 \subsection{Posenet}
 
 \par Posenet é um tipo de CNN, para a identificação em tempo real de pontos do corpo dos usuários, o modelo desenvolvido para esta rede é extremamente robusto e permite a identificação das poses mesmo quando há problemas com luz e iluminação do ambiente que está sendo levado em consideração na classificação (KENDALL, 2015). 
-
-\subsection{Transferência de aprendizado}
-
-% Em aprendizado profundo existe a necessidade de datasets com centenas de milhares de imagens...
-\par Explicar sobre transferência de aprendizado
 
 \section{Tecnologias}
 
