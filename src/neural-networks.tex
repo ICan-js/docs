@@ -1,0 +1,70 @@
+\begin{figure}[H]
+    \centering
+   \begin{tikzpicture}[
+init/.style={
+  draw,
+  circle,
+  inner sep=2pt,
+  font=\Huge,
+  join = by -latex
+},
+init2/.style={
+  draw,
+  circle,
+  inner sep=2pt
+},
+neuron missing/.style={
+    draw=none, 
+    scale=4,
+    text height=0.333cm,
+    execute at begin node=\color{black}$\vdots$
+  },
+squa/.style={
+  draw,
+  inner sep=2pt,
+  font=\Large,
+  join = by -latex
+},
+squa2/.style={
+  draw,
+  inner sep=2pt,
+  font=\Large
+},
+start chain=2,node distance=13mm
+]
+\node[on chain=2] 
+  (x2) {$x_2$};
+%\node[below of=x2] (dots) {$\vdots$} -- (dots) node[right of=dots] (ldots) {$\vdots$};
+%\node[below of=2] (dots) {$\vdots$} -- (dots) node[left of=dots] (ldots) {$\vdots$};
+\node[on chain=2,init2,join=by o-latex] 
+  {$w_{k2}$};
+\node[on chain=2,init] (sigma)
+  {$\displaystyle\Sigma$};
+\node[on chain=2,squa2,label=above:{\parbox{2cm}{\centering Função de \\ ativação}}](te) {$f$};
+\node[on chain=2,label=above:Saída] (sa)
+  {$y_k$};
+\begin{scope}[start chain=1]
+\node[on chain=1] at (0,1.5cm) 
+  (x1) {$x_1$};
+\node[on chain=1,init2,join=by o-latex] 
+  (w1) {$w_{k1}$};
+\end{scope}
+\begin{scope}[start chain=3]
+\node[on chain=3] at (0,-1.5cm) 
+  (x3) {$x_n$};
+\node[on chain=3, init2,label=below:{\parbox{2cm}{\centering Pesos \\ sinápticos}},join=by o-latex] 
+  (w3) {$w_{kn}$};
+\end{scope}
+\node[label=above:\parbox{2cm}{\centering Bias \\ $b$}] at (sigma|-w1) (b) {};
+
+\draw[-latex] (w1) -- (sigma);
+\draw[-latex] (w3) -- (sigma);
+\draw[o-latex] (b) -- (sigma);
+\draw[-latex] (sigma) -- (te) node[midway,sloped, above]{$v_k$};
+\draw[-latex] (te) -- (sa) node[midway,sloped, above]{};
+\draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Entradas} (x3.south west);
+\end{tikzpicture}
+    \caption{Neurônio Artificial}
+    % \fonte{Adaptado de \citeonline{haykin2009neural}}
+    \label{fig:modelo_neuronio}
+\end{figure}

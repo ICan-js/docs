@@ -10,7 +10,8 @@
 	openright,	% Capitulos começam em pag impar
 	oneside		% Apenas 1 página por folha
 	]{abntex2}
-
+	
+\usepackage{amssymb}
 \usepackage{lmodern}			% Usa a fonte Latin Modern
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento
@@ -31,7 +32,47 @@
 \usepackage{listings}
 \usepackage{multirow}           % Habilita o Merge de celulas na table
 \usepackage{graphicx}
+\usepackage{tikz}
 \graphicspath{ {./images/} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\usepackage{tabularx}
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstset{language=Java,
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{pgreen},
+  keywordstyle=\color{pblue},
+  stringstyle=\color{pred},
+  basicstyle=\ttfamily,
+  keywordsprefix={\@}
+}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{threeparttable}
+\usepackage{pifont}%para adicionar mais fonte
+\newcommand{\cmark}{\ding{51}}%simbolo de check
+\newcommand{\xmark}{\ding{53}}%simbolo de errado
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows, arrows.meta,intersections}
+\usepackage{forest}
+\usepackage{booktabs}
+\usepackage{siunitx} %para angulo
+\usepackage{pdfpages}
+\usepackage{minibox}
+\usepackage{multirow}           % Habilita o Merge de celulas na table
+\usepackage{todonotes} % comentários e TODO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ---
 % Alterações no modelo original da abnTex2
@@ -59,12 +100,13 @@
 }
 
 % Inserção de imagens
-\newcommand{\image}[4]{
+\newcommand{\image}[5]{
     \begin{figure}[h]
         \begin{center}
         \includegraphics[scale=#1]{#2}
         \caption{#3}
         \label{#4}
+        \fonte{#5}
         \end{center}
     \end{figure}
 }
