@@ -12,6 +12,7 @@
 Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os objetivos deste e a metodologia adotada.
 
 \section{Motivação} % Problema
+% Dica do Mineda: Colocar mais referências, gastar mesmo aqui.... Isto ajuda a fazer com que a importância do trabalho seja esclarecida.
 
 % Esta motivação está dando a entender que o problema a ser resolvido é outro, NÂO, lembre-se que, objetivo é demonstrar que recursos assistivos criados com Deep Learning podem ser aplicados em tecnologias da WEB!!!!
 \par De acordo com o censo do IBGE, realizado em 2010, no Brasil, há cerca de 45 milhões de pessoas com algum tipo de deficiência. E todas estas pessoas necessitam de uma vida independente e de inclusão (SARTORETTO; BERSCH, 2017).
@@ -25,9 +26,11 @@ Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os
 \par Desta forma, este trabalho foi motivado pela possibilidade da realização de um estudo de casos, onde técnicas de \textit{Deep Learning} são aplicadas para possibilitar a criação de recursos de tecnologias assistivas de baixo custo.
 
 % Section Objetivo Geral!
-\section{Objetivo Geral} % É necessário colocar um texto ?
+\section{Objetivo Geral}
 
-\par Implementar recursos de tecnologias assistivas de baixo custo, para usuários com deficiências auditiva e motora, utilizando técnicas de \textit{Deep Learning}
+\par O objetivo geral deste trabalho é desenvolver uma biblioteca JavaScript que possa levar recursos assistivos desenvolvidos através de técnicas de \textit{Deep Learning} para páginas da \textit{web}.
+
+% \par Implementar recursos de tecnologias assistivas de baixo custo, para usuários com deficiências auditiva e motora, utilizando técnicas de \textit{Deep Learning}
 
 % Section Objetivo Especifico!
 \section{Objetivo Espec\'ifico}
@@ -36,18 +39,21 @@ Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os
 
 % Nestes objetivos está explícito que o objetivo é demonstrar o desenvolvimento de recursos assistivos para web ? ? ? ? ? Acho que não.... 
 \begin{itemize}
-    \item Desenvolvimento de uma ferramenta que permite a movimentação do \textit{cursor} do \textit{mouse} através de movimentos da cabeça, com foco em usuários com deficiência motora;
-    \item Desenvolvimento de uma ferramenta que permite a escrita de textos utilizando LIBRAS, para usuários com deficiência auditiva;
-    \item Integração das ferramentas desenvolvidas.
+    \item Desenvolvimento de uma ferramenta que permite a movimentação do \textit{cursor} do \textit{mouse} através de movimentos da cabeça;
+    \item Desenvolvimento de uma ferramenta que permite a escrita de textos utilizando LIBRAS;
+    \item Integração das ferramentas desenvolvidas em uma biblioteca JavaScript.
 \end{itemize}
 
+% Reescrever a metodologia (17/03/2019)
 \section{Metodologia} % COMO !! 
 
-A realização dos objetivos específicos do trabalho é feita através da aplicação de modelos de DL no desenvolvimento das ferramentas. A linguagem de programação empregrada para o desenvolvimento das ferramentas é o Javascript, junto ao \textit{framework} de desenvolvimento de DL \textit{Tensorflow.js}
+\textbf{ESTA SUBSEÇÃO AINDA SERÁ ESCRITA}
 
-Por contar com diferentes estudos de caso, todas as ferramentas são desenvolvidas de maneira modular, a permitir que, no momento da integração entre as ferramentas desenvolvidas, injeções de dependências sejam realizadas para tal.
+% A realização dos objetivos específicos do trabalho é feita através da aplicação de modelos de DL no desenvolvimento das ferramentas. A linguagem de programação empregrada para o desenvolvimento das ferramentas é o Javascript, junto ao \textit{framework} de desenvolvimento de DL \textit{Tensorflow.js}
 
-Cada uma das ferramentas desenvolvidas, faz a utilização de um modelo de DL, no caso do controle do \textit{mouse} o modelo Posenet (KENDALL, 2015) é utilizado, para facilitar a identificação de pontos faciais do usuário, e permitir que cada gesto seja mapeado em movimentos do \textit{mouse}, o reconhecimento de voz, por sua vez, é feito com o \textit{Web Speech API}, uma \textit{API} livre que facilita a sintetização de som em texto. Por fim, para a tradução de LIBRAS em texto, será utilizado uma rede neural convolucional (LECUN et al, 1998), que apresenta bons resultados na classificação de imagens, junto a um conjunto de imagens de LIBRAS criado pelo autor.
+% Por contar com diferentes estudos de caso, todas as ferramentas são desenvolvidas de maneira modular, a permitir que, no momento da integração entre as ferramentas desenvolvidas, injeções de dependências sejam realizadas para tal.
+
+% Cada uma das ferramentas desenvolvidas, faz a utilização de um modelo de DL, no caso do controle do \textit{mouse} o modelo Posenet (KENDALL, 2015) é utilizado, para facilitar a identificação de pontos faciais do usuário, e permitir que cada gesto seja mapeado em movimentos do \textit{mouse}, o reconhecimento de voz, por sua vez, é feito com o \textit{Web Speech API}, uma \textit{API} livre que facilita a sintetização de som em texto. Por fim, para a tradução de LIBRAS em texto, será utilizado uma rede neural convolucional (LECUN et al, 1998), que apresenta bons resultados na classificação de imagens, junto a um conjunto de imagens de LIBRAS criado pelo autor.
 
 % Retirado apenas para ganhar tempo! <- Esta ainda é a oficial e deve ser levada em consideração ! ! !
 % o retreino do modelo de rede neural Mobilenet (HOWARD, A; WANG, W, 2017) é feito, permitindo que, mesmo com poucas imagens, a rede neural possa convergir na classificação dos sinais de LIBRAS.
