@@ -51,6 +51,10 @@
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 
+\lstset{
+  literate={@}{{\@}}1
+}
+
 % Python style for highlighting
 % \newcommand\pythonstyle{
 \lstset{language=Python,
@@ -62,7 +66,8 @@
     stringstyle=\color{deepgreen},
     frame=tb,                         
     showstringspaces=false,             
-    keywordsprefix={\@}
+    keywordsprefix={\@},
+    texcl=true
 }
 
 \lstset{
@@ -77,7 +82,8 @@
   tabsize=2,
   breaklines=true,
   showtabs=false,
-  captionpos=b
+  captionpos=b,
+  texcl=true
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -2,9 +2,11 @@
 \label{ch:fundamentacao}
 \par Neste capítulo ser\~ao fundamentados os conhecimentos b\'asicos para o entendimento do trabalho.
 
-\section{Tecnologias assistivas}
+\section{Recursos assistivos}
 
-\textbf{ESTA SUBSEÇÃO AINDA SERÁ ESCRITA}
+% \textbf{ESTA SUBSEÇÃO AINDA SERÁ ESCRITA}
+% ToDo: Fazer a explicação das deficiências e dos recursos assistivos
+% \textbf{CONVERSANDO COM O ORIENTADOR, ESTA SEÇÃO SERÁ ESCRITA JÁ EXPLICANDO AS DEFICIÊNCIAS E TAMBÉM OS RECURSOS ASSISTIVOS}
 
 % \section{Deficiência} % Este título está completamente problemático....
 % 07/03/2019 -> O Giuliano disse que isto pode ser mantido sem problemas...
@@ -66,6 +68,10 @@
 % \par Uma função que divide o espaço, porém levando em consideração variáveis dependentes categóricas
 %%%%%%%%%%%%%%%%%%%
 
+\section{Regressão}
+
+% Estou com dúvida sobre onde deixar este tópico aqui...
+
 \section{Inteligência artificial}
 
 %%%%%%%%%%%%%%%%%%%%% Verificar a necessidade de escrever sobre inteligência artificial ! ! ! No momento (01/02/2019) eu acho que devo escrever sobre
@@ -74,7 +80,7 @@
 % Von Zuben: ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ea072_2s13/introducao_EA072_2s2013.pdf
 % (Winston, 1992) Livro do Winston
 
-\par Sistemas inteligentes de forma geral são aqueles que apresentam a capacidade de planejar e resolver problemas através de dedução e indução utilizando conhecimentos de situações anteriores \cite{VonZuben2013}, e a inteligência artificial, é um campo da ciência e engenharia de computação \cite{VonZuben2013}, que possibilitam a sistemas computacionais, perceber, raciocionar e agir \cite{Winston1992}.
+\par Sistemas inteligentes de forma geral são aqueles que apresentam a capacidade de planejar e resolver problemas através de dedução e indução utilizando conhecimentos de situações anteriores \cite{VonZuben2013}, e a inteligência artificial, é um campo da ciência e engenharia de computação \cite{VonZuben2013} que possibilitam a sistemas computacionais, perceber, raciocinar e agir \cite{Winston1992}.
 
 % Augusto -> http://dcm.ffclrp.usp.br/~augusto/teaching/ami/AM-I-Conceitos-Definicoes.pdf
 \par As técnicas computacionais mais utilizadas para o desenvolvimento e aplicação de inteligência artificial, são aquelas relacionadas ao aprendizado de máquina. Esta que é uma área que tem como objetivo principal, desenvolver técnicas que permitam aos sistemas adquirir conhecimento de forma automática e com estes conhecimentos tomar decisões \cite{Augusto2007}.
@@ -123,25 +129,27 @@
 % SHEPERD -> Artigo
 % XAVIER -> Artigo (Divulgado no Alô Ciência) !
 % Consultar o livro do Hebb apenas para ter uma certeza!
-\par Estima-se que a rede neural cerebral, possui cerca de 100 bilhões de neurônios, cada um destes mantendo conexão com uma média de 6.000 outros neurônios, gerando cerca de 600 trilhões de conexões (SHEPHERD, 1990). A região de conexão entre os neurônios são chamadas de sinapses, estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} são fortalecidas todas as vezes em que são utilizadas.
+\par Estima-se que a rede neural cerebral, possui cerca de 100 bilhões de neurônios, cada um destes mantendo conexão com uma média de 6.000 outros neurônios, gerando cerca de 600 trilhões de conexões (SHEPHERD, 1990). A região de conexão entre os neurônios são chamadas de sinapses.
+
+% Retirado em (24/03/2019) -> Não li o livro, logo não cito...
+% , estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} são fortalecidas todas as vezes em que são utilizadas.
 
 % A regiã entre os neurônios são chamados de sinapses, estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} tem os caminhos fortalecidos toda vez que é utilizado
 % , assim, pode-se entender que, neurônios tem propensões para certas atividades, quando os neurônios utilizados por esta tem suas sinapses bem fortalecidas (XAVIER, 2017).
 
-\par A Figura \ref{figure:nncotex} demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo córtex auditivo.
+% \par A Figura \ref{figure:nncotex} demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo córtex auditivo.
 
 % ToDo
 % https://pt.wikipedia.org/wiki/Ficheiro:Cajal_actx_inter.jpg
 % MAnter wikipédia é foda...
-\image{0.35}{nn_cortex.jpg}{Rede neural do córtex auditivo}{figure:nncotex}{}
+% \image{0.35}{nn_cortex.jpg}{Rede neural do córtex auditivo}{figure:nncotex}{}
 
 %%% Validar as informações abaixo
 % Citar assim Hodgkin e Huxley (1952) ou (Hodgkin; Huxley, 1952) ? ? ?
 
 % McCulloch -> Artigo
 % (HODGKIn, HUXLEY, 1952) ? ? ? 
-\par A representação inicial deste conjunto de neurônios em sistemas de computação foram implementadas através de circuitos eletrônicos, com apresentado por McCulloc e Pitts (1943), estes que foram utilizados como base para a criação dos modelos de neurônios artificiais apresentados por Hodgkin e Huxley (1952).
-%%%
+\par A representação inicial deste conjunto de neurônios em sistemas de computação foram implementadas através de circuitos eletrônicos, com apresentado por \citeonline{McCullochS1943}, estes que foram utilizados como base para a criação dos modelos de neurônios artificiais apresentados por \citeonline{Hodgkin1952}.
 
 \subsection{Neurônio artificial}
 
@@ -154,7 +162,7 @@
 	\item Função de ativação utilizada para restringir os valores de saída do neurônio.
 \end{itemize}
 
-\par Ainda de acordo com \citeonline{Haykin2001}, a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura \ref{figure:nn_mcculloch}) com as seguintes equações \cite{Haykin2001}:
+\par Ainda de acordo com \citeonline{Haykin2001}, a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura \ref{fig:modelo_neuronio}) com as seguintes equações \cite{Haykin2001}:
 
 \begin{equation}
 	u_{k} = \sum_{j=1}^{n} w_{kj} x_{j}
@@ -240,7 +248,7 @@ start chain=2,node distance=13mm
     \label{fig:modelo_neuronio}
 \end{figure}
 
-\par A partir da Figura 3 é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados \cite{livroNunes2016} 
+\par A partir da Figura \ref{fig:modelo_neuronio} é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados \cite{livroNunes2016} 
 
 \subsection{Arquiteturas de rede} 
 
@@ -478,7 +486,9 @@ start chain=2,node distance=13mm
 
 % Especificar a fonte...
 % Adaptada de: https://www.vaetas.cz/posts/intro-convolutional-neural-networks/
-\image{0.6}{conv_completa.png}{Processo de convolução}{figure:conv_complete}{Adaptado de https://www.vaetas.cz/posts/intro-convolutional-neural-networks/}
+
+% \textbf{O QUE É ESTE LINK MALUCO!!! ESTÁ ERRADO ISTO!!!!}
+\image{0.6}{conv_completa.png}{Processo de convolução}{figure:conv_complete}{Adaptado de \citeonline{pavlovskyvojtech2017}}
 
 \subsubsection{Camada de Pooling}
 
@@ -505,20 +515,20 @@ start chain=2,node distance=13mm
 
 % \subsection{Camada totalmente conectada} % Esta seção fica aqui pois faz parte das redes neurais convolucionais (02/02/2019), (03/02/2019) R: não! Isto faz parte de rede neural mesmo! 
 
-\subsection{Mobilenet}
+\subsection{MobileNet}
+
+\textbf{ESTA COISA DE DIZER, DO INGLÊS....É UMA COISA INTERESSANTE DE SER FEITA ?}
 
 % Criado para apresentar.... não sei não....
-\par MobileNet é um modelo de CNN criado para apresentar bons resultados em classificações de imagens e ao mesmo tempo, ser leve, tanto no tamanho em memória, quanto em suas operações. Faz isto através da aplicação de técnicas de convolução profunda separável (do inglês \textit{Depthwise Separable Convolution}), este que basicamente aplica um filtro para cada camada de cor, permitindo assim que o modelo seja utilizado em sistemas \textit{web} e aplicativos de \textit{Smartphones} \cite{howard2017mobilenets}.
+\par MobileNet é um modelo de CNN criado para apresentar bons resultados em classificações de imagens e ao mesmo tempo, ser leve, tanto no tamanho em memória, quanto no custo operacional de suas operações. Faz isto através da aplicação de técnicas de convolução profunda separável (do inglês \textit{Depthwise Separable Convolution}), este que basicamente aplica um filtro para cada camada de cor, permitindo assim que o modelo seja utilizado em sistemas \textit{web} e aplicativos de \textit{Smartphones} \cite{howard2017mobilenets}.
 
 \subsection{PoseNet}
 
 % Esta afirmação final está ruim, acho que ela não deve ser feita
-\par PoseNet é um modelo de CNN, criado pelo \textit{Google Creative Lab} com base nos trabalhos \cite{george2017} e \cite{george2018} que realiza a identificação de 17 pontos do corpo humano (Figura \ref{figure:posenet_poses}), de um ou vários usuários. Este modelo que, por ser leve, pode ser aplicado nos mesmos contextos que o Mobilenet.
+\par PoseNet é um modelo de CNN, criado pelo \textit{Google Creative Lab} com base nos trabalhos \cite{george2017} e \cite{george2018} que realiza a identificação de 17 pontos do corpo humano (Figura \ref{figure:posenet_poses}), de um ou vários usuários. Este modelo que, por ser leve, pode ser aplicado nos mesmos contextos que o MobileNet.
 
 % Buscar esta imagem original, ou mesmo colocar uma outra e editar indicando, talvez fique melhor que editar esta que está inserida
-\image{0.6}{posenet_poses_original.png}{Pontos identificados pelo PoseNet}{figure:posenet_poses}{Adaptado de https://medium.com/tensorflow/real-time-human-pose-estimation-in-the-browser-with-tensorflow-js-7dd0bc881cd5}
-
-% \par Aqui seria legal entrar como o retorno da biblioteca é feito! Mas como posso fazer isto ? Talvez explicar apenas no desenvolvimento é o suficiente......
+\image{0.6}{posenet_poses_original.png}{Pontos identificados pelo PoseNet}{figure:posenet_poses}{Adaptado de \citeonline{PoseNetMedium2019}}
 
 \section{Conceitos Tecnológicos}
 % Como apresentar as bibliotecas aqui ? Fazer igual ao Felipe ? Ou seja apresentar tudo dentro de um único tópico.
@@ -533,18 +543,32 @@ start chain=2,node distance=13mm
 %   - Tensorflow.js;
 % E ai vem a dúvida, como devo descrever ?? Felipe disse que apenas falar sobre as linguagens já está valendo...
 % 07/03/2019 -> Conversei com o Giuliano hoje, ele me disse que, é melhor fazer da mesma forma que o Felipinho... Descreve em um capítulo as linguagens e as bibliotecas centras e depois boa, explica o que precisar no capítulo de desenvolvimento....
+% 19/03/2019 -> Bem, ao ler novamente o capítulo, o pensamento do carlos voltou em mim, parece que estou explicando menos do necessário e mais sobre o que está sendo feito
 
 Esta seção demonstra as tecnologias utilizadas durante a desenvolvimento do presente trabalho.
 
 \subsection{Linguagens de Programação}
 
-\par Para a criação da aplicação de aquisição de dados, foi utilizado a linguagem de programação Python \cite{Python2019}, que atualmente é aplicada no desenvolvimento de aplicações \textit{web} e \textit{Data Science}.
+% \textbf{BEM, ACHO QUE NESTE CAPÍTULO ESTOU ESTOU EXPLICANDO MENOS SOBRE O QUE SÃO AS TECNOLOGIAS E MAIS SOBRE ONDE É UTILIZADO, DA MESMA FORMA DITA PELO CARLOS, A MUDANÇA É MAIS QUE NECESSÁRIA AQUI}
+
+% \textbf{HEY! FALAR AQUI SOBRE O AUGMENTOR! ELE ESTÁ SENDO EXPLICADO LÁ EM BAIXO!!!!}
+
+% \textbf{SERÁ NECESSÁRIO REVER TODOS O TEXTO E ENTÃO MOVER AS EXPLICAÇÕES PARA CÁ}
+
+\par Para a criação da aplicação de aquisição de dados, foi utilizado a linguagem de programação Python \cite{Python2019}, que atualmente é aplicada no desenvolvimento de aplicações \textit{web} e \textit{Data Science}, junto as bibliotecas OpenCV, para o processamento das imagens e PyQt, para a criação de interfaces gráficas.
 
 \par O pré-processamento das imagens foi realizado em Python com o auxílio das bibliotecas OpenCV e scikit-image. A criação da rede neural de reconhecimentos de gestos utilizou Python, junto a biblioteca de \textit{Deep Learning} Keras, que permite a criação em alto nível de redes neurais artificiais profundas, além de disponibilizar funcionalidades para a aplicação de transferência de aprendizado em modelos já treinados \cite{chollet2015}.
 
-\par Para o desenvolvimento da biblioteca de recursos assistivos, fez-se a utilização da linguagem de programação JavaScript, junto a biblioteca de desenvolvimento de \textit{Deep Learning} para \textit{web} Tensorflow.js (TFJS), que permite que modelos de rede neural sejam executados no navegador, e também possui diversos modelos de rede neural já implementados \cite{tensorflowjs2019}.
+% \textbf{OLHA ISTO AQUI! O NODE.JS NEM É CITADO!!! VOCÊ DEVE COLOCAR ELE AQUI, EXPLICAR O RUNTIME E O TRANSPILE....}
+\par Para o desenvolvimento da biblioteca de recursos assistivos, fez-se a utilização da linguagem de programação JavaScript, no ambiente de execução Node.js, junto a biblioteca de desenvolvimento de Aprendizado Profundo para \textit{web} Tensorflow.js (TFJS), que permite a utilização de modelos de rede neural em navegadores, além de possuir diversos modelos já implementados \cite{tensorflowjs2019}.
 
-\par Por fim, a distribuição dos modelos de rede neural criados neste trabalho é feito através de uma \textit{API Rest}, que utilizando requisições \textit{HTTP} gera os resultados para o usuário, implementada com o \textit{Microframework web} Flask da linguagem Python, que auxilia no desenvolvimento de aplicações \textit{web}.
+% \textbf{CUIDADO, --> API REST NÃO É API RESTful <--}
+% \textbf{VERIFICAR ISTO AO LONGO DO TRABALHO}
+\par Por fim, para a distribuição do modelo de rede neural retreinado neste trabalho, uma \textit{API Rest}, esta que, através de requisições \textit{Hypertext Transfer Protocol} (HTTP) troca informações com o usuário 
+
+\par Por fim, como há a necessidade de distribuição de um modelo desenvolvido no trabalho, fez-se a implementação de uma \textit{API Rest}
+
+\par Por fim, a distribuição dos modelos de rede neural criados neste trabalho é feita através de uma \textit{API Rest}, que utilizando requisições \textit{HTTP} gera os resultados para o usuário. Esta \textit{API} será implementada em Python com o \textit{Microframework web} Flask, que auxilia no desenvolvimento de aplicações \textit{web}.
 
 % \subsection{Keras}
 
@@ -557,4 +581,6 @@ Esta seção demonstra as tecnologias utilizadas durante a desenvolvimento do pr
 \subsection{Google Colaboratory}
 
 % Talvez colocar rede neural profunda?? (07/03/2019)
-\par Colaboratory (Colab) é uma ferramenta criada pelo Google, que permite a fácil execução de algorítimos de aprendizado de máquina. Colab é criado sob o pacote Jupyter, um ambiente interativo, executado no navegador, que permite a execução de linguagens interpretadas \cite{PER-GRA:2007}. Todo o ambiente do Colab é executado sobre máquinas aceleradas por GPU, o que diminui o tempo de execução de processos de treinamento de modelos de rede neural.
+% \textbf{O RESULTADO PRODUZIDO PELO TEXTO ABAIXO ESTÁ ESTRANHO...}
+
+\par Colaboratory (Colab) é uma ferramenta criada pelo Google que permite a fácil execução de algorítimos de aprendizado de máquina. Colab é criado sob o pacote Jupyter, um ambiente interativo, executado no navegador, que permite a execução de linguagens interpretadas \cite{PER-GRA:2007}. Todo o ambiente do Colab é executado sobre máquinas aceleradas por GPU, o que diminui o tempo de execução de processos de treinamento de modelos de rede neural.
