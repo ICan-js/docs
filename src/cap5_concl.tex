@@ -1,3 +1,41 @@
-    \newpage
-\chapter{Conclus\~ao}
-Conclusao para o trabalho, mostra como a solu\~c\~ao proposta cumpre com o que foi apresentado anteriormente.
+\newpage
+\chapter{Considerações Finais}
+Conclusão para o trabalho, mostra como a solu\~c\~ao proposta cumpre com o que foi apresentado anteriormente.
+
+\section{Contribuições e conclusões}
+
+\par As contribuições apresentadas neste trabalho são:
+
+\begin{enumerate}
+    \item Um modelo de CNN criado sob o \textit{MobileNet} capaz de classificar gestos de Libras;
+    \item Biblioteca JavaScript que fornece recursos assistivos desenvolvidos com técnicas de Aprendizado Profundo.
+\end{enumerate}
+
+\par Neste trabalho foi apresentado uma biblioteca para a linguagem JavaScript que fornece dois recursos assistivos, o controle de \textit{cursor} através de movimentos com a cabeça e a escrita de texto em campos com gestos de Libras, ambos para ambiente \textit{web}.
+
+\par Para o desenvolvimento do recurso assistivo de controle de \textit{cursor} foram utilizados o modelo de CNN \textit{PoseNet} junto a regressões lineares, o que mesmo dependendo de uma calibração permitiu aos usuários a navegação dentro de uma página sem a necessidade de utilizar um \textit{mouse}.
+
+\par No desenvolvimento do recurso assistivo de escritas com sinais de Libras fez-se a utilização do \textit{MobileNet} com a técnica de aprendizado por transferência no treinamento, que utilizou um conjunto de dados criados neste trabalho. A métrica utilizada para a avaliação foi a matriz de confusão, que demonstrou que o modelo apresentou bons resultados, tanto no treino e teste quanto na validação.
+
+\par Todas as funcionalidades e o ecossitema criado para o desenvolvimento do ICan.js junto aos recursos assistivos citados anteriormente podem ser utilizado como base para a criação de outros recursos assistivos, e ainda, a forma de implementação da biblioteca e as técnicas utilizadas nela permitiram a criação de recursos assistivos mais acessíveis, que para serem utilizados dependem exclusivamente de tecnologias já presentes no dia-a-dia das pessoas, não sendo necessário a aquisição de nenhum \textit{hardware} ou \textit{software} específico.
+
+\subsection{Publicações}
+
+\par Como resultado deste trabalho foram publicados os seguintes artigos em periódicos:
+
+\begin{enumerate}
+    \item \textit{Deep Learning} aplicado na conversão de Libras em texto - \cite{fmenino2019a};
+    \item Uso de \textit{Deep Learning} para desenvolver tecnologias assistivas de baixo custo - \cite{fmenino2019b}.
+\end{enumerate}
+
+\section{Trabalhos futuros}
+
+Os resultados deste trabalho não encerram as pesquisas sobre recursos assistivos na \textit{web} utilizando técnicas de Aprendizado Profundo, mas abrem oportunidades para os seguintes trabalhos futuros:
+
+\begin{itemize}
+    \item Adicionar outros modelos de regressão;
+    \item Implementar método que permita ao usuário clicar na tela no recurso assistivo de controle de \textit{cursor};
+    \item Melhorar a movimentação do \textit{cursor} com predições extras, estas relacionadas aos locais onde o usuário deseja alcançar na tela;
+    \item Aumentar a quantidade de gestos de Libras disponíveis no ICan.js;
+    \item Incrementar os pontos de referência para a movimentação do \textit{cursor}.
+\end{itemize}

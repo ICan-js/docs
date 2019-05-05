@@ -2,160 +2,511 @@
 \label{ch:fundamentacao}
 \par Neste capítulo ser\~ao fundamentados os conhecimentos b\'asicos para o entendimento do trabalho.
 
-\section{Deficiência}
+\section{Recursos assistivos}
 
-De acordo com o censo do IBGE, realizado em 2010, cerca de 6.2\% da população brasileira possui algum tipo de deficiência. E a necessidade de inclusão destas pessoas na sociedade é extremamente importante. Do grupo citado anteriormente, cerca de 1.3\% tem algum tipo de deficiência auditiva, e 1.1\% tem deficiências auditivas
+\par Tecnologia assistiva (TA) é o termo que identifica todo o arsenal de recursos e serviços assistivos \cite{Bersch2017}, sendo, os recursos assistivos tudo aquilo que é produzido para aumentar, manter ou melhorar as capacidades de pessoas com deficiência \cite{tonollijoseberschrita2017} e os serviços representam tudo o que ajuda na aplicação e utilização de recursos assistivos \cite{tonollijoseberschrita2017}.
 
-Para aqueles com deficiência auditiva, a comunicação e inclusão pode ser feita através da Linguagem Brasileira de Sinais, segunda língua oficial do Brasil desde 2005. Mas, pode-se encontrar problemas com a comunicação através de LIBRAS principalmente pelo fato de, boa parte dos ouvintes não falar esta língua o que acarreta também na baixa utilização desta em diversos meios de comunicação. Um ponto importante apontado no documentário feito pela TVE RS, é que, pessoas com deficiência auditiva, normalmente são alfabetizadas somente com LIBRAS, por terem muita difículdade e falta de estrutura para o aprendizado da Língua Portuguesa. Ainda de acordo com o documentário, para as pessoas com deficiências motoras há os recursos de tecnologias assitivas, que aumentar a facilidade do acesso destas pessoas aos meios sociais, principalmente os digitais.
+\par De acordo com \cite{tonollijoseberschrita2017} existem diferentes tipos de TAs, sendo algumas delas: recursos de acessibilidade ao computador, auxílios para surdos ou com déficit auditivo e Auxílios para a vida diária.
 
-% Precisa ficar realizando definições de cada uma das deficiências que serão tratadas no trabalho ?? 
-%% Caso precise, qual o nível de profundidade necessário ? ? ?
+\par Para o caso dos recursos de acessibilidade ao computador, tem-se diversos recursos e serviços assistivos que ajudam pessoas com as mais variadas deficiências a acessar e utilizar o computador como auxílios alternativos de acesso, \textit{softwares} de comando de voz além de teclados modificados ou alternativos \cite{tonollijoseberschrita2017}.
 
-\section{Tecnologias assistivas}
+\section{Regressão linear}
 
-% Verificar como citar esta fonte ! ! !
-Uma das formas de realizar a inclusão social de pessoas com deficiência é através da inclusão digital, utilizando técnologias assitivas, estes que visam ampliar as habilidades presentes no indivíduo, não o forçando a ter características específicas para a inclusão (NTAAI, 2016). As tecnologias assitivas, de acordo com o Núcleo de Tecnologia Assistiva, Acessibilidade e Inovação da Universidade de Brasilia, podem ser divididas em dois grupos, os recursos, que representam equipamentos que expandem as habilidades dos indivíduos com deficiência, e os serviços, que normalmente são aqueles relacionados a facilitação e capacitação para o uso correto dos recursos assistivos.
+\par Análise de regressão é realizada através de técnicas estatísticas com o objetivo de verificar a relação funcional entre uma variável dependente com uma ou mais variáveis independentes \cite{Peternelli2003}. Assim, verifica-se o comportamento da variação de uma variável, decorrente a variação de outra variável \cite{Peternelli2003, mannprems2006}.
 
-% Adicionar dados aqui que fazem jus ao que estou dizendo ! ! !
-Para aqueles que possuem deficiência motora, a inclusão digital vem através de \textit{mouses} adaptados, formas diferentes de utilizar teclados, ou até mesmo a utilização do computador por comandos de voz. E para os surdos ferramentas que ajudam no processo de interação já levando em consideração problemas com a alfabetização.
+\par Este comportamento pode ser apresentado de diversas formas: linear, quadrática, cúbica, dentre outras \cite{Peternelli2003}. A representação de cada um destes comportamentos é feita através de modelos matemáticos \cite{mannprems2006}.
+
+\par A regressão linear representa um modelo matemático de regressão, que descreve uma relação linear entre duas variáveis, sendo estas, a variável dependente, que representa a variável que está sendo explicada e as variáveis independentes que explicam a variável independente \cite{mannprems2006}.
+
+\par Uma das formas de representação deste modelo é apresentado na Equação \ref{form:linearregression}, e quando representado graficamente, exibe uma reta. 
+\begin{equation}
+    \widehat{y} = a + bx
+\label{form:linearregression}
+\end{equation}
+
+\par Onde, $ \widehat{y} $ é a variável dependente, que está sendo explicada, \textit{x} a variável independente, \textit{a} é o termo constante e \textit{b} é a inclinação. 
+
+\par Por conta da explicação que este modelo faz entre as duas variáveis é possível realizar predições de valores com este, assim, com base em valores anteriores, utilizados para estimar \textit{a} e \textit{b}, tem-se a possibilidade de gerar $ \widehat{y} $, para \textit{x} que não está presente no conjunto de dados.
 
 \section{Inteligência artificial}
 
-% Rever todas as referências - Provavelmente reescrever o texto nas férias ! ! !
-% Von Zuben: ftp://ftp.dca.fee.unicamp.br/pub/docs/vonzuben/ea072_2s13/introducao_EA072_2s2013.pdf
-
-Sistemas inteligentes de forma geral são aqueles que apresentam a capacidade de planejar e resolver problemas através de dedução e indução utilizando conhecimentos de situações anteriores (ZUBEN, 2013), e a inteligência artificial, é um campo da ciência e engenharia de computação (ZUBEN, 2013), que possibilitam a sistemas computacionais, perceber, raciocionar e agir (WINSTON, 1992).
+\par Sistemas inteligentes de forma geral são aqueles que apresentam a capacidade de planejar e resolver problemas através de dedução e indução utilizando conhecimentos de situações anteriores \cite{VonZuben2013}, e a inteligência artificial, é um campo da ciência e engenharia de computação \cite{VonZuben2013} que possibilitam a sistemas computacionais, perceber, raciocinar e agir \cite{Winston1992}.
 
 % Augusto -> http://dcm.ffclrp.usp.br/~augusto/teaching/ami/AM-I-Conceitos-Definicoes.pdf
-Uma das técnicas computacionais mais utilizadas para o desenvolvimento e aplicação de inteligência artificial, são aquelas relacionadas ao aprendizado de máquina. Esta que é uma área que tem como objetivo principal, desenvolver técnicas que permitam aos sistemas adquirir conhecimento de forma automática e com estes conhecimentos tomar decisões (AUGUSTO, 2007).
+\par As técnicas computacionais mais utilizadas para o desenvolvimento e aplicação de inteligência artificial, são aquelas relacionadas ao aprendizado de máquina. Esta que é uma área que tem como objetivo principal, desenvolver técnicas que permitam aos sistemas adquirir conhecimento de forma automática e com estes conhecimentos tomar decisões \cite{Augusto2007}.
 
-% NG -> Curso do andrew
-Para a realização do aprendizado de máquina, existem diversas técnicas, que vão de simples regressões estatísticas, até modelos complexos, como às redes neurais artificiais (NG, 2016).
+\par Para a realização do aprendizado de máquina, existem diversas técnicas, que vão de simples regressões estatísticas, até modelos complexos, como às redes neurais artificiais (RNA) \cite{andrewngcourse}.
 
 \section{Redes neurais artificiais}
 
+\par Redes neurais artificiais são sistemas computacionais que busca modelar o sistema cerebral natural humano, estas que são uma das formas de soluções de problemas apresentados dentro do âmbito de inteligência computacional \cite{Cintra2019}.
+
+%% Não creio que isto esteja escrito da melhor forma, mas está melhor que o texto inicial (01/02/2019)
+% Escrever mais!! Fale sobre machine learning aqui tbm -> As referências do Deep Learning with R são boas ! (13/03/2019)
+\par Por buscar modelar o cérebro humano, as RNAs utilizam como unidade básica de processamento, os neurônios artificiais \cite{Haykin2001}, da mesma forma que o cérebro utiliza os neurônios biológicos. % Preciso criar um complemento para ir para o próximo capítulo ? (01/02/2019)
+
+%Acho que esta segunda parte não está combinando com o resto do texto, mas por agora vou manter aqui
+% Por buscar modelar o cérebro humano, a unidade básica de processamento das RNAs são os neurônios (HAYKIN, 2001), estruturas estas que tem fortes ligações com o sistema biológico.
+
+%%%%%%% Partes antigos
+% Redes neurais artificiais (RNA) são modelos criados para representar a maneira como o cérebro realiza suas tarefas, sendo estas maciçamente paralelas e distribuidas (HAYKIN, 2001). Ainda de acordo com Haykin (2001), estes modelos para ter bons desempenhos são representados normalmente através de interligações maciças de células computacionais simples, denominadas de neurônios. 
+% Veja que, para a criação destes modelos, há uma grande inspiração em aspectos e funcionamentos do cérebro humano (CINTRA, 2015)
+% Acho que isto aqui deve ser complementado ! ! ! Com toda a certeza!
 % Cintra - Minicurso INPE (2015)
-Como descrito na seção anterior, uma das áreas de aplicação do aprendizado de máquina mais avançadas atualmente são as RNA, que imitam principalmente aspectos do funcionamento do corpo humano, neste caso, o cérebro e suas redes neuronais (CINTRA, 2015). 
+% Como descrito na seção anterior, uma das áreas de aplicação do aprendizado de máquina mais avançadas atualmente são as RNA, que imitam principalmente aspectos do funcionamento do corpo humano, neste caso, o cérebro e suas redes neuronais (CINTRA, 2015). 
+%%%%%%%
 
 \subsection{Neurônio biológico}
 
-% Falar sobre sinapses ! ! !
-% Falar sobre como aprendemos ! ! !
+% Falar sobre sinapses ! ! ! -> Já falei sobre isto ! ! !
+% Falar sobre como aprendemos ! ! ! -> Será  mesmo necessário ? ? ?
 
 % Nunes -> Livro
-Todo o processamento de informações no cérebro humano, é feito através de elementos biológicos de processamento, que operam em paralelo para a produção de ações apropriadas para cada estimulo recebido pelo corpo. A célula base do sistema nervoso cerebral é o neurônio (Figura 1), e sua principal função é conduzir impulsos (Representando os estimulos) levando em consideração as condições do corpo e assim produzindo ações. Os neurônios também são os resposáveis pelos atos do pensamento e armazenamento de informações (NUNES et al, 2016).
+\par Todo o processamento de informações no cérebro humano, é feito através de elementos biológicos de processamento, que operam em paralelo para a produção de ações apropriadas para cada estímulo recebido pelo corpo. A célula base do sistema nervoso cerebral é o neurônio (Figura \ref{figure:bioneuron}), e sua principal função é conduzir impulsos (Representando os estímulos) levando em consideração as condições do corpo e assim produzindo ações. Os neurônios também são os responsáveis pelos atos do pensamento e armazenamento de informações \cite{livroNunes2016}.
 
-O neurônio podem ser divididos em três partes elementares, os dendritos, que captam de forma continua os impulsos vindos de outros neurônios, o corpo celular, que processa todas as informações captadas e os axônio que enviam as informações processadas no corpo celular para outros neurônios.
+\par Os neurônios podem ser divididos em três partes elementares, os dendritos, que captam de forma continua os impulsos vindos de outros neurônios, o corpo celular, que processa todas as informações captadas e os axônios que enviam as informações processadas no corpo celular para outros neurônios.
 
 % https://www.researchgate.net/figure/Figura-24-Ilustrativo-de-um-neuronio-biologico_fig17_303369695
-\image{1.2}{neuronio-biologico.png}{Ilustração do neurônio biológico}{bioneuron}
+\image{1.4}{neuronio-biologico.png}{Ilustração do neurônio biológico}{figure:bioneuron}{\citeonline{Remes2016}}
 
 % SHEPERD -> Artigo
 % XAVIER -> Artigo (Divulgado no Alô Ciência) !
-Estima-se que a rede neural cerebral, possui cerca de 100 bilhões de neurônios, cada um destes mantendo conexão com uma média de 6.000 outros neurônios, gerando cerca de 600 trilhões de conexões (SHEPHERD, 1990). As conexões entre os neurônios são chamados de sinapses, estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} tem os caminhos fortalecidos toda vez que é utilizado, assim, pode-se entender que, neurônios tem propensões para certas atividades, quando os neurônios utilizados por esta tem suas sinapses bem fortalecidas (XAVIER, 2017).
+% Consultar o livro do Hebb apenas para ter uma certeza!
+\par Estima-se que a rede neural cerebral, possui cerca de 100 bilhões de neurônios, cada um destes mantendo conexão com uma média de 6.000 outros neurônios, gerando cerca de 600 trilhões de conexões \cite{shepherdgordonm1990}. A região de conexão entre os neurônios são chamadas de sinapses.
 
-A Figura 2 demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo cortex auditivo.
+% Retirado em (24/03/2019) -> Não li o livro, logo não cito...
+% , estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} são fortalecidas todas as vezes em que são utilizadas.
 
+% A regiã entre os neurônios são chamados de sinapses, estas que como apresentado por Donald Hebb em 1949, em seu livro \textit{The Organization of Behavior} tem os caminhos fortalecidos toda vez que é utilizado
+% , assim, pode-se entender que, neurônios tem propensões para certas atividades, quando os neurônios utilizados por esta tem suas sinapses bem fortalecidas (XAVIER, 2017).
+
+% \par A Figura \ref{figure:nncotex} demonstra um exemplo de uma pequena parte das redes neuronais responsáveis pelo córtex auditivo.
+
+% ToDo
 % https://pt.wikipedia.org/wiki/Ficheiro:Cajal_actx_inter.jpg
-\image{0.35}{nn_cortex.jpg}{Rede neural do cotex auditivo}{nncotex}
+% MAnter wikipédia é foda...
+% \image{0.35}{nn_cortex.jpg}{Rede neural do córtex auditivo}{figure:nncotex}{}
+
+%%% Validar as informações abaixo
+% Citar assim Hodgkin e Huxley (1952) ou (Hodgkin; Huxley, 1952) ? ? ?
 
 % McCulloch -> Artigo
-A representação inicial deste conjunto de neurônios em sistemas de computação foram implementadas através de circuitos elétricos (MCCULLOCH; PITTS, 1943), estes que foram utilizados como base para a criação dos modelos de neurônios artificiais (HODGKIN; HUXLEY, 1952).
+% (HODGKIn, HUXLEY, 1952) ? ? ? 
+\par A representação inicial deste conjunto de neurônios em sistemas de computação foram implementadas através de circuitos eletrônicos, com apresentado por \citeonline{McCullochS1943}, estes que foram utilizados como base para a criação dos modelos de neurônios artificiais apresentados por \citeonline{Hodgkin1952}.
 
 \subsection{Neurônio artificial}
 
-Os neurônios artificias, que são modelos de representações dos neurônios biológicos compoem a RNA. O principal modelo de neurônio artificial utilizado, mesmo em arquiteturas mais atuais, é o proposto por McCulloch e Pitts em 1943 (Figura 3). Neste há componentes que fazem referência direta ao neurônio biológico visto anteriormente.
+\par Como citado anteriormente, os neurônios artificiais, são modelos computacionais para a representação do neurônio biológico nas RNAs, e da mesma forma que em um neurônio biológico, a representação deste é feita com três elementos básicos \cite{Haykin2001}:  
 
-\image{0.1}{nn_mculloch.jpg}{Modelo de Neurônio artificial}{nn_mcculloch}
+\begin{itemize}
+	% Posso colocar Conjunto de sinapses, representado por Xn... ? (02/02/2019)
+	\item Conjunto de sinapses, cada uma caracterizada por um peso, este que indica a relevância de cada valor de entrada;
+	\item Somador, ou combinador linear, que faz a ponderação dos valores de entrada com as respectivas sinapses do neurônio;
+	\item Função de ativação utilizada para restringir os valores de saída do neurônio.
+\end{itemize}
 
-Os sinais de entrada, apresentados na Figura 3, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados (NUNES et al, 2016).
+\par Ainda de acordo com \citeonline{Haykin2001}, a estes modelos neuronais pode-se aplicar um \textit{bias}, este que será o responsável pelo aumento ou diminuição dos valores de entrada da função de ativação. Em termos matemáticos, pode-se descrever um neurônio k (Figura \ref{fig:modelo_neuronio}) com as seguintes equações \cite{Haykin2001}:
 
-Através destes modelos as redes neurais são compostas com dezenas ou até mesmo centenas de neurônios, dependendo exclusivamente da complexidade do problema a ser resolvido. As RNA, ainda são divididas em camadas, onde cada uma delas tem uma função específica, uma RNA simples, normalmente tem-se três camadas apenas (Figura 4), uma camada de entrada, uma camada oculta, que contém um conjunto de neurônios e a camada de saída dos resultados.
+\begin{equation}
+	u_{k} = \sum_{j=1}^{n} w_{kj} x_{j}
+\end{equation}
+e
+\begin{equation}
+	y_{k} = f(u_{k} + b_{k})	
+\end{equation}
+onde $ x_{1}, x_{2}, ..., x_{n} $ são os sinais de entrada; $ w_{k1}, w_{k2}, ..., w_{kn} $ são os pesos sinápticos do neurônio k; $ u_{k} $ é a saída do combinador linear; $ b_{k} $ é o \textit{bias}; $ f(u_{k} + b_{k}) $ a função de ativação; e $ y_{k} $ representa a saída do neurônio.
 
-\image{0.8}{nn_generic.png}{Rede neural artificial simples}{nn_generic}
+% Os neurônios artificias, que são modelos de representações dos neurônios biológicos compoem a RNA. O principal modelo de neurônio artificial utilizado, mesmo em arquiteturas mais atuais, é o proposto por McCulloch e Pitts em 1943 (Figura 3). Neste há componentes que fazem referência direta ao neurônio biológico visto anteriormente.
 
-Na camada de entrada, os dados são recebidos e enviados para a camada oculta, na camada oculta, os dados são processados pelos neurônios, e seus resultados são unidos na camada de saída (PONTI, 2017).
+% Imagem adaptada de Haykin (2001)
+% \image{0.1}{nn_mculloch.jpg}{Modelo de Neurônio artificial}{figure:nn_mcculloch}{Adaptado de \cite{Haykin2001}}
+\begin{figure}[H]
+    \centering
+    \caption{Neurônio Artificial}
+    \begin{tikzpicture}[
+init/.style={
+  draw,
+  circle,
+  inner sep=2pt,
+  font=\Huge,
+  join = by -latex
+},
+init2/.style={
+  draw,
+  circle,
+  inner sep=2pt
+},
+neuron missing/.style={
+    draw=none, 
+    scale=4,
+    text height=0.333cm,
+    execute at begin node=\color{black}$\vdots$
+  },
+squa/.style={
+  draw,
+  inner sep=2pt,
+  font=\Large,
+  join = by -latex
+},
+squa2/.style={
+  draw,
+  inner sep=2pt,
+  font=\Large
+},
+start chain=2,node distance=13mm
+]
+\node[on chain=2] 
+  (x2) {$x_2$};
+%\node[below of=x2] (dots) {$\vdots$} -- (dots) node[right of=dots] (ldots) {$\vdots$};
+%\node[below of=2] (dots) {$\vdots$} -- (dots) node[left of=dots] (ldots) {$\vdots$};
+\node[on chain=2,init2,join=by o-latex] 
+  {$w_{k2}$};
+\node[on chain=2,init] (sigma)
+  {$\displaystyle\Sigma$};
+\node[on chain=2,squa2,label=above:{\parbox{2cm}{\centering Função de \\ ativação}}](te) {$f$};
+\node[on chain=2,label=above:Saída] (sa)
+  {$y_k$};
+\begin{scope}[start chain=1]
+\node[on chain=1] at (0,1.5cm) 
+  (x1) {$x_1$};
+\node[on chain=1,init2,join=by o-latex] 
+  (w1) {$w_{k1}$};
+\end{scope}
+\begin{scope}[start chain=3]
+\node[on chain=3] at (0,-1.5cm) 
+  (x3) {$x_n$};
+\node[on chain=3, init2,label=below:{\parbox{2cm}{\centering Pesos \\ sinápticos}},join=by o-latex] 
+  (w3) {$w_{kn}$};
+\end{scope}
+\node[label=above:\parbox{2cm}{\centering Bias \\ $b$}] at (sigma|-w1) (b) {};
 
-Um tipo muito comum de rede neural com esta estrutura básica são os chamados \textbf{Perceptron}, que é uma rede neural simples, criada por Frank Rosenblat em 1957. Porém redes neurais com apenas uma camada de processamento (Camada oculta) não são aplicáveis em diversos casos, principalmente pela limitação no nível de complexidade de problemas que podem ser resolvidos com este tipo de rede (PONTI, 2017). Problemas como classificação de imagens, reconhecimento de objetos e detecção de fraudes podem ser um grande desafio para estes tipos de arquitetura, desta forma, mais camadas devem ser inseridas para tratamentos mais sofisticados dos dados, gerando resultados mais acertivos e principalmente, resolvendo problemas mais complexos. 
+\draw[-latex] (w1) -- (sigma);
+\draw[-latex] (w3) -- (sigma);
+\draw[o-latex] (b) -- (sigma);
+\draw[-latex] (sigma) -- (te) node[midway,sloped, above]{$v_k$};
+\draw[-latex] (te) -- (sa) node[midway,sloped, above]{};
+\draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Entradas} (x3.south west);
+\end{tikzpicture}
+    \fonte{Adaptado de \citeonline{Haykin2001}}
+    \label{fig:modelo_neuronio}
+\end{figure}
 
-% Falar sobre as diferenças no processo de aprendizado
-% Aqui falo de forma geral ? Preciso ir a fundo na questão ??
+\par A partir da Figura \ref{fig:modelo_neuronio} é possível realizar uma comparação entre cada um dos elementos do neurônio artificial e biológico. Os sinais de entrada, advindos do meio externo, normalmente uma aplicação, são análogos aos impulsos elétricos captados pelos dendritos no neurônio biológico.  Os pesos sinápticos representam a importância do sinal recebido para o neurônio, o que representa as ponderações exercidas pelas junções sinápticas do modelo biológico, ou seja, a força do caminho entre as sinapses, citados anteriormente. O campo de somatório junto a função de ativação, representam o corpo celular do neurônio biológico, é nesta parte que os resultados criados pelo neurônio são calculados \cite{livroNunes2016} 
+
+\subsection{Arquiteturas de rede} 
+
+\par Para \citeonline{livroNunes2016} uma RNA pode ser constituída de até três partes diferentes, estas denominadas de camadas, as quais são nomeadas a seguir:
+
+\begin{itemize}
+    \item Camada de entrada: É a camada responsável pelo recebimento de dados;
+    \item Camadas escondidas, intermediárias ou ocultas: São camadas compostas de neurônios responsáveis pela extração de características associadas ao processo ou sistema;
+    \item Camadas de saída: Também constituída de neurônios, esta camada é responsável pela produção e apresentação dos resultados finais da rede.
+\end{itemize}
+
+\par Das camadas descritas acima, devem estar presentes em uma RNA no mínimo a camada de entrada e a camada de saída \cite{Cintra2019}.
+
+\par Diferentes formas de organização de cada uma destas camadas, especialmente relacionadas a forma de relação entre os neurônios, definem as arquiteturas de RNA \cite{livroNunes2016}. \citeonline{Haykin2001} define a existência de duas classes de arquiteturas fundamentais, sendo elas: Redes de alimentação direta, com uma ou várias camadas e Redes recorrentes.
+
+\par As redes de alimentação direta, são denominadas desta forma por conta de seu fluxo percorrer uma única direção \cite{Cintra2019}, iniciando o fluxo na camada de entrada seguindo pelas diferentes camadas até o neurônio de saída. Este tipo de rede pode possuir uma ou várias camadas ocultas.
+
+% Verificar se devo abreviar a sigla de redes de alimentação direta.... (04/03/2019)
+\par Para as redes de alimentação direta com uma única camada, tem-se como tipo comum a \textit{Perceptron} (Figura \ref{figure:camadaunida}). Em sua estrutura são apresentadas duas camadas, entrada e saída, porém são nomeadas de camada única já que existem operações matemáticas ocorrendo apenas na camada de saída \cite{livroNunes2016}.
+
+\begin{figure}[H]
+    \centering
+    \def\layersep{2.5cm}
+    \caption{Rede de alimentação direta de camada única}
+\begin{tikzpicture}[shorten >=1pt,->,draw=black!50, node distance=\layersep]
+    \tikzstyle{every pin edge}=[<-,shorten <=1pt]
+    \tikzstyle{neuron}=[circle,fill=black!25,minimum size=17pt,inner sep=0pt]
+    \tikzstyle{input neuron}=[neuron, fill=black!50];
+    \tikzstyle{output neuron}=[neuron, fill=black!50];
+    \tikzstyle{hidden neuron}=[neuron, fill=black!50];
+    \tikzstyle{annot} = [text width=4em, text centered]
+    \tikzset{normal arrow/.style={draw,-triangle 45,very thick}}
+
+    % Draw the input layer nodes
+    \foreach \name / \y in {1,...,4}
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Entrada $x$$_\y$] (I-\name) at (0,-\y) {};
+
+    % Draw the hidden layer nodes
+    \foreach \name / \y in {1,...,5}
+        \path[yshift=0.5cm]
+            node[hidden neuron] (H-\name) at (\layersep,-\y cm) {};
+
+    % Draw the output layer node
+    %\node[output neuron,pin={[pin edge={->}]right:Saída}, right of=H-3] (O) {};
+
+    % Connect every node in the input layer with every node in the
+    % hidden layer.
+    \foreach \source in {1,...,4}
+        \foreach \dest in {1,...,5}
+            \path (I-\source) edge (H-\dest);
+            
+
+    % Connect every node in the hidden layer with the output layer
+    \foreach \source in {1,...,5}
+        \draw[->] (H-\source) -- +(0.9,0);
+        %\path (H-\source)  -- ();
+        %\draw [->] (0,0) -- (30:20pt); 
+
+    % Annotate the layers
+    \node[annot,above of=H-1, node distance=1.5cm] (hl) {Camada de \\ Saída};
+    \node[annot,left of=hl] {Camada de entrada};
+    %\node[annot,right of=hl] {Camada de saída};
+\end{tikzpicture}
+    \fonte{Adaptado de \citeonline{livroNunes2016}}
+    \label{figure:camadaunida}
+\end{figure}
+
+% Novamente, dúvidas nas siglas... (04/03/2019)
+% Referenciar este parâgrafo.... escrevendo apenas para montar a ideia e já completar a doc....
+% Figura XY -> Imagem 
+\par Já as redes de alimentação direta com múltiplas camadas (Figura \ref{figure:multilayer_perc}), diferentes das redes de camada única, possuem diversas camadas ocultas. Para esta classe o tipo mais comum são as Perceptron multicamadas (do inglês \textit{Multilayer Perceptron} - MLP), estas que por possuírem mais camadas são capazes de extrair quantidades maiores de características do problema que está sendo modelado pela rede.
+
+\begin{figure}[H]
+    \centering
+    \def\layersep{2.5cm}
+ \caption{Rede de múltiplas camadas}
+\begin{tikzpicture}[shorten >=1pt,->,draw=black!50, node distance=\layersep]
+    \tikzstyle{every pin edge}=[<-,shorten <=1pt]
+    \tikzstyle{neuron}=[circle,fill=black!25,minimum size=17pt,inner sep=0pt]
+    \tikzstyle{input neuron}=[neuron, fill=black!50];
+    \tikzstyle{output neuron}=[neuron, fill=black!50];
+    \tikzstyle{hidden neuron}=[neuron, fill=black!50];
+    \tikzstyle{annot} = [text width=4em, text centered]
+
+    % Draw the input layer nodes
+    \foreach \name / \y in {1,...,4}
+    % This is the same as writing \foreach \name / \y in {1/1,2/2,3/3,4/4}
+        \node[input neuron, pin=left:Entrada $x$$_\y$] (I-\name) at (0,-\y) {};
+
+    % Draw the hidden layer nodes
+    \foreach \name / \y in {1,...,4}
+        \path[yshift=0cm]
+            node[hidden neuron] (H-\name) at (\layersep,-\y cm) {};
+            
+    % Draw the second hidden layer nodes
+    \foreach \name / \y in {1,...,5}
+        \path[yshift=0.5cm, xshift=1.9cm ]
+            node[hidden neuron] (J-\name) at (\layersep,-\y cm) {};
+
+    % Draw the output layer node
+    \node[output neuron,pin={[pin edge={->}]right:Saída}, right of=J-3] (O) {};
+
+    % Connect every node in the input layer with every node in the
+    % hidden layer.
+    \foreach \source in {1,...,4}
+        \foreach \dest in {1,...,4}
+            \path (I-\source) edge (H-\dest);
+   
+   % Connect every node in the hidden layer 1 with every node in the
+    % hidden layer 2.     
+     \foreach \source in {1,...,4}
+        \foreach \dest in {1,...,5}
+            \path (H-\source) edge (J-\dest);
+
+    % Connect every node in the hidden layer with the output layer
+    \foreach \source in {1,...,5}
+        \path (J-\source) edge (O);
+
+    % Annotate the layers
+    \node[annot,above of=H-1, node distance=1.5cm] (hl) {1º Camada \\ oculta};
+    \node[annot,above of=J-1, node distance=1.5cm] (hl2) {2º Camada \\ oculta};
+    \node[annot,left of=hl] {Camada de entrada};
+    \node[annot,right of=hl2] {Camada de \\ saída};
+    %\node[annot,above of=H-1, node distance=1.5cm] (hl) {Camada de \\ Saída};
+\end{tikzpicture}
+    \fonte{Adaptado de \citeonline{livroNunes2016}}
+    \label{figure:multilayer_perc}
+\end{figure}
+
+\par Por fim as redes recorrentes, que recebem este nome por conta da realimentação entre os neurônios da mesma camada, ou seja, a saída de um neurônio em uma camada, pode servir como entrada para outro neurônio da mesma camada \cite{Nelson2017}.
+
+\par Estas formas de organização presentes nas arquiteturas, estão intimamente relacionadas ao processo de aprendizado que é aplicado nas RNAs \cite{Haykin2001}.
+
 \subsection{Processo de aprendizado}
 
-Um dos pontos mais relevantes das RNA é seu poder de generalização, assim, após aprender a realizar alguma atividade, levando em consideração um determinado conjunto de dados, estas redes conseguem realizar atividades com diferentes conjuntos de dados. Porém isto exige um processo de treinamento bem definido, seguindo um algoritimo de treinamento, este algoritimo é o processo de treinamento. (NUNES et al, 2016).
+\par Um dos pontos mais relevantes das RNAs é a generalização \cite{livroNunes2016}, onde treina-se levando em consideração um conjunto amostral \textit{A}, este que faz uma boa representação do problema resolvido na tarefa e então após este processo a rede consegue realizar a tarefa não somente para o conjunto \textit{A}, mas também para um conjunto \textit{C} qualquer \cite{livroNunes2016}.
 
-Estes processos de treinamento podem adotar diferentes estratégias para ensinar as RNA, e cada estratégia gera um algoritimo de aprendizado diferente, sendo os principais, os algoritimos de aprendizado supervisionado e não-supervisionado.
+\par Porém para a generalização, como citado, é necessário um processo de treinamento, este que seja adequado a arquitetura de rede neural. \citeonline{livroNunes2016} definem processo de treinamento como um algoritmo que, através de seus passos bem definidos ajusta os pesos sinápticos da rede com o objetivo de permitir o mapeamento das relações dos dados e então realizar o processo de generalização. 
 
-\subsubsection{Aprendizado supervisionado}
+\par Os processos de treinamento podem adotar diferentes estratégias para ensinar as RNAs, e cada estratégia gera um algorítimo de aprendizado diferente, sendo os principais, os algorítimos de aprendizado supervisionado e não-supervisionado.
 
-% OSÓRIO -> fia99 (http://osorio.wait4.org/oldsite/IForumIA/fia99.pdf)
-No aprendizado supervisionado, o usuário indica o comportamento que a RNA deve apresentar dado um conjunto de dados qualquer, desta forma, a RNA pode ir ajustando os pesos sinápticos de seus neurônios com o objetivo de produzir o mesmo resultado apresentado pelo usuário (OSÓRIO, 1999). Levando em consideração um problema de classificação, onde um conjunto de dados é apresentado para a RNA, e ela deve informar ao usuário o que cada um dos dados daquele conjunto representa.
+\par No aprendizado supervisionado, há rótulos $y^{(t)}$ que indicam o comportamento $\widehat{y}$ que a rede deve apresentar para cada $x^{(t)}$ presente em um conjunto de dados $\{(x^{(t)}, y^{(t)}): 1 \leqslant t \leqslant T\}$ \cite{bezerra2016}. Desta forma, de acordo com os resultados apresentados, ajustes são feitos nos pesos sinápticos e limiares dos neurônios da rede \cite{livroNunes2016}, para que a saída da rede seja o mais próximo possível de $y^{(t)}$ \cite{Osorio1999}. Desta forma, o objetivo do aprendizado supervisionado é gerar para uma entrada \textit{x}, um valor de \textit{y}, sendo que, para valores categóricos de \textit{y}, tem-se uma classificação e para valores numéricos tem-se uma regressão \cite{murphy2012}.
 
-\subsubsection{Aprendizado não-supervisionado}
+\par Já o aprendizado não supervisionado, são utilizados apenas os dados, sem qualquer tipo de rótulo, sendo utilizados para gerar grupos \cite{Camila2017} e com isto descobrir novos padrões no conjunto de dados \cite{murphy2012}
+
+\par Após a aplicação dos algoritmos de treinamento é necessário avaliar a performance do modelo de RNA gerado, para garantir que o mesmo está sendo capaz de generalizar. Uma maneira de realizar esta avaliação é verificando a acurácia da RNA, esta que é calculada medindo a quantidade de acertos do modelo frente a um conjunto de dados não visto durante o processo de treinamento, por isto em diversos casos o conjunto de dados é dividido em dados de treino e teste \cite{Goodfellow-et-al-2016}.
+
+\par A separação dos dados, pode ser utilizada também para a identificação de problemas de \textit{Underfitting}, que é causado quando o modelo não consegue extrair características relevantes do conjunto de dados, obtendo altas taxas de erro durante o treinamento, ou mesmo o \textit{Overfitting}, que ocorre quando o modelo extrair características além do necessário do conjunto de dados, fazendo assim com que o modelo tenha baixas taxas de erro no treino e praticamente não acerte no teste \cite{Goodfellow-et-al-2016}.
+
+\image{1.0}{aprendizado/overfitting_under_editado.png}{Representação gráfica do \textit{Overfitting} e \textit{Underfitting}}{figure:over_under}{Adaptado de \citeonline{gibsonadampattersonjosh2017}}
+
+\par A Figura \ref{figure:over_under} apresenta os problemas explicados anteriormente de uma forma gráfica, onde (a) representa o \textit{Underfitting}, (c) \textit{Overfitting} e (b) o ideal. Para muitos casos as RNAs são utilizadas pois conseguem chegar a esse ideal \cite{Goodfellow-et-al-2016}, garantindo assim a generalização, porém a depender do escopo do problema, as RNAs necessitam de mais camadas, estas com certas especialidades, para possibilitar a extração mais sofisticada de características, gerando assim a necessidade de técnicas para a aplicação de tais camadas.
+
+% No aprendizado supervisionado, é considerado adisponibilidade de um conjunto de treinamento  é o vetor de características que está associado ao componente $y^{t}$ \cite{bezerra2016}, e então, para cada $x^{t}$ a rede gera um componente resultante $\widehat{y}$, este que será utilizado  
 
 % NG -> Neste caso é o curso do Andrew NG
-O aprendizado não supervisionado é completamente o oposto do supervisionado, neste é apresentado para a RNA apenas o conjunto de dados, e a RNA se encarrega de aprender sobre aquele conjunto de dados. Este tipo de aprendizado pode ser utilizado para deixar a RNA identificar os padrões presentes nos dados, e tirar informações destes padrões (NG, 2013). 
+% No aprendizado supervisionado, o usuário indica o comportamento que a RNA deve apresentar dado um conjunto de dados qualquer, desta forma, a RNA pode ir ajustando os pesos sinápticos de seus neurônios com o objetivo de produzir o mesmo resultado apresentado pelo usuário. Já o aprendizado não supervisionado, oposto do supervisionado, é apresentado para a RNA apenas o conjunto de dados, e a RNA se encarrega de aprender sobre aquele conjunto de dados. Este tipo de aprendizado pode ser utilizado para deixar a RNA identificar os padrões presentes nos dados, e tirar informações destes padrões (NG, 2013). 
 
-\section{Deep Learning}
+% \subsubsection{Transferência de aprendizado}
+% Isto aqui está completamente sem sentido nesta parte... (25/02/2019)
 
-O \textit{Deep Learning} apresenta uma abordagem diferente para os problemas resolvidos com técnicas de RNA, porém, no caso de DL, muitas camadas são empregadas (GOODFELLOW, 2016) nas arquiteturas das redes neurais (Figura 5).
+% Buscar referências para a primeira afirmação feita (25/02/2019)
+% Certos tipos de arquiteturas de RNAs são formadas por dezenas ou mesmo centenas de neurônios, e isto exige grandes conjuntos de dados em seu treinamento, grande poder computacional e tempo \cite{Carneiro2017, decio2017} para possibilitar a generalização do algoritmo, porém comumente para boa parte dos problemas há apenas pequenos conjuntos de dados \cite{Ponti2018} e nem sempre há capacidade computacional para a realização dos treinamentos, para estes casos, pode-se empregar as técnicas de Transferência de aprendizado.
 
-\image{0.6}{snn_vs_dl.png}{Diferenças entre redes neurais simples e Deep Learning}{ml_vs_dl}
+% Estou com dúvida se deixo este sub-tópico aqui....Ele faz bem mais sentido no tópico de aprendizado profundo
 
-A utilização de múltiplas camadas, cada um com dezenas de neurônios, permitiu as técnicas de DL chegarem ao estado-da-arte em muitos problemas que envolvem o AM (SHANKAR, 2017).  Além disto, de acordo com Andrew NG, o processo de aprendizado destas redes melhora muito com o aumento dos dados (Figura 6), diferente do que ocorria com arquiteturas e algoritimos de aprendizado de máquinas antigos.
+% Um dos grandes desafios em certas arquiteturas de RNAs, que dispõem de milhares de parâmetros a serem ajustados durante o processo de treinamento, utilizar o conhecimento adquirido no contexto de uma tarefa, e utiliza-lo em um contexto diferente do original...
 
-\image{0.4}{dl_vs_dados.png}{Deep Learning X Quantidade de dados}{dl_vs_dados}
+% Em certas arquiteturas de RNAs, que possuem grandes quantidades de parâmetros a serem ajustados, 
 
-Ainda de acordo com Andrew, isto ocorre pois ao utilizar múltiplas camadas, diversos recursos são captados dos dados, fazendo com que o processo de aprendizado se torne eficaz, e tende a melhorar ainda mais com o aumento da quantidade de dados utilizados no processo de treinamento. 
+% Em certas arquiteturas de RNAs, que possuem grandes quantidades de parâmetros a serem ajustados, 
 
-A utilização de múltiplas camadas, permitiram que diferentes técnicas pudessem ser utilizadas dentro de uma rede neural, e isto fez com que diversas arquiteturas, para os mais váriados fins fossem criados.
+% Em aprendizado profundo existe a necessidade de datasets com centenas de milhares de imagens...
+% \par Explicar sobre transferência de aprendizado
 
-\subsection{Redes neurais convolucionais}
+\section{Aprendizado Profundo}
+
+% Colocar mais referências aqui... Antes havia um gráfico legal aqui, colocar também....
+\par O Aprendizado Profundo (AP) apresenta uma abordagem diferente para os problemas resolvidos com técnicas de RNA, onde múltiplas camadas são empregadas nas arquiteturas, permitindo assim que problemas mais complexos e sofisticados sejam mapeados \cite{Goodfellow-et-al-2016}.
+
+\par As características dos algoritmos de AP fizeram com que estes chegassem ao estado-da-arte em diversos casos, como em \citeonline{Shankar2017} e \citeonline{Krizhevsky2012}. 
+
+\subsection{Redes Neurais Convolucionais}
+
+\par Redes Neurais Convolucionais (do inglês \textit{Convolutional Neural Network} - CNN) são uma variação das redes MLP, tendo sua criação inspirada no processo biológico de processamento de dados visuais \cite{Caroline2016}. Estas arquiteturas de AP, são capazes de subdividir os dados para tentar extrair características relevantes a classificação, reduzindo assim o números de parâmetros que deverão ser ajustados pela rede \cite{Miyazaki2017}, assim, melhorando o processo de treinamento \cite{Miyazaki2017}. % Verificar o ARAUJO, 2017 -> Para inserir nesta parte
+
+\par As CNNs são utilizadas principalmente em dados com estruturas de grade, como por exemplo, processamento de fala e entendimento da linguagem natural (Uma dimensão, convolução temporal) \cite{Miyazaki2017} e segmentação e classificação de imagens (Duas dimensões, convolução espacial) \cite{Miyazaki2017, Goodfellow-et-al-2016}.
+
+\par Um dos primeiros modelos de CNNs propostos foi a LeNet \cite{LeCun1998} (Figura \ref{figure:lecun_basic}), esta que é formada por conjunto de camadas, também nomeada de blocos, onde cada uma delas possui uma função específica \cite{Carneiro2017}. 
+
+% Colocar esta descrição...
+% Estrutura básica de CNN proposta por LeCun aplicada na identificação de célcular normais e anormais....
+% Tumores normais??? Verificar isto...
+\image{0.6}{cnn_lenet.JPG}{Estrutura básica de CNN proposta por \citeonline{LeCun1998} aplicado na identificação de tumores normais e anormais}{figure:lecun_basic}{\citeonline{Carneiro2017}}
+
+\par As três camadas fundamentais para uma CNN, apresentadas por \citeonline{LeCun1998}, e ilustradas na Figura \ref{figure:lecun_basic}, são as seguintes: convolucional, de \textit{pooling} e totalmente conectada.
 
 % SAVARESE, 2018 -> https://web.stanford.edu/class/cs231a/lectures/intro_cnn.pdf
 % ARAÚJO, 2017 -> Redes neurais convolucionais com tensorflow: Teoria e Prática 
-Redes neurais convolucionais, do inglês, \textit{Convolutional Neural Network} são um tipo de rede neural profunda, especializadas em análise de elementos visuais, tais como imagens e vídeos (SAVARESE, 2018).  Sua especialidade em dados visuais permitiu um grande avanço nas áreas de visão computacional, especialmente por estar serem mais fáceis de treinar, quando comparado a redes neurais comuns em trabalhos com imagens (ARAÚJO, 2017).
+% É legal colocar: `do inglês...` ? (25/02/2019)
+% Redes neurais convolucionais, do inglês, \textit{Convolutional Neural Network} são um tipo de rede neural profunda, especializadas em análise de elementos visuais, tais como imagens e vídeos (SAVARESE, 2018).  Sua especialidade em dados visuais permitiu um grande avanço nas áreas de visão computacional, especialmente por estas serem mais fáceis de treinar, quando comparado a redes neurais comuns em trabalhos com imagens (ARAÚJO, 2017).
 
-Um dos primeiros modelos de CNN propostos foi a LeNet (LECUN et al, 1998), proposta por Yann LeCunn em 1998, e mesmo com a evolução dos conceitos deste tipo de rede, os conceitos apresentados por LeCun continuam sendo aplicados. Nesta arquitetura, uma sequência de camadas convolucionais, de \textit{pooling} e totalmente conectadas são utilizadas (ARAÚJO, 2017).
+% Um dos primeiros modelos de CNN propostos foi a LeNet-5 (LECUN et al, 1998), proposta por Yann LeCunn em 1998, e mesmo evoluindo, os conceitos apresentados por LeCun continuam sendo aplicados. Nesta arquitetura, uma sequência de camadas convolucionais, de \textit{pooling} e totalmente conectadas são utilizadas (ARAÚJO, 2017).
 
-As camadas convolucionais, que são a grande diferença das CNN para outros tipos de RNA, trabalham como filtros, recuperando apenas pontos importantes da imagem para a classificação, isto através de uma matriz de pesos que é utilizada nas convoluções (ARAÚJO, 2017). Após o filtro realizado por esta camada, as imagens resultantes do filtro são passadas para a camada de \textit{pooling}, estas camadas que básicamente reduzem a dimensionalidade das resultantes. Por fim, as camadas totalmente conectadas são as responsáveis em realizar a multiplicação ponto a ponto dos sinais recebidos (imagens) e aplicar uma função de ativação, que produzirá a probabilidade de cada uma das classes esperadas na classificação (ARAÚJO, 2017).
+% As camadas convolucionais, que são a grande diferença das CNN para outros tipos de RNA, trabalham como filtros, recuperando apenas pontos importantes da imagem para a classificação, isto através de uma matriz de pesos que é utilizada nas convoluções (ARAÚJO, 2017). Após o filtro realizado por esta camada, as imagens resultantes do filtro são passadas para a camada de \textit{pooling}, estas camadas que básicamente reduzem a dimensionalidade das resultantes. Por fim, as camadas totalmente conectadas são as responsáveis em realizar a multiplicação ponto a ponto dos sinais recebidos (imagens) e aplicar uma função de ativação, que produzirá a probabilidade de cada uma das classes esperadas na classificação (ARAÚJO, 2017).
 
-A Figura 7 demonstra a arquitetura de LeCun sendo utilizada para a classificação de imagens de tumores, podendo ter como resultado às classes \textbf{normal} ou \textbf{anormal}.
+% A Figura 7 demonstra a arquitetura de LeCun sendo utilizada para a classificação de imagens de tumores, podendo ter como resultado às classes \textbf{normal} ou \textbf{anormal}.
 
-\image{0.6}{cnn_lenet.JPG}{Estrutura básica de CNN proposta por LeCun, 1998}{lecun_basic}
+% Modelo proposto por LeCun 98 (LeNet-5), aplicado a identificação de anomalias....
+% \image{0.6}{cnn_lenet.JPG}{Estrutura básica de CNN proposta por LeCun, 1998}{lecun_basic}
 
-Veja que, o diferencial citado acima, na utilização das convoluções está justamente na quantidade de elementos que são utilizados para a classificação, em RNA comuns, ao realizar a classificação de imagens, deve-se ter de neurônios na RNA a mesma quantidade de píxels presentes na imagem a ser classificada, o que nas CNN não ocorre, exatamente por conta dos filtros que são criados (PONTI, 2017). 
+% Veja que, o diferencial citado acima, na utilização das convoluções está justamente na quantidade de elementos que são utilizados para a classificação, em RNA comuns, ao realizar a classificação de imagens, deve-se ter de neurônios na RNA a mesma quantidade de píxels presentes na imagem a ser classificada, o que nas CNN não ocorre, exatamente por conta dos filtros que são criados (PONTI, 2017). 
 
-% \subsubsection{Camada convolucional}
-% \subsubsection{Camada de pooling}
-% \subsection{Camada totalmente conectada}
+\subsubsection{Camada convolucional}
 
-\subsection{Posenet}
+\par A camada convolucional (do inglês \textit{Convolutional layer} - CL) é um conjunto de filtros não lineares que percorrerem os dados de entrada sequencialmente e produzem os mapas de características \cite{Miyazaki2017}. O processo de percorrer os dados de entrada ocorrer através de passos (\textit{strides}), passando de \textit{pixel} em \textit{pixel} nas imagens de entrada.
 
-Posenet é um tipo de CNN, para a identificação em tempo real de pontos do corpo dos usuários, o modelo desenvolvido para esta rede é extremamente robusto e permite a identificação das poses mesmo quando há problemas com luz e iluminação do ambiente que está sendo levado em consideração na classificação (KENDALL, 2015). 
+\par Nesta camada há dois conceitos centrais: o campo receptor local e o compartilhamento de pesos sinápticos. Assim, com o campo receptor local, ao contrário das RNAs tradicionais, na qual todo o volume de entrada é conectado a camada oculta, apenas uma região específica, esta definida pelo compartilhamento de pesos sinápticos, é retirada da camada de entrada \cite{mnielsen2018}.
 
-\section{Tecnologias}
+\par A Figura \ref{figure:conv_complete} demonstra o processo de convolução, nesta, um filtro 3x3, definido pelo compartilhamento dos pesos sinápticos, passa sobre uma região dos dados, com passo igual a um, e a multiplicação entre eles é realizada, e os valores resultantes são somados e colocados no mapa de características.
 
-Esta seção demonstra as tecnologias utilizadas durante a implementação do presente trabalho.
+\image{0.6}{conv_completa.png}{Processo de convolução}{figure:conv_complete}{Adaptado de \citeonline{pavlovskyvojtech2017}}
 
-\subsection{Tensorflow.js}
+\par Com isto, no mapa de características há apenas características relevantes para a classificação.
 
-% https://www.tensorflow.org/about/bib
-Tensorflow.js é uma biblioteca para a linguagem de programação Javascript, que permite a implementação de modelos de AM com grande facilidade de expressão. A biblioteca é flexível e pode ser usada para expressar uma ampla variedade de algoritmos, incluindo algoritmos de treinamento e inferência para modelos de DL, e tem sido usado para conduzir pesquisas e implantar sistemas de aprendizado de máquina nas mais diversas áreas, envolvendo trabalhos como reconhecimento de fala, visão computacional e robótica (ABADI et al, 2015). 
+\subsubsection{\textit{Rectified Linear Units}}
+
+\par Após a camada de convolução, normalmente aplica-se uma função de ativação \cite{Carneiro2017}, e a mais comumente utilizada para CNNs é a \textit{Rectified Linear Units} \cite{nair2010, Krizhevsky2012}. Essa função é calculada pela Equação \ref{form:relu}.
+
+\begin{equation}
+    f(x) = max(0, x)
+\label{form:relu}
+\end{equation}
+
+\par Esta função faz com que, apenas os valores positivos sejam mantidos e os negativos substituídos por 0.
+
+\subsubsection{Camada de Pooling}
+
+% Buscar referências...
+% Este texto inicial está completamente sem nexo (13/03/2019)
+\par A camada de \textit{Pooling}, comumente utilizada após uma certa camada de convolução \cite{Caroline2016}, tem a finalidade de reduzir a dimensionalidade dos dados do mapa de características \cite{Caroline2016}. Esta redução é realizada principalmente para agilizar o processo de treinamento \cite{Caroline2016}.
+
+\par Esta redução é feita com o agrupamento de valores, este que através de uma janela \textit{M}x\textit{N} que é passada pelo mapa de características, aplica uma função, normalmente de média ou de valor máximo \cite{Amidi2018}. A Figura \ref{figure:pooling} apresenta uma operação de \textit{Pooling} feita através de um filtro 2x2, com a função de valor máximo.
+
+% Figura de 
+% Antiga: pooling.png
+\image{0.34}{pooling/pooling_v2.png}{Processo de \textit{Pooling}}{figure:pooling}{Adaptado de \citeonline{rawat2017}}
+
+\par Para o filtro de \textit{Pooling}, normalmente é utilizado a dimensão 2x2 com o deslocamento de um passo \cite{mnielsen2018}.
+
+\subsubsection{Camada totalmente conectada}
+
+\par A saída das camadas convolucionais e de \textit{Pooling} geram as características extraídas dos dados de entrada \cite{Carneiro2017}. As camadas totalmente conectadas utilizam estas características para classificar os dados. Estas camadas representam uma RNA convencional, uma MLP \cite{Haykin2001}, dentro desta RNA, sua última camada contém uma função de ativação, normalmente \textit{softmax}, responsável pela classificação final dos resultados \cite{Bishop2006}. 
+
+\subsubsection{Transferência de Aprendizado}
+
+\par Realizar treinamentos de CNNs requer grandes quantidades de dados, não sendo comum realizar treinamento deste tipo de rede do zero \cite{Carneiro2017}, isto porque mesmo havendo uma melhora nos parâmetros que precisam ser ajustados com a aplicação dos filtros de convolução, normalmente estas redes apresentam muitas camadas, e realizar o ajuste de cada camada pode exigir muitos dados. Desta forma é comum utilizar modelos que já possuem parâmetros ajustados para outros conjuntos de dados \cite{Ponti2018}, ou seja, aplica-se um domínio geral em um domínio específico, e este processo é nomeado de Transferência de aprendizado.
+
+\par De acordo com \citeonline{Ponti2018} existem diversas abordagens para a realização da transferência de aprendizado, sendo algumas delas: (i) Permitir que o algoritmo de treino ajuste todos os pesos presentes na rede com os novos dados, (ii) Congelar algumas camadas e assim limitar o número de parâmetros treinados pela rede, (iii) Adicionar mais camadas no modelo e realizar o treinamento somente destas novas camadas.
+
+\par A escolha da abordagem de transferência pode variar de acordo com a similaridade do novo conjunto de dados em relação ao antigo e também a seu tamanho \cite{Carneiro2017}.
+
+\subsection{MobileNet}
+
+\par MobileNet é um modelo de CNN criado para apresentar bons resultados em classificações de imagens e ao mesmo tempo, ser leve, tanto no tamanho em memória, quanto no custo operacional de suas operações, isto para que seja possível realizar sua aplicação em \textit{Smartphones} e aplicações embarcadas de visão computacional. Faz isto através da aplicação de técnicas de convolução profunda separável (do inglês \textit{Depthwise Separable Convolution}), este que basicamente aplica um filtro para cada camada de cor, tornando o modelo mais leve \cite{howard2017mobilenets}.
+
+\subsection{PoseNet}
+
+\par PoseNet é um modelo de CNN, criado pelo \textit{Google Creative Lab} com base nos trabalhos \citeonline{george2017} e \citeonline{george2018} que realiza a identificação de 17 pontos do corpo humano (Figura \ref{figure:posenet_poses}), de um ou vários usuários.
+
+\image{0.6}{figura_traduzida.jpg}{Pontos identificados pelo PoseNet}{figure:posenet_poses}{Adaptado de \citeonline{PoseNetMedium2019}}
+
+\par Mesmo fazendo esta serie de identificações (Figura \ref{figure:posenet_poses}), este é um modelo leve de CNN, fazendo com que este possa ser aplicado em diferentes contextos, até mesmo em páginas \textit{web} \cite{PoseNetMedium2019}.
+
+\section{Conceitos Tecnológicos}
+
+Nesta seção as tecnologias utilizadas durante a desenvolvimento do presente trabalho são expostas.
+
+\subsection{\textit{Application Programming Interface Rest}}
+
+\par \textit{Application Programming Interface} (API) é uma especificação destinada a ser usada como uma interface de comunicação entre componentes de \textit{software}. Uma \textit{API Rest} representa esta especificação de comunicação feita através do protocolo \textit{Hypertext Transfer Protocol} (HTTP), que inicialmente foi criado somente para a transferência de Hipertexto, porém posteriormente a sua criação passou a ser utilizado para a transferência dos mais variados formatos de dados.
+
+\par O protocolo HTTP trabalha utilizando o conceito de requisições-respostas, desta forma, para cada requisição realizada há uma resposta.
+
+\subsection{Linguagens de Programação}
+
+\par Para a criação da aplicação de aquisição de imagens e processamento de imagens, foi utilizado a linguagem de programação Python \cite{Python2019}, que é interpretada e possui tipagem dinâmica, junto as bibliotecas OpenCV e scikit-image para o processamento das imagens, Augmentor, para a aplicação de modificações em imagens no processo de \textit{Data Augmentation} e PyQt para a criação de interfaces gráficas.
+
+\par A criação da rede neural de reconhecimentos de gestos utilizou Python, junto a biblioteca de Keras, que permite a criação em alto nível de redes neurais artificiais profundas, além de disponibilizar modelos já treinados e funcionalidades para a aplicação de transferência de aprendizado \cite{chollet2015}. A disponibilização dos resultados do Keras é feita através de arquivos hierárquico (H5), que podem ser consumidos por outras bibliotecas, como as presentes no ecossistema do TensorFlow.
+
+\par Para o desenvolvimento da biblioteca de recursos assistivos, fez-se a utilização da linguagem de programação JavaScript, junto a biblioteca de desenvolvimento de Aprendizado Profundo para \textit{web} TensorFlow.js (TFJS), que permite a utilização de modelos de rede neural em navegadores, e também disponibiliza modelos já treinados \cite{tensorflowjs2019}, da mesma forma que o Keras.
+
+\par Por fim, para a distribuição do modelo de rede neural treinado neste trabalho, fez-se uma \textit{API Rest} utilizando o \textit{Microframework web} de Python, Flask, que permite a construção simplificada de aplicações \textit{web}.
+
+% \textbf{CUIDADO, --> API REST NÃO É API RESTful <--}
+% \textbf{VERIFICAR ISTO AO LONGO DO TRABALHO}
+
+% \textbf{DENTRO DA EXPLICAÇÃO DO FLASK, COLOCA O QUE É API (interface application program) REST}
+
+% \par Por fim, como há a necessidade de distribuição de um modelo desenvolvido no trabalho, fez-se a implementação de uma \textit{API Rest}
+
+% \par Por fim, a distribuição dos modelos de rede neural criados neste trabalho é feita através de uma \textit{API Rest}, que utilizando requisições \textit{HTTP} gera os resultados para o usuário. Esta \textit{API} será implementada em Python com o \textit{Microframework web} Flask, que auxilia no desenvolvimento de aplicações \textit{web}.
+
+% \subsection{Keras}
+
+% Keras é um biblioteca de Python, que permite a criação em alto nível de redes neurais artificiais, além de disponibilizar funcionalidades para a aplicação de transferência de aprendizado em modelos já treinados, presentes na biblioteca. Os códigos são escritos com Keras, e podem ser executados com as seguintes bibliotecas \textit{TensorFlow}, \textit{Microsoft Cognitive Toolkit} (CNTK) e \textit{Theano} \cite{chollet2015}.
+
+% \subsection{TensorFlow.js}
+
+% TensorFlow.js (TFJS) é uma biblioteca JavaScript desenvolvida para criar e executar algoritmos de aprendizado de máquina. Os modelos desenvolvidos com TFJS, podem ser executados em um navegador \cite{tensorflowjs2019}. Esta é uma biblioteca que faz parte do ecossistema TensorFlow, criado pelo Google, assim, os modelos criados em outros ambientes do ecossistema, como por exemplo em Python, podem ser facilmente portados para o TFJS \cite{tensorflowjs2019}.
 
 \subsection{Google Colaboratory}
 
-% Eu que fiz esta definição ! ! !
-Colaboratory é uma ferramenta criada pelo Google, que permite a fácil execução de algoritimos de aprendizado de máquina. O ambiente é criado sobre o pacote Jupyter, um ambiente interativo e simples para a execução de código, com a diferença de que, no Colaboratory, toda a execução pode ser feita utilizando máquinas disponibilizadas pelo Google.
+% Talvez colocar rede neural profunda?? (07/03/2019)
+% \textbf{O RESULTADO PRODUZIDO PELO TEXTO ABAIXO ESTÁ ESTRANHO...}
 
-% Melhorar (E muito) esta definição, já que deve ser aprofundado estes conceitos ! ! ! 
-\subsection{Processamento de voz}
-
-O processamento de voz é uma área que engloba diversas técnicas diferentes, como o reconhecimento de fala natural e síntese de voz (GUILHOTO, 2001). Para a aplicação de reconhecimentos de comandos por voz, utiliza-se o reconhecimento de palavras, este que é caracterízado pelo processamento de um pequeno trecho da fala, com o objetivo de identificar qual ação o sistema deve tomar (GUILHOTO, 2001).
-
-\subsubsection{Web speech API}
-
-% Verificar como citar a certificação digital ! ! !
-Normalmente a utilização de comandos voz em sistemas pode ser muito complexa, pois esta envolve diversos conceitos, das mais variadas áreas de estudo. Porém, a utilização de comandos de voz torna todo sistema que o utiliza, mais acessível a pessoas com deficiência, desta forma o \textit{Web Speech API} foi desenvolvido. Esta é uma ferramenta que facilita o processo de análise e sintetização de voz em texto (ADORF, 2013).
-
-Sua utilização permite uma rápida aplicação do processamento de voz em sistemas criados utilizando a linguagem de programação Javascript.
+\par Colaboratory (Colab) é uma ferramenta criada pelo Google que permite a fácil execução de algorítimos de aprendizado de máquina. Colab é criado sob o pacote Jupyter, um ambiente interativo, executado no navegador, que permite a execução de linguagens interpretadas \cite{PER-GRA:2007}. Todo o ambiente do Colab é executado sobre máquinas aceleradas por GPU, o que diminui o tempo de execução de processos de treinamento de modelos de rede neural.

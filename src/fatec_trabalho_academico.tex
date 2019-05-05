@@ -10,7 +10,8 @@
 	openright,	% Capitulos começam em pag impar
 	oneside		% Apenas 1 página por folha
 	]{abntex2}
-
+	
+\usepackage{amssymb}
 \usepackage{lmodern}			% Usa a fonte Latin Modern
 \usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
 \usepackage[utf8]{inputenc}		% Codificacao do documento
@@ -29,9 +30,138 @@
 \usepackage{pdfpages}
 \usepackage{minibox}
 \usepackage{listings}
+\usepackage{listingsutf8}
 \usepackage{multirow}           % Habilita o Merge de celulas na table
 \usepackage{graphicx}
+\usepackage{tikz}
+
 \graphicspath{ {./images/} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\usepackage{caption}            % adiciona \caption*{d} para criar fontes em imagens.
+\usepackage{subfig}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\usepackage{tabularx}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Listings das linguagens utilizadas
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\lstset{
+  literate={@}{{\@}}1
+}
+
+% Python style for highlighting
+% \newcommand\pythonstyle{
+\lstset{language=Python,
+    basicstyle=\ttm,
+    otherkeywords={self},             
+    keywordstyle=\ttb\color{deepblue},
+    emph={MyClass,__init__},          
+    emphstyle=\ttb\color{deepred},    
+    stringstyle=\color{deepgreen},
+    frame=tb,                         
+    showstringspaces=false,             
+    keywordsprefix={\@},
+    texcl=true
+}
+
+\lstset{
+  language=Javascript,
+  extendedchars=true,
+  basicstyle=\footnotesize\ttfamily,
+  showstringspaces=false,
+  showspaces=false,
+  numbers=left,
+  numberstyle=\footnotesize,
+  numbersep=9pt,
+  tabsize=2,
+  breaklines=true,
+  showtabs=false,
+  captionpos=b,
+  texcl=true
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \definecolor{pblue}{rgb}{0.13,0.13,1}
+% \definecolor{pgreen}{rgb}{0,0.5,0}
+% \definecolor{pred}{rgb}{0.9,0,0}
+% \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+% \lstset{language=Java,
+%   showspaces=false,
+%   showtabs=false,
+%   breaklines=true,
+%   showstringspaces=false,
+%   breakatwhitespace=true,
+%   commentstyle=\color{pgreen},
+%   keywordstyle=\color{pblue},
+%   stringstyle=\color{pred},
+%   basicstyle=\ttfamily,
+%   keywordsprefix={\@}
+% }
+
+%%%%%%%%%%%%%%% Definindo JavaScript para listings
+
+% \usepackage{listings}
+% \usepackage{color}
+% \definecolor{lightgray}{rgb}{.9,.9,.9}
+% \definecolor{darkgray}{rgb}{.4,.4,.4}
+% \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+% \lstdefinelanguage{JavaScript}{
+%   keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+%   keywordstyle=\color{blue}\bfseries,
+%   ndkeywords={class, export, boolean, throw, implements, import, this},
+%   ndkeywordstyle=\color{darkgray}\bfseries,
+%   identifierstyle=\color{black},
+%   sensitive=false,
+%   comment=[l]{//},
+%   morecomment=[s]{/*}{*/},
+%   commentstyle=\color{purple}\ttfamily,
+%   stringstyle=\color{red}\ttfamily,
+%   morestring=[b]',
+%   morestring=[b]"
+% }
+
+% \lstset{
+%   language=JavaScript,
+%   backgroundcolor=\color{lightgray},
+%   extendedchars=true,
+%   basicstyle=\footnotesize\ttfamily,
+%   showstringspaces=false,
+%   showspaces=false,
+%   numbers=left,
+%   numberstyle=\footnotesize,
+%   numbersep=9pt,
+%   tabsize=2,
+%   breaklines=true,
+%   showtabs=false,
+%   captionpos=b
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{threeparttable}
+\usepackage{pifont}%para adicionar mais fonte
+\newcommand{\cmark}{\ding{51}}%simbolo de check
+\newcommand{\xmark}{\ding{53}}%simbolo de errado
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows, arrows.meta,intersections}
+\usepackage{forest}
+\usepackage{booktabs}
+\usepackage{siunitx} %para angulo
+\usepackage{pdfpages}
+\usepackage{minibox}
+\usepackage{multirow}           % Habilita o Merge de celulas na table
+\usepackage{todonotes} % comentários e TODO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ---
 % Alterações no modelo original da abnTex2
@@ -59,14 +189,26 @@
 }
 
 % Inserção de imagens
-\newcommand{\image}[4]{
-    \begin{figure}[h]
+% #1 -> Escala da figura
+% #2 -> Nome da figura (Dentro do diretório de figuras)
+% #3 -> Legenda da figura
+% #4 -> Nome de referência da figura
+% #5 -> Fonte da figura
+% Exemplo de uso: \image{1.4}{neuronio-biologico.png}{Ilustração do neurônio biológico}{figure:bioneuron}{\citeonline{Remes2016}}
+\newcommand{\image}[5]{
+    \begin{figure}[H]%[h]
         \begin{center}
-        \includegraphics[scale=#1]{#2}
         \caption{#3}
+        \includegraphics[scale=#1]{#2}
         \label{#4}
+        \fonte{#5}
         \end{center}
     \end{figure}
+}
+
+% Criação de comando para gerar palavras com negrito e itálico
+\newcommand{\textitbf}[1]{
+    \textbf{\textit{#1}}
 }
 
 % ---
@@ -264,10 +406,10 @@
 % ---
 
 % FOLHA CIP
-%\begin{fichacatalografica}
+\begin{fichacatalografica}
     %\includepdf{./testFicha}
-    %\include{pre_cip}
-%\end{fichacatalografica}
+    \include{pre_cip}
+\end{fichacatalografica}
 
 % ---
 % Folha de aprovação
@@ -283,25 +425,25 @@
 % ---
 % Dedicatória
 % ---
-%\include{pre_dedic}
+\include{pre_dedic}
 % ---
 
 % ---
 % Agradecimentos
 % ---
-%\include{pre_agrad}
+\include{pre_agrad}
 % ---
 
 % ---
 % Epigrafe
 % ---
-%\include{pre_epigrafe}
+\include{pre_epigrafe}
 % ---
 
 % ---
 % RESUMOS
 % ---
-%\include{pre_resumos}
+\include{pre_resumos}
 % ---
 
 % ---
@@ -315,9 +457,9 @@
 % ---
 % inserir lista de tabelas
 % ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
+% \pdfbookmark[0]{\listtablename}{lot}
+% \listoftables*
+% \cleardoublepage
 % ---
 
 % ---
@@ -360,21 +502,21 @@
 
 % ---
 % Incluindo Capitulo 3 - Desenvolvimento
-%\include{cap3_dev}
+\include{cap3_dev}
 % ---
 
 % ---
 % Incluindo Capitulo 4 - Casos de Testes
-%\include{cap4_cases}
+\include{cap4_cases}
 % ---
 
 % ---
 % Incluindo Capitulo 5 - Conclusao
-%\include{cap5_concl}
+\include{cap5_concl}
 % ---
 
 % ---
 % Referências bibliográficas
-\bibliography{./ref/referencias}
+\bibliography{ref/referencias}
 % ---
 \end{document}

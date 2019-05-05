@@ -1,3 +1,109 @@
 \newpage
-\chapter{Casos de Testes}
-Neste capitulo serao apresentados os testes que foram implementados com a solucao e o conteudo apresentado.
+\chapter{Resultados}
+
+\par Neste capítulo serão apresentados os resultados do modelo gerado e as páginas \textit{web} criadas para testar os módulos implementados no ICan.js
+
+\section{Tradução de Libras para texto}
+
+\par Nesta seção, os resultados obtidos com a tranferência de aprendizado realizada no modelo \textit{MobileNet} e também das páginas de testes deste recurso assistivo.
+
+\subsection{Resultados da transferência de aprendizado do modelo \textit{MobileNet}}
+
+\image{0.23}{resultados/resultados_rede_neural.jpg}{Resultado do retreino do \textit{MobileNet}}{figure:historico_retreino}{Produção do Autor}
+
+\par A Figura \ref{figure:historico_retreino} mostra a acurácia e a perda do modelo durante seu retreino, nota-se que, o processo de retreino levou 5 épocas para atingir bons resultados, isto, tanto na diminuição da perda, quanto no aumento da acurácia do modelo, que nos dois casos, nas primeiras épocas não estavam apresentando bons resultados.
+
+\par O comportamento dos resultados na Figura \ref{figure:historico_retreino}, onde, mesmo os dados de treino sendo 100\% identificados a partir da segunda época e tendo poucas perdas, mas, para os dados de teste, tem-se uma variação inversamente proporcional entre a crescente da acurácia e a diminuição da perda. 
+
+\par Para avaliar o desempenho do modelo, além dos resultados da Figura \ref{figure:historico_retreino}, fez-se a utilização da matriz de confusão, esta que vincula as classes esperadas com a preditas em cada um dos valores presentes nos dados. Como citado anteriormente, os dados foram separados em dois conjuntos, o primeiro para treino/teste e o segundo para validação, isto para garantir que, o modelo gerado de nenhuma forma possui bons resultados somente por conta de um viés aos dados. Desta forma, duas matrizes de confusão foram criadas, uma para o conjunto de treino e teste (Figura \ref{figure:matriz_confusao_teste}) e outra para o conjunto de validação (Figura \ref{figure:matriz_confusao_validacao}).
+
+\par A matriz de confusão da Figura \ref{figure:matriz_confusao_teste}, utilizou apenas os dados de teste, e mesmo nestes havendo imagens de participantes que foram apresentados ao modelo nos dados de treino, uma pequena quantidade de erro foi registrada nas classes Amigo e Desculpa.
+
+\image{0.60}{resultados/matriz_de_confusao_teste.png}{Matriz de confusão do modelo \textit{MobileNet} retreinado com dados de teste}{figure:matriz_confusao_teste}{Produção do Autor}
+
+\par Já na matriz de confusão de validação (Figura \ref{figure:matriz_confusao_validacao}), que possui dados nunca antes apresentados para o modelo retreinado apresentou excelentes resultados, não errando em nenhuma das classes.
+
+\image{0.60}{resultados/matriz_de_confusao_validacao.png}{Matriz de confusão do modelo \textit{MobileNet} retreinado com dados de validação}{figure:matriz_confusao_validacao}{Produção do Autor}
+
+\par É interessante notar que, o erro pode ter ocorrido para a matriz dos dados de teste (Figura \ref{figure:matriz_confusao_teste}) por conta de dados que, mesmo sendo filtrados, apresentam características muito diferentes das levadas em consideração pelo modelo, o que acaba não ocorrendo nos dados do conjunto de validação (Figura \ref{figure:matriz_confusao_validacao}).
+
+\subsection{Aplicação do recurso assistivo desenvolvido}
+
+\par Além da validação realizada nos resultados do \textit{MobileNet} utilizado neste recurso assistivo, uma aplicação\footnote{Disponível em: \url{https://icanjs-examples.netlify.com/escrita-de-texto/}} foi desenvolvida para validar a eficácia da biblioteca na distribuição de um recurso assistivo que permite a escrita de textos em campos de páginas \textit{web}. Nesta aplicação espera-se que a biblioteca permita a escrita através de Libras em um campo de uma página \textit{web}.
+
+\subsubsection{Página inicial}
+
+\par Esta aplicação possui apenas uma página, em seu início (Figura \ref{figure:case_libras_1}), há uma descrição dos objetivos da página e também sobre o projeto desenvolvido.
+
+\image{0.70}{resultados/estudo-de-caso_escrita-de-texto/1.PNG}{Primeira parte da página da aplicação desenvolvido}{figure:case_libras_1}{Produção do Autor}   
+
+\par Após a parte de apresentação, há uma seção que explica as formas de funcionamento (Figura \ref{figure:case_libras_2}) do exemplo, nesta são descritas as duas formas de funcionamento descritas durante o Capítulo \ref{ch:desenvolvimento}, a primeira (Exclusiva) transcrevendo o gesto capturado em cada \textit{frame} e a segunda (Contínua), que considera os \textit{frames} capturados em um intervalo de tempo para definir o gesto que deve ser transcrito.
+
+\image{0.70}{resultados/estudo-de-caso_escrita-de-texto/2.PNG}{Seção de explicações sobre o funcionamento do exemplo da aplicação}{figure:case_libras_2}{Produção do Autor}   
+
+\par Com o final das explicações o exemplo presente na aplicação é apresentado, disponibilizando as duas formas de funcionamento explicadas na Figura \ref{figure:case_libras_2}. A primeira forma de funcionamento não permite a geração de um texto contínuo, transcrevendo gesto a gesto para o campo da página (Figura \ref{figure:case_libras_3_1}). 
+
+\image{0.60}{resultados/estudo-de-caso_escrita-de-texto/3_1.PNG}{Exemplo de funcionamento exclusivo}{figure:case_libras_3_1}{Produção do Autor} 
+
+\par Já a segunda forma de funcionamento, presente na Figura \ref{figure:case_libras_3_2}, permite a escrita de textos contínuos, utilizando intervalos de tempo, o que também deixa seu uso agradável.
+
+\image{0.60}{resultados/estudo-de-caso_escrita-de-texto/3_2.PNG}{Exemplo de funcionamento contínuo}{figure:case_libras_3_2}{Produção do Autor} 
+
+\par Com isto, o objetivo da escrita de textos com Libras foi atingido através do módulo implementado na biblioteca.
+
+\section{Controle do \textit{cursor} do \textit{mouse} com movimentos da cabeça}
+
+\par Esta seção apresenta a aplicação criada com os resultados obtidos na implementação do ICan.js e suas funcionalidades para o recurso assistivo de controle de \textit{cursor}.
+
+\subsection{Aplicação do recurso assistivo desenvolvido}
+
+\par Para realizar testes com o recurso assistivo implementado na biblioteca, fez-se a criação de uma aplicação\footnote{Disponível em: \url{https://icanjs-examples.netlify.com/controle-de-mouse/}}que consome os recursos da biblioteca. Nas subseções abaixo as páginas desenvolvidas serão apresentadas.
+
+\subsubsection{Página inicial e calibração}
+
+\par A página inicial da aplicação desenvolvida possui informações gerais do projeto e também da forma de funcionamento do mesmo, como exibido na Figura \ref{figure:case_cursor_tela_1}.
+
+\image{0.47}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_1.PNG}{Tela inicial}{figure:case_cursor_tela_1}{Produção do Autor}
+
+\par Na Figura \ref{figure:case_cursor_tela_1}, logo após a explicação do exemplo de execução da aplicação há um botão para que a execução seja iniciada, no momento em que o usuário clica neste a tela de calibração do modelo de regressão que será utilizado é exibida (Figura \ref{figure:case_cursor_tela_2}), nesta primeira tela de calibração, informações gerais são exibidas e então o usuário pode começar a calibração.
+
+\image{0.40}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_2.PNG}{Tela inicial de calibração}{figure:case_cursor_tela_2}{Produção do Autor}
+
+\par Com o usuário iniciando a aplicação, fica disponível para ele uma matriz 3X3 que ao ser clicada, salva a posição do \textit{cursor} e também do nariz do usuário. Aqui é esperado que, quando o usuário clicar nos pontos da matriz ele esteja apontando o nariz para a direção do ponto. Cada clique válido do usuário, faz uma barra de progresso no topo da tela ser atualizada (Figura \ref{figure:case_cursor_tela_2_2}).
+
+\image{0.33}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_2_2.PNG}{Matriz de calibração e barra de progresso}{figure:case_cursor_tela_2_2}{Produção do Autor}
+
+\par Ao término da coleta de pontos, o modelo é calibrado e salvo no \textit{sessionStorage}\footnote{Local para armazenamento temporário em navegadores} do navegador, ao mesmo tempo que, uma mensagem de finalização é exibida (Figura \ref{figure:case_cursor_tela_2_3}), nesta mensagem o usuário pode escolher continuar para a próxima tela ou mesmo recalibrar o modelo, sendo que, ao clicar nesta segunda opção, o processo visto anteriormente é recomeçado.
+
+\image{0.40}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_2_3.PNG}{Aviso da finalização da calibração}{figure:case_cursor_tela_2_3}{Produção do Autor}
+
+% \subsubsubsection{Geração dos regressores}
+
+% \par No momento em que a calibração é realizada, dois modelos são gerados, como descrito no Capítulo \ref{ch:desenvolvimento}, a forma do ajuste feito por cada um destes modelos é exibida na Figura \ref{figure:modelos_calibrados}.
+
+% \image{0.60}{recurso_assistivo_controle_do_mouse/plot_modelo.png}{Modelos de regressão gerados durante a calibração}{figure:modelos_calibrados}{Produção do Autor}
+
+\subsubsection{Páginas de exemplos}
+
+\par Com a finalização da calibração é exibido ao usuário uma página para seleção de exemplos (Figura \ref{figure:case_cursor_tela_3}), nesta está disponível uma página para testar a funcionalidade de \textit{scrolling} de páginas, isto feito através da leitura de um texto e outra para desenhar, que aproveita os recursos da camada \textit{Core} para construir uma aplicação de desenhos através de gestos.
+
+\image{0.47}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_3.PNG}{Página de seleção de exemplos}{figure:case_cursor_tela_3}{Produção do Autor}
+
+\par A página de leitura de texto (Figura \ref{figure:case_cursor_tela_4}) utiliza a função \textit{screenScroller}, sem nenhuma mudança, o resultado é uma \textit{div} que representa o \textit{cursor} criado que é movimentado através dos gestos.
+
+\image{0.47}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_4.PNG}{Página de leitura de texto com a função \textit{screenScroller}}{figure:case_cursor_tela_4}{Produção do Autor}
+
+\par Já na página de desenho, foi criado uma nova forma de aplicação das funcionalidades presentes do ICan.js, presentes na camada \textit{Core}, demonstrando que, além dos recursos já implementados na camada \textit{Common} é possível realizar a implementação de novas funcionalidades com a biblioteca.
+
+\image{0.47}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_5.PNG}{Canvas de desenho criado no exemplo de desenho com o ICan.js}{figure:case_cursor_tela_5}{Produção do Autor}
+
+\par Com isto, o objetivo da criação de um recurso assistivo para controle de \textit{cursor} com gestos do usuário foi atingido através das funcionalidades implementadas no ICan.js.
+
+% \section{Experimentos}
+
+% \par \textbf{O ORIENTADOR DISSE QUE, DA MESMA FORMA COMO FOI FEITO NA CAPÍTULO 3, A DIVISÃO PODE SER FEITA AQUI TAMBÉM! =D}
+
+%% ?? ? ? ?
+% Ainda estou com dúvida sobre como apresentar os resultados...
+
+% Devo apresentar os resultados separado da mesma forma que o capítulo de desenvolvimento ? Ou posso fazer algo como demonstrar os resultados da rede, e então já a implementação da biblioteca, junto aos exemplos....
