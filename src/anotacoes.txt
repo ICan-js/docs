@@ -52,3 +52,33 @@ OBS geral:
     - Seu trabalho ta bem legal
     - Da uma procurada em sinonimos para substituir algumas palavras que se repetem x vezes
     - Tenta dar uma enxugada nos seus subcap's do cap 2
+
+
+e outro para posições verticais. As variáveis aplicadas nestes modelos são: 
+
+\par As variá
+
+\par Para seu funcionamento, a regressão tem que, necessariamente utilizar no mínimo duas variáveis
+
+\citeonline{Papoutsaki2016} fez a definição de dois modelos 
+
+Para que a técnica de regressão pudesse ser aplicada para este contexto, \citeonline{Papoutsaki2016} a dividiu em dois modelos, sendo um modelo de regressão linear para o X e outro modelo para a posição Y, ambos relacionados a posição na tela em que o usuário está apontando.
+
+a forma de aplicação das regressões lineares nesta etapa
+
+\par Com a identificação do nariz do usuário sendo feita pelo PoseNet tem-se a necessidade do mapeamento dos movimentos do nariz do usuário para posições na tela. Neste trabalho utilizou-se os conceitos apresentados em \cite{Papoutsaki2016}, onde os movimentos dos usuários são traduzidos para tela do computador através de regressões.
+
+\par Veja que \citeonline{Papoutsaki2016} descreveram o mapeamento através de diversas regressões, mas neste trabalho utilizou-se apenas a regressão linear. Porém este pode ser expandido através da implementação de generalizações da classe Regression da camada \textit{Core}, apresentadas na Figura \ref{figure:icanjscoredc}.
+
+\par Para que a técnica de regressão pudesse ser aplicada para este contexto, \citeonline{Papoutsaki2016} a dividiu em dois modelos, sendo um modelo de regressão linear para o X e outro modelo para a posição Y, ambos relacionados a posição na tela em que o usuário está apontando.
+
+\par A implementação da técnica de \cite{Papoutsaki2016} no ICan.js é feita através da classe LinearRegression, esta fornece os métodos para treino e predição dos valores.
+
+\par Desta forma, para a criação da interação do usuário, criou-se um fluxo para a tradução das movimentações do nariz para movimentos nas páginas \textit{web}. Este processo (Figura \ref{figure:flow_mapeamento}) é iniciado com a identificação da posição do nariz do usuário na câmera, feita com o PoseNet, então, as posições X e Y identificadas são passadas respectivamente aos modelos de regressão em X e Y.
+
+% \image{0.80}{recurso_assistivo_controle_do_mouse/flow_de_mapeammento_de_movimentos.png}{Fluxo de funcionamento do mapeamento de movimentos para tela do computador}{figure:flow_mapeamento}{Produção do Autor}
+
+\par Porém para a utilização das regressões, é necessário que os respectivos modelos sejam gerados, para isto, a biblioteca oferece uma \textit{API} de calibração, que facilita a geração dos modelos e o vínculo entre a posição do \textit{mouse} e a posição do nariz do usuário.
+
+
+\textbf{ACHO QUE AQUI DEVE SER EXPLICADO TAMBÉM QUEM É A VARIÁVEL DEPENDENTE E QUEM É A VARIÁVEL INDEPENDENTE! ISTO DEIXA AS COISAS MAIS ORGANIZADAS E CLARAS AO LEITOR}.

@@ -37,7 +37,6 @@
 
 \graphicspath{ {./images/} }
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \usepackage{caption}            % adiciona \caption*{d} para criar fontes em imagens.
 \usepackage{subfig}
@@ -197,10 +196,10 @@
 % #5 -> Fonte da figura
 % Exemplo de uso: \image{1.4}{neuronio-biologico.png}{Ilustração do neurônio biológico}{figure:bioneuron}{\citeonline{Remes2016}}
 \newcommand{\image}[5]{
-    \begin{figure}[h]
+    \begin{figure}[H]%[h]
         \begin{center}
-        \includegraphics[scale=#1]{#2}
         \caption{#3}
+        \includegraphics[scale=#1]{#2}
         \label{#4}
         \fonte{#5}
         \end{center}
@@ -458,9 +457,9 @@
 % ---
 % inserir lista de tabelas
 % ---
-\pdfbookmark[0]{\listtablename}{lot}
-\listoftables*
-\cleardoublepage
+% \pdfbookmark[0]{\listtablename}{lot}
+% \listoftables*
+% \cleardoublepage
 % ---
 
 % ---

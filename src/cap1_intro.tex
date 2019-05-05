@@ -9,7 +9,7 @@
 % \par Apresentar brevemente o problema para explicar a motiva\~c\~ao para o realizar.
 % \par Recomendável a utilização de figuras e/ou tabelas.
 
-Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os objetivos deste e a metodologia adotada.
+Este capítulo apresenta a motivação para o desenvolvimento deste trabalho, os objetivos deste e a metodologia adotada.
 
 \section{Motivação} % Problema
 % Dica do Mineda: Colocar mais referências, gastar mesmo aqui.... Isto ajuda a fazer com que a importância do trabalho seja esclarecida.
@@ -64,13 +64,13 @@ Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os
 
 \par Estas características fizeram com que a procura e aplicação destes algoritmos aumentasse exponencialmente, como pode ser visto na Figura \ref{figure:interesse_aprendizado_profundo}. Isto fez com que diversas empresas como Google e Facebook começassem a utilizar muito destas técnicas em seus sistemas e aplicações, o que impulsionou a área de uma forma nunca antes vista.
 
-\image{0.8}{intro/interesse_deep_learning.jpeg}{Interesse em aprendizado profundo de 2012 à 2019}{figure:interesse_aprendizado_profundo}{\citeonline{google2019}}
+\image{0.8}{intro/interesse_deep_learning.jpeg}{Interesse em Aprendizado Profundo de 2012 à 2019}{figure:interesse_aprendizado_profundo}{\citeonline{google2019}}
 
-\par Com empresas interessadas na rápida prototipação e implementação destas técnicas em seus serviços, diversas bibliotecas de códigos, nas mais variadas linguagens, que facilitam a aplicação dessas técnicas foram criadas, e muitas disponibilizadas como \textit{software} livre. Dentre as bibliotecas disponibilizadas, destaca-se \cite{pytorch2017, tensorflowjs2019, tensorflow2015-whitepaper, chollet2015}. Estas bibliotecas trouxeram benefícios não apenas para as empresas por trás delas, mas também para todas as comunidades com interesse em tais técnicas.
+\par Com empresas interessadas na rápida prototipação e implementação destas técnicas em seus serviços, diversas bibliotecas de códigos, nas mais variadas linguagens, que facilitam a aplicação dessas técnicas foram criadas, e muitas disponibilizadas para o público em geral. Dentre as bibliotecas disponíveis, destaca-se \cite{pytorch2017, tensorflowjs2019, tensorflow2015-whitepaper, chollet2015}. Estas bibliotecas trouxeram benefícios não apenas para as empresas por trás delas, mas também para todas as comunidades com interesse em tais técnicas.
 
-\par Para a área cientifica, veio a oportunidade de aplicação de tais técnicas para impulsionar diferentes estudos como em \cite{Frid-Adar2018, Caroline2016}, e também outras empresas se beneficiaram expandindo seus negócios e áreas de atuação.
+\par Para a área cientifica, veio a oportunidade de aplicação de tais técnicas para impulsionar diferentes estudos como em \citeonline{Frid-Adar2018} e \citeonline{Caroline2016}, além de outras empresas se beneficiaram expandindo seus negócios e áreas de atuação.
 
-\par Neste contexto, para o desenvolvimento de recursos assistivos mais precisos e acessivos, as técnicas de Aprendizado Profundo começaram a ser aplicadas, como é o caso de \citeonline{Magalh2018}, que desenvolve um reconhecedor de gestos de Libras estado-da-arte com tais técnicas. Mas, estas aplicações ainda estão muito restritas apenas ao desenvolvimento e geração de modelos de redes neurais profundas, fazendo com que seja necessário a implementação destes em sistemas assistivos, como a biblioteca de navegação apresentada por \cite{handsfree2019}. Assim, este trabalho é motivado pela possibilidade do desenvolvimento de recursos assistivos para páginas da \textit{web} aplicando técnicas de Aprendizado Profundo, trazendo mais precisão as ferramentas desenvolvidas e mais acessibilidade para as páginas da \textit{web}.
+\par Neste contexto, para o desenvolvimento de recursos assistivos mais precisos e acessivos, as técnicas de Aprendizado Profundo começaram a ser aplicadas, como é o caso de \citeonline{Magalh2018}, que desenvolve um reconhecedor de gestos de Libras estado-da-arte com tais técnicas. Mas, estas aplicações ainda estão muito restritas apenas ao desenvolvimento e geração de modelos de redes neurais profundas, fazendo com que seja necessário a implementação destes em sistemas assistivos, como a biblioteca de navegação apresentada por \cite{handsfree2019}. Assim, este trabalho é motivado pela possibilidade do desenvolvimento de recursos assistivos para páginas da \textit{web}, aplicando técnicas de Aprendizado Profundo, trazendo mais precisão as ferramentas desenvolvidas e mais acessibilidade para as páginas da \textit{web}.
 
 % \cite{handsfree2019}
 
@@ -107,7 +107,7 @@ Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os
 % Section Objetivo Geral!
 \section{Objetivo Geral}
 
-\par O objetivo geral deste trabalho é desenvolver uma biblioteca JavaScript que possa levar recursos assistivos desenvolvidos através de técnicas de Aprendizado Profundo para páginas da \textit{web}.
+\par O objetivo geral deste trabalho é desenvolver uma biblioteca JavaScript que possa levar recursos assistivos desenvolvidos através de técnicas de Aprendizado Profundo para páginas \textit{web}.
 
 % \par Implementar recursos de tecnologias assistivas de baixo custo, para usuários com deficiências auditiva e motora, utilizando técnicas de \textit{Deep Learning}
 
@@ -127,9 +127,9 @@ Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os
 
 \par A realização dos objetivos específicos deste trabalho são feitas através da aplicação de modelos de Aprendizado Profundo no desenvolvimento dos recursos assistivos para páginas da \textit{web}, todos estes consolidados através de uma biblioteca JavaScript.
 
-\par Para o desenvolvimento do recurso assistivo de escrita de texto com gestos de Libras, dados serão coletados e um modelo MobileNet \cite{howard2017mobilenets} será treinado com os dados para possibilitar o reconhecimento de gestos e então traduzir estes para textos. Já no recurso assistivo para a movimentação do \textit{mouse}, através da aplicação do modelo PoseNet \cite{PoseNetMedium2019}, junto a regressões lineares, será feito o mapeamento dos gestos do usuário para posições do \textit{mouse} na tela.
+\par Para o desenvolvimento do recurso assistivo de escrita de texto com gestos de Libras, dados serão coletados para que um modelo \textit{MobileNet} \cite{howard2017mobilenets} seja treinado e possibilite o reconhecimento de gestos, para então traduzir estes em textos. Já no recurso assistivo para a movimentação do \textit{mouse}, através da aplicação do modelo PoseNet \cite{PoseNetMedium2019}, junto a regressões lineares, será feito o mapeamento dos gestos do usuário para posições do \textit{cursor} na tela.
 
-\par A disponibilização e utilização destes modelos dentro da biblioteca desenvolvida neste trabalho, esta nomeada de ICan.js, será feita através de módulo Tensorflow para JavaScript \cite{tensorflowjs2019}.
+\par A disponibilização e utilização destes modelos dentro da biblioteca desenvolvida neste trabalho, nomeada de ICan.js, será feita através do módulo TensorFlow para JavaScript \cite{tensorflowjs2019}.
 
 % A realização dos objetivos específicos do trabalho é feita através da aplicação de modelos de DL no desenvolvimento das ferramentas. A linguagem de programação empregrada para o desenvolvimento das ferramentas é o Javascript, junto ao \textit{framework} de desenvolvimento de DL \textit{Tensorflow.js}
 
@@ -145,14 +145,10 @@ Este capítulo demonstra a motivação para o desenvolvimento deste trabalho, os
 Este Trabalho está organizado nos seguintes capítulos:
 
 \begin{itemize}
-    \item 2 - Fundamentação Teórica
-    \par O capítulo expõe os conceitos necessários para a compreensão do presente trabalho.
-    \item 3 - Desenvolvimento
-    \par Este capítulo aborda detalhadamente a especificação da biblioteca JavaScript, assim como a metodologia empregada para o desenvolvimento de cada um dos recursos assistivos.
-    \item 4 - Resultados
-    \par Neste capítulo são expostos, através de aplicações de exemplo, os resultados alcançados com a metodologia aplicada na implementação dos recursos assistivos e na biblioteca.
-    \item 5 - Considerações Finais
-    \par Este capítulo apresenta as conclusões obtidas com os resultados, assim como uma breve sugestão de trabalhos futuros.
+    \item 2 - Fundamentação Teórica: O capítulo expõe os conceitos necessários para a compreensão do presente trabalho;
+    \item 3 - Desenvolvimento: Este capítulo aborda detalhadamente a especificação da biblioteca JavaScript, assim como a metodologia empregada para o desenvolvimento de cada um dos recursos assistivos;
+    \item 4 - Resultados: Neste capítulo são expostos, através de aplicações de exemplo, os resultados alcançados com a metodologia aplicada na implementação dos recursos assistivos e na biblioteca;
+    \item 5 - Considerações Finais: Este capítulo apresenta as conclusões obtidas com os resultados, assim como uma breve sugestão de trabalhos futuros.
 \end{itemize}
 
 % 	\item Capítulo 2: Revisão bibliográfica
