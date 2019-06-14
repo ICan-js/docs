@@ -2,75 +2,28 @@
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
 \chapter[Introdução]{Introdução}
-%\addcontentsline{toc}{chapter}{Introdução}
-% ----------------------------------------------------------
-
-% \par O trabalho é motivado pela necessidade / oportunidade de...
-% \par Apresentar brevemente o problema para explicar a motiva\~c\~ao para o realizar.
-% \par Recomendável a utilização de figuras e/ou tabelas.
 
 Este capítulo apresenta a motivação para o desenvolvimento deste trabalho, os objetivos deste e a metodologia adotada.
 
 \section{Motivação} % Problema
-% Dica do Mineda: Colocar mais referências, gastar mesmo aqui.... Isto ajuda a fazer com que a importância do trabalho seja esclarecida.
 
-% Esta motivação está dando a entender que o problema a ser resolvido é outro, NÂO, lembre-se que, objetivo é demonstrar que recursos assistivos criados com Deep Learning podem ser aplicados em tecnologias da WEB!!!! BOa
-
-% Colocar também uma observação feita pelo Arakaki -> O que é caro ? O que é barato ?
-
-
-% e a necessidade de importação \cite{ANDRIOLI2017}. Sendo que, o alto custo, é justificado principalmente pela necessidade da criação de equipamentos específicos para cada caso
-
-% O alto custo, na maioria dos casos pode ser justificado pela necessidade de desenvolvimento e construção de equipamentos específicos cada cada caso, isto por 
-
-% \par No Brasil, há uma grande dificuldade de acesso aos recursos de tecnologia assistiva, causadas por diversos fatores, a citar, o alto custo e a necessidade de importação \cite{ANDRIOLI2017}. O alto custo, na maioria dos casos pode ser justificado pela necessidade de desenvolvimento e construção de equipamentos específicos, o que acaba gerando um alto valor de compra.
-
-% . A principal característica
-
-% estas que deixam de lado as deficiências de lado e focam nas habilidades já presentes no indivíduo \cite{tve2016} para permit
-
-% em suas habilidades \cite{tve2016} para permitir 
-
-% \cite{tve2016}
-
-% são as tecnologias assistivas, 
-
-% \par Para serem independentes nem todos os deficientes precisam de algum auxílio, porém aqueles que necessitam utilizam 
-
-% \par Uma das maneiras de permitir que deficientes sejam inclusos na sociedade e tenham uma vida autônoma é com a utilização de  recursos de tecnologias assistivas, estas aliadas a serviços de tecnologia assistiva. Isto porque, estes recursos assistivos deixam de lado a deficiência, e focam nas habilidades presentes no individuo.
-
-% Neste âmbito surgem as tecnologias assistivas
-
-% e todas estas pessoas necessitam de uma vida inclusiva e independente, não sendo impedidas de realizar suas atividades por conta de suas 
-
-% E todas estas pessoas necessitam de uma vida independente e de inclusão (SARTORETTO; BERSCH, 2017).
-
-% \par No Brasil, há uma grande dificuldade de acesso aos recursos de tecnologia assistiva, causadas por diversos fatores, a citar, o alto custo e a necessidade de importação \cite{ANDRIOLI2017}. O alto custo, na maioria dos casos pode ser justificado pela necessidade de desenvolvimento e construção de equipamentos específicos, o que acaba gerando um alto valor de compra.
-
-% \textbf{SE EU FALAR DE RECURSOS ASSISTIVOS DE BAIXO CUSTO, O TRABALHO TERÁ DE BUSCAR INFORMAÇÕES SOBRE PREÇO....PENSE NISTO....}
-
-% \textbf{AQUI SERÁ LEGAL FALAR SOBRE A GRANDE DIFICULDADE DE AQUISIÇÃO DE RECURSOS ASSISTIVOS, E MESMO SOBRE OS AVANÇOS QUE TEM SIDO FEITOS....}
-
-% % Não sei no que isto implica
-% \textbf{TALVEZ FALAR SOBRE A GRANDE QUANTIDADE DE TRABALHOS SOBRE RECURSOS ASSISTIVOS E MESMO ASSIM POUCA APLICAÇÃO... --> "TALVEZ" <--}
-
-\par De acordo com o censo do IBGE, realizado em 2010, no Brasil, há cerca de 45 milhões de pessoas com algum tipo de deficiência e todas estas necessitam de uma vida independente e inclusiva, não sendo impedidas de realizar suas atividades por conta da deficiência.
+\par De acordo com o censo do Instituto Brasileiro de Geografia e Estatística (IBGE), realizado em 2010, no Brasil, há cerca de 45 milhões de pessoas com algum tipo de deficiência e todas estas necessitam de uma vida independente e inclusiva, não sendo impedidas de realizar suas atividades por conta da deficiência.
 
 \par Para uma parte deste público-alvo, a solução para a inclusão e independência são as tecnologias assistivas \cite{ANDRIOLI2017}, que através dos avanços tecnológicos criam possibilidades para as pessoas que possuem deficiência \cite{Bersch2017}. Este tipo de tecnologia deixa de lado as deficiências e foca apenas nas habilidades já presentes nos indivíduos \cite{tve2016}.
 
-\par Porém no Brasil, mesmo com diferentes iniciativas surgindo ao longo dos anos \cite{Bersch2017} há uma grande dificuldade de acesso aos recursos de tecnologia assistiva \cite{ANDRIOLI2017}, causados por diversos fatores, a citar, o alto custo, por conta da grande necessidade da criação de equipamentos específicos para cada caso \cite{tve2016}, e também a necessidade de importação destes equipamentos \cite{ANDRIOLI2017}.
+\par Porém no Brasil, mesmo com diferentes iniciativas surgindo ao longo dos anos \cite{Bersch2017} há uma grande dificuldade de acesso aos recursos de tecnologia assistiva (TA) \cite{ANDRIOLI2017}, causados por diversos fatores, a citar, o alto custo, por conta da grande necessidade da criação de equipamentos específicos para cada caso \cite{tve2016}, e também a necessidade de importação destes equipamentos \cite{ANDRIOLI2017}.
 
-\par Por outro lado, tem-se técnicas de Aprendizado Profundo, que através da aplicação de redes neurais artificiais profundas, desde 2012 vem sendo apresentadas como o estado-da-arte para a solução dos mais diversos problemas, nos mais variados contextos \cite{Ponti2018, forbes2019}, isto ocorrendo principalmente por conta da alta capacidade de generalização e adaptabilidade destes algoritmos \cite{Camila2017, Ponti2018, forbes2019}.
+\par Por outro lado, tem-se técnicas de Aprendizado Profundo (AP), que através da aplicação de redes neurais artificiais (RNA) profundas, desde 2012 vem sendo apresentadas como o estado-da-arte para a solução dos mais diversos problemas, nos mais variados contextos \cite{Ponti2018, forbes2019}, isto ocorrendo principalmente por conta da alta capacidade de generalização e adaptabilidade desses algoritmos \cite{Camila2017, Ponti2018, forbes2019}.
 
-\par Estas características fizeram com que a procura e aplicação destes algoritmos aumentasse exponencialmente, como pode ser visto na Figura \ref{figure:interesse_aprendizado_profundo}. Isto fez com que diversas empresas como Google e Facebook começassem a utilizar muito destas técnicas em seus sistemas e aplicações, o que impulsionou a área de uma forma nunca antes vista.
+\par Essas características fizeram com que a procura e aplicação desses algoritmos aumentasse exponencialmente, vide Figura \ref{figure:interesse_aprendizado_profundo}. Isso fez com que diversas empresas como Google e Facebook começassem a utilizar muito dessas técnicas em seus sistemas e aplicações, o que impulsionou a área de uma forma nunca antes vista.
 
 \image{0.8}{intro/interesse_deep_learning.jpeg}{Interesse em Aprendizado Profundo de 2012 à 2019}{figure:interesse_aprendizado_profundo}{\citeonline{google2019}}
 
-\par Com empresas interessadas na rápida prototipação e implementação destas técnicas em seus serviços, diversas bibliotecas de códigos, nas mais variadas linguagens, que facilitam a aplicação dessas técnicas foram criadas, e muitas disponibilizadas para o público em geral. Dentre as bibliotecas disponíveis, destaca-se \cite{pytorch2017, tensorflowjs2019, tensorflow2015-whitepaper, chollet2015}. Estas bibliotecas trouxeram benefícios não apenas para as empresas por trás delas, mas também para todas as comunidades com interesse em tais técnicas.
+\par Com empresas interessadas na rápida prototipação e implementação dessas técnicas em seus serviços, diversas bibliotecas de códigos, nas mais variadas linguagens, que facilitam a aplicação dessas técnicas foram criadas e muitas disponibilizadas para o público em geral. Dentre as bibliotecas disponíveis, destaca-se \citeonline{pytorch2017}, \citeonline{tensorflowjs2019}, \citeonline{tensorflow2015-whitepaper} e  \citeonline{chollet2015}. Estas bibliotecas trouxeram benefícios não apenas para as empresas por trás delas, mas também para todas as comunidades com interesse em tais técnicas.
 
-\par Para a área cientifica, veio a oportunidade de aplicação de tais técnicas para impulsionar diferentes estudos como em \citeonline{Frid-Adar2018} e \citeonline{Caroline2016}, além de outras empresas se beneficiaram expandindo seus negócios e áreas de atuação.
+\par Para a área científica, por exemplo, veio a oportunidade de aplicação de tais técnicas para impulsionar diferentes estudos como em \citeonline{Frid-Adar2018} e \citeonline{Caroline2016}, além de outras empresas que se beneficiaram expandindo seus negócios e áreas de atuação.
 
-\par Neste contexto, para o desenvolvimento de recursos assistivos mais precisos e acessivos, as técnicas de Aprendizado Profundo começaram a ser aplicadas, como é o caso de \citeonline{Magalh2018}, que desenvolve um reconhecedor de gestos de Libras estado-da-arte com tais técnicas. Mas, estas aplicações ainda estão muito restritas apenas ao desenvolvimento e geração de modelos de redes neurais profundas, fazendo com que seja necessário a implementação destes em sistemas assistivos, como a biblioteca de navegação apresentada por \cite{handsfree2019}. Assim, este trabalho é motivado pela possibilidade do desenvolvimento de recursos assistivos para páginas da \textit{web}, aplicando técnicas de Aprendizado Profundo, trazendo mais precisão as ferramentas desenvolvidas e mais acessibilidade para as páginas da \textit{web}.
+\par Neste contexto, para o desenvolvimento de recursos assistivos (RAs) mais precisos e acessivos, as técnicas de AP começaram a ser aplicadas, como é o caso de \citeonline{Magalh2018}, que desenvolve um identificador de gestos de Libras estado-da-arte com tais técnicas. Mas, essas aplicações ainda estão muito restritas ao desenvolvimento e geração de modelos de redes neurais profundas, fazendo com que seja necessário a implementação desses em sistemas assistivos, como a biblioteca de navegação apresentada por \citeonline{handsfree2019}. Assim, este Trabalho é motivado pela possibilidade do desenvolvimento de RAs para páginas \textit{web}, aplicando técnicas de AP, para trazer mais acessibilidade e precisão às ferramentas desenvolvidas.
 
 % \cite{handsfree2019}
 
@@ -107,7 +60,7 @@ Este capítulo apresenta a motivação para o desenvolvimento deste trabalho, os
 % Section Objetivo Geral!
 \section{Objetivo Geral}
 
-\par O objetivo geral deste trabalho é desenvolver uma biblioteca JavaScript que possa levar recursos assistivos desenvolvidos através de técnicas de Aprendizado Profundo para páginas \textit{web}.
+\par O objetivo geral deste Trabalho é desenvolver uma biblioteca JavaScript que possa levar recursos assistivos desenvolvidos através de técnicas de Aprendizado Profundo para páginas \textit{web}.
 
 % \par Implementar recursos de tecnologias assistivas de baixo custo, para usuários com deficiências auditiva e motora, utilizando técnicas de \textit{Deep Learning}
 
@@ -125,11 +78,11 @@ Este capítulo apresenta a motivação para o desenvolvimento deste trabalho, os
 \section{Metodologia} % COMO !! 
 % Reescrever a metodologia (24/03/2019)
 
-\par A realização dos objetivos específicos deste trabalho são feitas através da aplicação de modelos de Aprendizado Profundo no desenvolvimento dos recursos assistivos para páginas da \textit{web}, todos estes consolidados através de uma biblioteca JavaScript.
+\par A realização dos objetivos específicos deste Trabalho são feitas através da aplicação de modelos de AP no desenvolvimento dos RAs para páginas da \textit{web}, todos estes consolidados através de uma biblioteca JavaScript, esta nomeada de ICan.js.
 
-\par Para o desenvolvimento do recurso assistivo de escrita de texto com gestos de Libras, dados serão coletados para que um modelo \textit{MobileNet} \cite{howard2017mobilenets} seja treinado e possibilite o reconhecimento de gestos, para então traduzir estes em textos. Já no recurso assistivo para a movimentação do \textit{mouse}, através da aplicação do modelo PoseNet \cite{PoseNetMedium2019}, junto a regressões lineares, será feito o mapeamento dos gestos do usuário para posições do \textit{cursor} na tela.
+\par Para o desenvolvimento do RA de escrita de texto com gestos de Libras, dados são coletados através de diferentes usuários através de um sistema de coleta, isso para que um modelo MobileNet \cite{howard2017mobilenets} seja treinado e possibilite o reconhecimento de gestos, para então traduzir esses em textos. Já no RA para a movimentação do \textit{cursor} do \textit{mouse}, o modelo PoseNet \cite{PoseNetMedium2019} junto a regressões lineares são aplicados para o mapeamento dos gestos do usuário em posições do \textit{cursor} na tela.
 
-\par A disponibilização e utilização destes modelos dentro da biblioteca desenvolvida neste trabalho, nomeada de ICan.js, será feita através do módulo TensorFlow para JavaScript \cite{tensorflowjs2019}.
+\par A disponibilização e utilização dos modelos de AP na biblioteca desenvolvida neste Trabalho, é feita través do módulo TensorFlow para JavaScript \cite{tensorflowjs2019}.
 
 % A realização dos objetivos específicos do trabalho é feita através da aplicação de modelos de DL no desenvolvimento das ferramentas. A linguagem de programação empregrada para o desenvolvimento das ferramentas é o Javascript, junto ao \textit{framework} de desenvolvimento de DL \textit{Tensorflow.js}
 

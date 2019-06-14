@@ -13,8 +13,9 @@
 	
 \usepackage{amssymb}
 \usepackage{lmodern}			% Usa a fonte Latin Modern
-\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
-\usepackage[utf8]{inputenc}		% Codificacao do documento
+\usepackage[T1]{fontenc}		% Seleção de códigos de fonte.
+% \usepackage{cmap}
+\usepackage[utf8]{inputenc}		% Codificação do documento
 \usepackage{lastpage}			% Usado pela Ficha catalográfica
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
@@ -34,28 +35,33 @@
 \usepackage{multirow}           % Habilita o Merge de celulas na table
 \usepackage{graphicx}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{threeparttable}
+\usepackage{pifont}%para adicionar mais fonte
+\newcommand{\cmark}{\ding{51}}%simbolo de check
+\newcommand{\xmark}{\ding{53}}%simbolo de errado
+\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows, arrows.meta,intersections}
+\usepackage{forest}
+\usepackage{booktabs}
+\usepackage{siunitx} %para angulo
+\usepackage{todonotes} % comentários e TODO 
 
 \graphicspath{ {./images/} }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\usepackage{caption}            % adiciona \caption*{d} para criar fontes em imagens.
+\usepackage{caption}% adiciona \caption*{d} para criar fontes em imagens.
 \usepackage{subfig}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
-
 \usepackage{tabularx}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Listings das linguagens utilizadas
+
+%%%%%%%%%%%%Listings das linguagens utilizadas
 \definecolor{deepblue}{rgb}{0,0,0.5}
 \definecolor{deepred}{rgb}{0.6,0,0}
 \definecolor{deepgreen}{rgb}{0,0.5,0}
 
-\lstset{
-  literate={@}{{\@}}1
-}
-
-% Python style for highlighting
-% \newcommand\pythonstyle{
 \lstset{language=Python,
     basicstyle=\ttm,
     otherkeywords={self},             
@@ -65,12 +71,27 @@
     stringstyle=\color{deepgreen},
     frame=tb,                         
     showstringspaces=false,             
-    keywordsprefix={\@},
+    keywordsprefix=\@, alsoletter=\@,
     texcl=true
 }
 
+% Define a linguagem JavaScript no pacote listings
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break, async, await},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
 \lstset{
-  language=Javascript,
+  language=JavaScript,
   extendedchars=true,
   basicstyle=\footnotesize\ttfamily,
   showstringspaces=false,
@@ -84,83 +105,6 @@
   captionpos=b,
   texcl=true
 }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \definecolor{pblue}{rgb}{0.13,0.13,1}
-% \definecolor{pgreen}{rgb}{0,0.5,0}
-% \definecolor{pred}{rgb}{0.9,0,0}
-% \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
-
-% \lstset{language=Java,
-%   showspaces=false,
-%   showtabs=false,
-%   breaklines=true,
-%   showstringspaces=false,
-%   breakatwhitespace=true,
-%   commentstyle=\color{pgreen},
-%   keywordstyle=\color{pblue},
-%   stringstyle=\color{pred},
-%   basicstyle=\ttfamily,
-%   keywordsprefix={\@}
-% }
-
-%%%%%%%%%%%%%%% Definindo JavaScript para listings
-
-% \usepackage{listings}
-% \usepackage{color}
-% \definecolor{lightgray}{rgb}{.9,.9,.9}
-% \definecolor{darkgray}{rgb}{.4,.4,.4}
-% \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-
-% \lstdefinelanguage{JavaScript}{
-%   keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
-%   keywordstyle=\color{blue}\bfseries,
-%   ndkeywords={class, export, boolean, throw, implements, import, this},
-%   ndkeywordstyle=\color{darkgray}\bfseries,
-%   identifierstyle=\color{black},
-%   sensitive=false,
-%   comment=[l]{//},
-%   morecomment=[s]{/*}{*/},
-%   commentstyle=\color{purple}\ttfamily,
-%   stringstyle=\color{red}\ttfamily,
-%   morestring=[b]',
-%   morestring=[b]"
-% }
-
-% \lstset{
-%   language=JavaScript,
-%   backgroundcolor=\color{lightgray},
-%   extendedchars=true,
-%   basicstyle=\footnotesize\ttfamily,
-%   showstringspaces=false,
-%   showspaces=false,
-%   numbers=left,
-%   numberstyle=\footnotesize,
-%   numbersep=9pt,
-%   tabsize=2,
-%   breaklines=true,
-%   showtabs=false,
-%   captionpos=b
-% }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage{pgfplots}
-\pgfplotsset{compat=1.8}
-\usepackage{threeparttable}
-\usepackage{pifont}%para adicionar mais fonte
-\newcommand{\cmark}{\ding{51}}%simbolo de check
-\newcommand{\xmark}{\ding{53}}%simbolo de errado
-\usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows, arrows.meta,intersections}
-\usepackage{forest}
-\usepackage{booktabs}
-\usepackage{siunitx} %para angulo
-\usepackage{pdfpages}
-\usepackage{minibox}
-\usepackage{multirow}           % Habilita o Merge de celulas na table
-\usepackage{todonotes} % comentários e TODO 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ---
@@ -204,11 +148,6 @@
         \fonte{#5}
         \end{center}
     \end{figure}
-}
-
-% Criação de comando para gerar palavras com negrito e itálico
-\newcommand{\textitbf}[1]{
-    \textbf{\textit{#1}}
 }
 
 % ---
@@ -288,8 +227,6 @@
 % ---
 \usepackage[brazilian, hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
-
-
 
 % ---
 % CONFIGURAÇÕES DE PACOTES
@@ -416,7 +353,7 @@
 % ---
 
 % Descomentar para imprimir a folha
-%\include{pre_folhaAprov}
+\include{pre_folhaAprov}
 
 % Descomentar quando o arquivo folhaAprov.pdf estiver no diretorio raiz
 %\includepdf[]{folhaAprov.pdf}

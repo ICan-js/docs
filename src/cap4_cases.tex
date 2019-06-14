@@ -5,7 +5,7 @@
 
 \section{Tradução de Libras para texto}
 
-\par Nesta seção, os resultados obtidos com a tranferência de aprendizado realizada no modelo \textit{MobileNet} e também das páginas de testes deste recurso assistivo.
+\par Nesta seção, os resultados obtidos com a transferência de aprendizado realizada no modelo MobileNet e também as páginas de testes deste RA são apresentadas.
 
 \subsection{Resultados da transferência de aprendizado do modelo \textit{MobileNet}}
 
@@ -13,7 +13,7 @@
 
 \par A Figura \ref{figure:historico_retreino} mostra a acurácia e a perda do modelo durante seu retreino, nota-se que, o processo de retreino levou 5 épocas para atingir bons resultados, isto, tanto na diminuição da perda, quanto no aumento da acurácia do modelo, que nos dois casos, nas primeiras épocas não estavam apresentando bons resultados.
 
-\par O comportamento dos resultados na Figura \ref{figure:historico_retreino}, onde, mesmo os dados de treino sendo 100\% identificados a partir da segunda época e tendo poucas perdas, mas, para os dados de teste, tem-se uma variação inversamente proporcional entre a crescente da acurácia e a diminuição da perda. 
+\par O comportamento dos resultados na Figura \ref{figure:historico_retreino}, onde, mesmo os dados de treino sendo 100\% identificados a partir da segunda época e tendo poucas perdas, para os dados de teste, tem-se uma variação inversamente proporcional entre a crescente da acurácia e a diminuição da perda. 
 
 \par Para avaliar o desempenho do modelo, além dos resultados da Figura \ref{figure:historico_retreino}, fez-se a utilização da matriz de confusão, esta que vincula as classes esperadas com a preditas em cada um dos valores presentes nos dados. Como citado anteriormente, os dados foram separados em dois conjuntos, o primeiro para treino/teste e o segundo para validação, isto para garantir que, o modelo gerado de nenhuma forma possui bons resultados somente por conta de um viés aos dados. Desta forma, duas matrizes de confusão foram criadas, uma para o conjunto de treino e teste (Figura \ref{figure:matriz_confusao_teste}) e outra para o conjunto de validação (Figura \ref{figure:matriz_confusao_validacao}).
 
@@ -29,29 +29,29 @@
 
 \subsection{Aplicação do recurso assistivo desenvolvido}
 
-\par Além da validação realizada nos resultados do \textit{MobileNet} utilizado neste recurso assistivo, uma aplicação\footnote{Disponível em: \url{https://icanjs-examples.netlify.com/escrita-de-texto/}} foi desenvolvida para validar a eficácia da biblioteca na distribuição de um recurso assistivo que permite a escrita de textos em campos de páginas \textit{web}. Nesta aplicação espera-se que a biblioteca permita a escrita através de Libras em um campo de uma página \textit{web}.
+\par Além da validação realizada nos resultados do \textit{MobileNet} utilizado neste RA, uma aplicação\footnote{Disponível em: \url{https://icanjs-examples.netlify.com/escrita-de-texto/}} foi desenvolvida para validar a eficácia da biblioteca na distribuição de um RA que permite a escrita de textos em campos de páginas \textit{web}. Nesta aplicação espera-se que a biblioteca permita a escrita através de Libras em um campo de uma página \textit{web}.
 
 \subsubsection{Página inicial}
 
-\par Esta aplicação possui apenas uma página, em seu início (Figura \ref{figure:case_libras_1}), há uma descrição dos objetivos da página e também sobre o projeto desenvolvido.
+\par Esta aplicação possui uma página, em seu início (Figura \ref{figure:case_libras_1}), há uma descrição dos objetivos da página e também sobre o projeto desenvolvido.
 
 \image{0.70}{resultados/estudo-de-caso_escrita-de-texto/1.PNG}{Primeira parte da página da aplicação desenvolvido}{figure:case_libras_1}{Produção do Autor}   
 
-\par Após a parte de apresentação, há uma seção que explica as formas de funcionamento (Figura \ref{figure:case_libras_2}) do exemplo, nesta são descritas as duas formas de funcionamento descritas durante o Capítulo \ref{ch:desenvolvimento}, a primeira (Exclusiva) transcrevendo o gesto capturado em cada \textit{frame} e a segunda (Contínua), que considera os \textit{frames} capturados em um intervalo de tempo para definir o gesto que deve ser transcrito.
+\par Após a parte de apresentação, há uma seção que explica as formas de funcionamento (Figura \ref{figure:case_libras_2}) do exemplo, nessa são descritas as duas formas de funcionamento descritas durante o Capítulo \ref{ch:desenvolvimento}, a primeira (Exclusiva) transcrevendo o gesto capturado em cada \textit{frame} e a segunda (Contínua), que considera os \textit{frames} capturados em um intervalo de tempo para definir o gesto que deve ser transcrito.
 
 \image{0.70}{resultados/estudo-de-caso_escrita-de-texto/2.PNG}{Seção de explicações sobre o funcionamento do exemplo da aplicação}{figure:case_libras_2}{Produção do Autor}   
 
 \par Com o final das explicações o exemplo presente na aplicação é apresentado, disponibilizando as duas formas de funcionamento explicadas na Figura \ref{figure:case_libras_2}. A primeira forma de funcionamento não permite a geração de um texto contínuo, transcrevendo gesto a gesto para o campo da página (Figura \ref{figure:case_libras_3_1}). 
 
-\image{0.60}{resultados/estudo-de-caso_escrita-de-texto/3_1.PNG}{Exemplo de funcionamento exclusivo}{figure:case_libras_3_1}{Produção do Autor} 
+\image{0.65}{resultados/estudo-de-caso_escrita-de-texto/3.PNG}{Exemplo de funcionamento exclusivo}{figure:case_libras_3_1}{Produção do Autor} 
 
 \par Já a segunda forma de funcionamento, presente na Figura \ref{figure:case_libras_3_2}, permite a escrita de textos contínuos, utilizando intervalos de tempo, o que também deixa seu uso agradável.
 
-\image{0.60}{resultados/estudo-de-caso_escrita-de-texto/3_2.PNG}{Exemplo de funcionamento contínuo}{figure:case_libras_3_2}{Produção do Autor} 
+\image{0.65}{resultados/estudo-de-caso_escrita-de-texto/4.PNG}{Exemplo de funcionamento contínuo}{figure:case_libras_3_2}{Produção do Autor} 
 
-\par Com isto, o objetivo da escrita de textos com Libras foi atingido através do módulo implementado na biblioteca.
+\par Com isso, o objetivo da escrita de textos com Libras em campos de páginas \textit{web} foi atingido através do módulo implementado na biblioteca.
 
-\section{Controle do \textit{cursor} do \textit{mouse} com movimentos da cabeça}
+\section{Controle do cursor do mouse com movimentos da cabeça}
 
 \par Esta seção apresenta a aplicação criada com os resultados obtidos na implementação do ICan.js e suas funcionalidades para o recurso assistivo de controle de \textit{cursor}.
 
@@ -65,7 +65,7 @@
 
 \image{0.47}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_1.PNG}{Tela inicial}{figure:case_cursor_tela_1}{Produção do Autor}
 
-\par Na Figura \ref{figure:case_cursor_tela_1}, logo após a explicação do exemplo de execução da aplicação há um botão para que a execução seja iniciada, no momento em que o usuário clica neste a tela de calibração do modelo de regressão que será utilizado é exibida (Figura \ref{figure:case_cursor_tela_2}), nesta primeira tela de calibração, informações gerais são exibidas e então o usuário pode começar a calibração.
+\par Na Figura \ref{figure:case_cursor_tela_1}, logo após a explicação do exemplo de execução da aplicação há um botão para que a execução seja iniciada, no momento em que o usuário clica no botão, a tela de calibração do modelo de regressão que será utilizado é exibida (Figura \ref{figure:case_cursor_tela_2}), nesta primeira tela de calibração, informações gerais são exibidas e então o usuário pode começar a calibração.
 
 \image{0.40}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_2.PNG}{Tela inicial de calibração}{figure:case_cursor_tela_2}{Produção do Autor}
 
@@ -76,12 +76,6 @@
 \par Ao término da coleta de pontos, o modelo é calibrado e salvo no \textit{sessionStorage}\footnote{Local para armazenamento temporário em navegadores} do navegador, ao mesmo tempo que, uma mensagem de finalização é exibida (Figura \ref{figure:case_cursor_tela_2_3}), nesta mensagem o usuário pode escolher continuar para a próxima tela ou mesmo recalibrar o modelo, sendo que, ao clicar nesta segunda opção, o processo visto anteriormente é recomeçado.
 
 \image{0.40}{resultados/estudo-de-dado_controle-de-cursor/controle_do_mouse_2_3.PNG}{Aviso da finalização da calibração}{figure:case_cursor_tela_2_3}{Produção do Autor}
-
-% \subsubsubsection{Geração dos regressores}
-
-% \par No momento em que a calibração é realizada, dois modelos são gerados, como descrito no Capítulo \ref{ch:desenvolvimento}, a forma do ajuste feito por cada um destes modelos é exibida na Figura \ref{figure:modelos_calibrados}.
-
-% \image{0.60}{recurso_assistivo_controle_do_mouse/plot_modelo.png}{Modelos de regressão gerados durante a calibração}{figure:modelos_calibrados}{Produção do Autor}
 
 \subsubsection{Páginas de exemplos}
 
