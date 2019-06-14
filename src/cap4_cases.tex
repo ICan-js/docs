@@ -7,9 +7,9 @@
 
 \par Nesta seção, os resultados obtidos com a transferência de aprendizado realizada no modelo MobileNet e também as páginas de testes deste RA são apresentadas.
 
-\subsection{Resultados da transferência de aprendizado do modelo \textit{MobileNet}}
+\subsection{Resultados da transferência de aprendizado do modelo MobileNet}
 
-\image{0.23}{resultados/resultados_rede_neural.jpg}{Resultado do retreino do \textit{MobileNet}}{figure:historico_retreino}{Produção do Autor}
+\image{0.23}{resultados/resultados_rede_neural.jpg}{Resultado do retreino do MobileNet}{figure:historico_retreino}{Produção do Autor}
 
 \par A Figura \ref{figure:historico_retreino} mostra a acurácia e a perda do modelo durante seu retreino, nota-se que, o processo de retreino levou 5 épocas para atingir bons resultados, isto, tanto na diminuição da perda, quanto no aumento da acurácia do modelo, que nos dois casos, nas primeiras épocas não estavam apresentando bons resultados.
 
@@ -19,17 +19,17 @@
 
 \par A matriz de confusão da Figura \ref{figure:matriz_confusao_teste}, utilizou apenas os dados de teste, e mesmo nestes havendo imagens de participantes que foram apresentados ao modelo nos dados de treino, uma pequena quantidade de erro foi registrada nas classes Amigo e Desculpa.
 
-\image{0.60}{resultados/matriz_de_confusao_teste.png}{Matriz de confusão do modelo \textit{MobileNet} retreinado com dados de teste}{figure:matriz_confusao_teste}{Produção do Autor}
+\image{0.60}{resultados/matriz_de_confusao_teste.png}{Matriz de confusão do modelo MobileNet retreinado com dados de teste}{figure:matriz_confusao_teste}{Produção do Autor}
 
 \par Já na matriz de confusão de validação (Figura \ref{figure:matriz_confusao_validacao}), que possui dados nunca antes apresentados para o modelo retreinado apresentou excelentes resultados, não errando em nenhuma das classes.
 
-\image{0.60}{resultados/matriz_de_confusao_validacao.png}{Matriz de confusão do modelo \textit{MobileNet} retreinado com dados de validação}{figure:matriz_confusao_validacao}{Produção do Autor}
+\image{0.60}{resultados/matriz_de_confusao_validacao.png}{Matriz de confusão do modelo MobileNet retreinado com dados de validação}{figure:matriz_confusao_validacao}{Produção do Autor}
 
 \par É interessante notar que, o erro pode ter ocorrido para a matriz dos dados de teste (Figura \ref{figure:matriz_confusao_teste}) por conta de dados que, mesmo sendo filtrados, apresentam características muito diferentes das levadas em consideração pelo modelo, o que acaba não ocorrendo nos dados do conjunto de validação (Figura \ref{figure:matriz_confusao_validacao}).
 
 \subsection{Aplicação do recurso assistivo desenvolvido}
 
-\par Além da validação realizada nos resultados do \textit{MobileNet} utilizado neste RA, uma aplicação\footnote{Disponível em: \url{https://icanjs-examples.netlify.com/escrita-de-texto/}} foi desenvolvida para validar a eficácia da biblioteca na distribuição de um RA que permite a escrita de textos em campos de páginas \textit{web}. Nesta aplicação espera-se que a biblioteca permita a escrita através de Libras em um campo de uma página \textit{web}.
+\par Além da validação realizada nos resultados do MobileNet utilizado neste RA, uma aplicação\footnote{Disponível em: \url{https://icanjs-examples.netlify.com/escrita-de-texto/}} foi desenvolvida para validar a eficácia da biblioteca na distribuição de um RA que permite a escrita de textos em campos de páginas \textit{web}. Nesta aplicação espera-se que a biblioteca permita a escrita através de Libras em um campo de uma página \textit{web}.
 
 \subsubsection{Página inicial}
 
